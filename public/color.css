@@ -1,25 +1,18 @@
-/* CSS HEX */
-* {--melon: #fec5bbff;
---pale-pink: #fcd5ceff;
---misty-rose: #fae1ddff;
---isabelline: #f8edebff;
---platinum: #e8e8e4ff;
---alabaster: #d8e2dcff;
---linen: #ece4dbff;
---champagne-pink: #ffe5d9ff;
---peach-puff: #ffd7baff;
---peach-crayola: #fec89aff;
-
+.light {
 /* CSS HSL */
---melon: hsla(9, 97%, 86%, 1);
---pale-pink: hsla(9, 88%, 90%, 1);
---misty-rose: hsla(8, 74%, 92%, 1);
---isabelline: hsla(9, 48%, 95%, 1);
---platinum: hsla(60, 8%, 90%, 1);
---alabaster: hsla(144, 15%, 87%, 1);
---linen: hsla(32, 31%, 89%, 1);
---champagne-pink: hsla(19, 100%, 93%, 1);
---peach-puff: hsla(25, 100%, 86%, 1);
---peach-crayola: hsla(28, 98%, 80%, 1);
-}
 
+/*Figure out the variable name later.*/
+--manatee: hsla(218, 17%, 62%, 1);
+--languid-lavender: hsla(275, 18%, 79%, 1);
+--pale-pink: hsla(351, 47%, 88%, 1);
+--pale-purple-pantone: hsla(312, 91%, 96%, 1);
+--lavender-web: hsla(233, 100%, 94%, 1);
+
+/*
+--manatee: #8e9aafff;
+--languid-lavender: #cbc0d3ff;
+--pale-pink: #efd3d7ff;
+--pale-purple-pantone: #feeafaff;
+--lavender-web: #dee2ffff;
+*/
+}
