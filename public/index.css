@@ -2,6 +2,14 @@
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
+/*:root {
+	color-scheme: light dark;
+}
+*/
+
+
+
+
 html{height: 100%; width: 100%;}
 
 
@@ -21,6 +29,13 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+.scheme-dark {
+
+	background-color: #3ba0e6;
+}
+
+
 
 .simple-container {
 	max-width: 675px;

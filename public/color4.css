@@ -1,0 +1,17 @@
+* {
+    /* CSS HEX */
+--manatee: #8e9aafff;
+--languid-lavender: #cbc0d3ff;
+--pale-pink: #efd3d7ff;
+--pale-purple-pantone: #feeafaff;
+--lavender-web: #dee2ffff;
+
+/* CSS HSL */
+--manatee: hsla(218, 17%, 62%, 1);
+--languid-lavender: hsla(275, 18%, 79%, 1);
+--pale-pink: hsla(351, 47%, 88%, 1);
+--pale-purple-pantone: hsla(312, 91%, 96%, 1);
+--lavender-web: hsla(233, 100%, 94%, 1);
+
+
+}
