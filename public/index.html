@@ -10,6 +10,7 @@
     <script src="color.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/rainbow-code@2.1.7/dist/rainbow.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/rainbow-code@2.1.7/src/language/javascript.js"></script>
+    <script src="index.js"></script>
 
     <meta property="og:title" content="Cinnamon" />
     <meta property="og:type" content="website" />
@@ -27,17 +28,8 @@
     <h4>Welcome to my site!</h4>
 
     <!-- allow for better hiding of pre-->
-    <a href="#" onclick="displayResume()" class="button">Open resume</a>
-    <div id="resume" style="display:none;">
-            <!--jsonresume schema is neat-->
-        <pre id="code"><h2 style="margin-left: 32px; margin: 5px 0 0 10 px;">Resume</h2>
-            <code data-language="javascript" style="margin: 0 0 0 0;">
-                var testing = true;
-                {"name":"test"}
-    
-            </code>
-        <a href="#" class="button">Download as PDF</a></pre>
-    </div>
+    <a href="#" onclick="displayResume()" class="button" id="resumeBtn">Open resume</a>
+    <div id="resume" class="fade-in"></div>
     <p>
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at aliquet eros. Vestibulum sit amet pretium magna. Suspendisse quis lorem quis felis tristique fringilla. Sed consectetur odio et fermentum molestie. Proin scelerisque molestie mauris ac tempor. Mauris non nunc nibh. Donec id malesuada justo. Suspendisse pretium lectus sit amet magna mattis gravida. Etiam congue semper neque et aliquet. Nunc imperdiet arcu eros, sed consectetur odio pretium sed. Pellentesque tincidunt nisi id metus ornare faucibus. Etiam lacus erat, sagittis sed velit sed, fringilla luctus magna. Etiam id feugiat quam. Duis ut blandit arcu, quis scelerisque turpis.
