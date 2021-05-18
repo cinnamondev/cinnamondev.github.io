@@ -25,10 +25,19 @@
         <h1>Cinnamon</h1>
     </div>
     <h4>Welcome to my site!</h4>
-    <pre><code data-language="javascript">
-            var testing = true;
-            {"name":"test"}
-    </code></pre>
+
+    <!-- allow for better hiding of pre-->
+    <a href="#" onclick="displayResume()" class="button">Open resume</a>
+    <div id="resume" style="display:none;">
+            <!--jsonresume schema is neat-->
+        <pre id="code"><h2 style="margin-left: 32px; margin: 5px 0 0 10 px;">Resume</h2>
+            <code data-language="javascript" style="margin: 0 0 0 0;">
+                var testing = true;
+                {"name":"test"}
+    
+            </code>
+        <a href="#" class="button">Download as PDF</a></pre>
+    </div>
     <p>
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at aliquet eros. Vestibulum sit amet pretium magna. Suspendisse quis lorem quis felis tristique fringilla. Sed consectetur odio et fermentum molestie. Proin scelerisque molestie mauris ac tempor. Mauris non nunc nibh. Donec id malesuada justo. Suspendisse pretium lectus sit amet magna mattis gravida. Etiam congue semper neque et aliquet. Nunc imperdiet arcu eros, sed consectetur odio pretium sed. Pellentesque tincidunt nisi id metus ornare faucibus. Etiam lacus erat, sagittis sed velit sed, fringilla luctus magna. Etiam id feugiat quam. Duis ut blandit arcu, quis scelerisque turpis.
