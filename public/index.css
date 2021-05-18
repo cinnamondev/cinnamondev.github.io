@@ -9,25 +9,54 @@
 
 @import "color_dark.css";
 
-html{height:100vh; width:100vw;}
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 60px;
+  /* must be same height as the footer */
+}
+
+#footer {
+	border-top: 1px solid var(--color-acc);
+	padding-top: 5px;
+	width: 50%;
+ 	position: relative;
+  	margin-top: -60px;
+	  clear:both;
+  	/* negative value of footer height */
+  	height: 60px;
+}
+
+
+/* Opera Fix thanks to Maleika (Kohoutec) */
+
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+  /* thank you Erik J - negate effect of float*/
+}
 
 *{
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	line-height: 1.4;
+	margin: 0;
+	padding: 0;
 }
-
-body {
-	font-family: 'Open Sans', sans-serif;
-	line-height: 1.75em;
-	font-size: 16px;
-	
-}
-
-
-
-
-html{height: 100%; width: 100%;}
 
 
 * {
@@ -46,12 +75,6 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
-.scheme-dark {
-
-	background-color: #3ba0e6;
-}
-
 
 p {
 	font-size: 16px;
@@ -197,4 +220,10 @@ a.button:active{
     to {
         opacity: 1;
     }
+}
+
+#header {
+	border-bottom: 1px solid var(--color-acc);
+	height: 56px;
+	vertical-align: middle;
 }
