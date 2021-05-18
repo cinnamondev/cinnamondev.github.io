@@ -1,2 +1,4 @@
-var testing = true;
-{"name":"test"}
+{
+    "name": "test",
+    "lmao": "lol"
+    }
