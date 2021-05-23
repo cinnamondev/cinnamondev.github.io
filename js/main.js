@@ -1,6 +1,6 @@
 "use strict";
 
-let gist = "https://gist.githubusercontent.com/cinnamondev/61aa08f25fe20a4943b8c613076946bb/raw/dd56aa052d9f1a7fd41386e08f306252b579867a/data.json";
+let gist = "https://gist.github.com/cinnamondev/a5a99818256d192c2d6ca41b5f7aec3b/raw/80e2740ee6494f159f567ebb4793d1e6ea749d22/resume.json";
 
 
 window.onload = () => {
