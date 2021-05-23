@@ -3,14 +3,12 @@
 
 let theme = {
     // Sets the theme on load.
-    "start": () => {
+    "start": (callback) => {
         // Set to respect the OS/browser scheme preference (if unset)
         if (localStorage.getItem('theme') === null) {
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 theme.set('dark');
-                return; // exit here
-            }
-            theme.set('light');
+            } else theme.set('light');
         }
 
         // (If set) set the theme to the correct scheme
@@ -44,6 +42,8 @@ let theme = {
         }
     },
     "set": (name) => {
+
+
         localStorage.setItem('theme', name);
         document.documentElement.className = name;
     } 
