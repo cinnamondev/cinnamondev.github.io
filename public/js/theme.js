@@ -1,35 +1,36 @@
 // Javascript color manager.
 "use strict";
 
-let color = {
-    // Adds the event listener.
+let theme = {
+    // Sets the theme on load.
     "start": () => {
+        // Set to respect the OS/browser scheme preference (if unset)
         if (localStorage.getItem('theme') === null) {
-            // set the initial theme, respecting the OS theme.
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                color.set('dark');
-                return;
+                theme.set('dark');
+                return; // exit here
             }
-            color.set('light');
+            theme.set('light');
         }
 
-
+        // (If set) set the theme to the correct scheme
         if (localStorage.getItem('theme') === 'dark') {
-            color.set('dark');
+            theme.set('dark');
         } else {
-            color.set('light');
+            theme.set('light');
         }
     },
-    "listen": () => {},
-    // Introduce button in top right (theming button)
-    "addControls": () => {
+
+    // Introduce the button element. Multiple buttons should use the 
+    "addControls": (parentElement = document.body, style="top: 0; right: 0; position: fixed;") => {
         let button = document.createElement('button');
+        button.classList.add('themer');
         button.id = "theming";                               
         button.innerText = "THEME";                             // Text
-        button.style = "top: 0; right: 0; position: fixed;";    // change this later.
-        document.body.appendChild(button);                      // Add button to document
+        button.style = style;    // change this later.
+        parentElement.appendChild(button);                      // Add button to document
         
-        button.addEventListener("click", () => {color.invert()}); // invert on button click
+        button.addEventListener("click", () => {theme.invert()}); // invert on button click
     }, 
     // Triggered manually or by the button. Switches color scheme.
     "invert": () => {
@@ -37,9 +38,9 @@ let color = {
 
 
         if (localStorage.getItem('theme') === 'dark') {
-            color.set('light');
+            theme.set('light');
         } else { 
-            color.set('dark');
+            theme.set('dark');
         }
     },
     "set": (name) => {
@@ -48,6 +49,5 @@ let color = {
     } 
 }
 
-color.start();
 
 
