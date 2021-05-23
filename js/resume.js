@@ -22,16 +22,12 @@ let resume = {
     },
     // Use the json resume thingy to export to a pdf with the theming.
     "export": (username) => {
-        fetch("https://registry.jsonresume.org/" + username + "?theme=stackoverflow") // fetch tha html :sunglasses:
+        fetch("https://registry.jsonresume.org/" + username + "?theme=kendall") // fetch tha html :sunglasses:
             .then(response => response.text() // make it play nicely
                 .then(html => {
                     let inject = `
-                    <script>
-                        let hide = () => {document.getElementById("top").style="visibility:none;display:none;"};
-                        document.title = "Resume";
-                        // here we can inject our broadcast channel stuff if we wanna talk to this via javascript
-                    </script>
                     <style>
+                    #photo {visibility:hidden !important;}
                     @media print
                     {    
                         .no-print, .no-print *
@@ -39,12 +35,13 @@ let resume = {
                             display: none !important;
                         }
                     }
-                    @media print {
-                        @page { margin: 0; size:auto; }
-                        body { margin: 1.6cm; }
-                      }
                     </style>
-                    <div class="no-print" id="top" style="position:fixed;top:0;left:0;padding-left:32px;border-bottom:1px solid black;height:32px;font-size:14px;line-height:32px;width: 100%;background-color:#eee;">
+                    <script>
+                        let hide = () => {document.getElementById("top").style="visibility:none;display:none;"};
+                        document.title = "Resume";
+                        // here we can inject our broadcast channel stuff if we wanna talk to this via javascript
+                    </script>
+                    <div class="no-print" id="top" style="z-index:9999;position:fixed;top:0;left:0;padding-left:32px;border-bottom:1px solid black;height:32px;font-size:14px;line-height:32px;width: 100%;background-color:#eee;">
                         <span>
                         <span><a href="#" onclick="hide()">(Close)</a>              To save as PDF click <a href="#" onclick="window.print()">here</a> and choose destination 'Save to PDF'</span>
                         </span>
