@@ -25,7 +25,27 @@ let resume = {
         fetch("https://registry.jsonresume.org/" + username) // fetch tha html :sunglasses:
             .then(response => response.text() // make it play nicely
                 .then(html => {
-                    let blob = new Blob([html], {type: 'text/html'}); // make a new blob object 
+                    let inject = `
+                    <script>
+                        let hide = () => {document.getElementById("top").style="visibility:none;display:none;"};
+                        document.title = "Resume";
+                        // here we can inject our broadcast channel stuff if we wanna talk to this via javascript
+                    </script>
+                    <style>
+                    @media print
+                    {    
+                        .no-print, .no-print *
+                        {
+                            display: none !important;
+                        }
+                    }
+                    </style>
+                    <div class="no-print" id="top" style="position:fixed;top:0;left:0;padding-left:32px;border-bottom:1px solid black;height:32px;font-size:14px;line-height:32px;width: 100%;background-color:#eee;">
+                        <span>
+                        <span><a href="#" onclick="hide()">(Close)</a>              To save as PDF click <a href="#" onclick="window.print()">here</a> and choose destination 'Save to PDF'</span>
+                        </span>
+                    </div>` // What we put in here will let us communicate to this tab AND inject our print help
+                    let blob = new Blob([inject + html], {type: 'text/html'}); // make a new blob object 
                     let url = URL.createObjectURL(blob); // make it a thing
                     window.open(url); // open it :)
                     })
