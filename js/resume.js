@@ -12,7 +12,7 @@ let resume = {
         resume.innerHTML = `           
         <!--jsonresume schema is neat-->
         <pre id="code" class="fade-in"><h2 style="margin-left: 32px; margin: 5px 0 0 10 px;">Resume</h2>
-            <code data-language="javascript" style="margin-left:32px !important;">`
+            <code data-language="javascript" style="left:32px !important;">`
              + content + 
              `</code>
 
@@ -22,7 +22,7 @@ let resume = {
     },
     // Use the json resume thingy to export to a pdf with the theming.
     "export": (username) => {
-        fetch("https://registry.jsonresume.org/" + username) // fetch tha html :sunglasses:
+        fetch("https://registry.jsonresume.org/" + username + "?theme=stackoverflow") // fetch tha html :sunglasses:
             .then(response => response.text() // make it play nicely
                 .then(html => {
                     let inject = `
