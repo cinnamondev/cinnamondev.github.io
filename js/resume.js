@@ -39,6 +39,10 @@ let resume = {
                             display: none !important;
                         }
                     }
+                    @media print {
+                        @page { margin: 0; size:auto; }
+                        body { margin: 1.6cm; }
+                      }
                     </style>
                     <div class="no-print" id="top" style="position:fixed;top:0;left:0;padding-left:32px;border-bottom:1px solid black;height:32px;font-size:14px;line-height:32px;width: 100%;background-color:#eee;">
                         <span>
