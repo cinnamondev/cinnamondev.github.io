@@ -22,13 +22,12 @@ let resume = {
     },
     // Use the json resume thingy to export to a pdf with the theming.
     "export": (username) => {
-        fetch("https://registry.jsonresume.org/" + username)
-            .then(response => response.text()
+        fetch("https://registry.jsonresume.org/" + username) // fetch tha html :sunglasses:
+            .then(response => response.text() // make it play nicely
                 .then(html => {
-                    console.log(html);
-                    let blob = new Blob([html], {type: 'text/html'});
-                    let url = URL.createObjectURL(blob);
-                    window.open(url);
+                    let blob = new Blob([html], {type: 'text/html'}); // make a new blob object 
+                    let url = URL.createObjectURL(blob); // make it a thing
+                    window.open(url); // open it :)
                     })
             )
     },
