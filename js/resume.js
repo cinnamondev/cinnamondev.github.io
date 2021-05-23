@@ -16,13 +16,21 @@ let resume = {
              + content + 
              `</code>
 
-        <a href="#" class="button" onclick="exportResume()">Download as PDF</a></pre>`
+        <a href="#" class="button" onclick="resume.export('cinnamondev')">Open formatted</a></pre>`
         
         Rainbow.color(); // trigger rainbow to look for things to highlight
     },
     // Use the json resume thingy to export to a pdf with the theming.
-    "export": (username, theme) => {
-
+    "export": (username) => {
+        fetch("https://registry.jsonresume.org/" + username)
+            .then(response => response.text()
+                .then(html => {
+                    console.log(html);
+                    let blob = new Blob([html], {type: 'text/html'});
+                    let url = URL.createObjectURL(blob);
+                    window.open(url);
+                    })
+            )
     },
     // Fetches the github GIST.
     "fetch": (gist, callback) => {
