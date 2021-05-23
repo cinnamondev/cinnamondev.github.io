@@ -22,10 +22,10 @@ let theme = {
     },
 
     // Introduce the button element. Multiple buttons should use the 
-    "addControls": (parentElement = document.body, style="top: 0; right: 0; position: fixed;") => {
-        let button = document.createElement('button');
+    "addControls": (parentElement = document.body, style="top: 0; right: 0; position: fixed;font-size:12px;") => {
+        let button = document.createElement('a');
         button.classList.add('themer');
-        button.id = "theming";                               
+        button.href="#"
         button.innerText = "THEME";                             // Text
         button.style = style;    // change this later.
         parentElement.appendChild(button);                      // Add button to document
