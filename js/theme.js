@@ -9,10 +9,7 @@ let theme = {
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 theme.set('dark');
             } else theme.set('light');
-        }
-
-        // (If set) set the theme to the correct scheme
-        if (localStorage.getItem('theme') === 'dark') {
+        } else if (localStorage.getItem('theme') === 'dark') {
             theme.set('dark');
         } else {
             theme.set('light');
@@ -42,9 +39,13 @@ let theme = {
         }
     },
     "set": (name) => {
-
-
+        let codeTheme = document.getElementById("rainbow-theme");
+        let codes = {
+            "dark": "https://cdn.jsdelivr.net/npm/rainbow-code@2.1.7/themes/css/obsidian.css",
+            "light": "https://cdn.jsdelivr.net/npm/rainbow-code@2.1.7/themes/css/github.css"
+        }
         localStorage.setItem('theme', name);
+        codeTheme.href = codes[name]
         document.documentElement.className = name;
     } 
 }

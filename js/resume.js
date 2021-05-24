@@ -25,15 +25,15 @@ let resume = {
         resume.appendChild(btn);
         panel.innerHTML += `        
         <!--jsonresume schema is neat-->
-        <pre style="width:100%;">
+        <pre style="width:100%;border:none !important;">
         <div style="width:100%;border-bottom:1px solid #ddd">
         <a href="#" class="button" onclick="resume.export('cinnamondev')">Open formatted cv</a>   
         </div>
             <code data-language="javascript" style="left:32px !important;">`
              + content + 
              `</code>
-        </pre>
-        <small>Made using the <a href="https://jsonresume.org/">JSON Resume Schema</a>.</small>`
+
+<small>Made using the <a href="https://jsonresume.org/">JSON Resume Schema</a>.</small></pre>`
         resume.appendChild(panel);
 
         Rainbow.color(); // trigger rainbow to look for things to highlight
@@ -77,7 +77,6 @@ let resume = {
             .then(response => response.json()
                     .then(data => {
                         let json = JSON.stringify(data, null, '\t');
-                        console.log(json);
                         callback(json);
                     }))
     }

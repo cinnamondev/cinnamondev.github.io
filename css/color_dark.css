@@ -4,6 +4,9 @@
 /*@import "color.css";*/ /*Import color scheme.*/
 
 .dark {
+    --lavender-web: hsla(233, 100%, 94%, 1);
+
+    --code-bg: #22282a;
     --color-bg: #222;
     --color-acc: #aaa;
     --a: #1e8ad6;

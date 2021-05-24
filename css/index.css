@@ -8,7 +8,7 @@
 */
 
 @import "./color_dark.css";
-
+@import "./color.css";
 
 
 html,
@@ -72,7 +72,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	line-height: 1.75em;
 	font-size: 16px;
-	background-color: var(--color-bg);
+	background: var(--color-bg);
 	color: var(--color-acc);
     width: 50%;
     margin-left: auto;
@@ -139,18 +139,6 @@ aside,
 	body {
 		font-size: 18px;
 	}
-}
-
-#code {
-	border: 1px solid var(--border);
-	border-radius: 5px;
-	padding-left: 50px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	white-space: -moz-pre-wrap;
-	white-space: -pre-wrap;
-	white-space: -o-pre-wrap;
-	word-wrap: break-word;
 }
 
 
@@ -276,7 +264,7 @@ temp
   
   #code-panel {
 	padding: 0 18px;
-	background-color: #22282A;
+	background-color: var(--code-bg);
 	max-height: 200px;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
@@ -287,4 +275,13 @@ temp
   #resume {
 	  border: 1px solid #ddd;
 	  border-radius: 12px;
+  }
+
+  #code-panel pre {
+	overflow-x: auto;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
   }
