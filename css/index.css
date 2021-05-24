@@ -74,7 +74,7 @@ body {
 	font-size: 16px;
 	background: var(--color-bg);
 	color: var(--color-acc);
-    width: 50%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -232,14 +232,13 @@ a.button:active{
 /*
 temp
 */
-#resume-btn {
+.btn-big {
 	background-color: #eee;
 	color: #444;
 	cursor: pointer;
 	padding: 14px;
-	width: 100%;
 	border: none;
-	border-radius: 10px 10px 0 0;
+	border-radius: 10px 0 0 0;
 	text-align: left;
 	outline: none;
 	font-size: 15px;
@@ -249,21 +248,13 @@ temp
 .active, #resume-btn:hover {
 	background-color: #ccc;
 }
-  
-#resume-btn:after {
-	content: '\002B';
+#btn-expand:after {
 	color: #777;
 	font-weight: bold;
-	float: right;
 	margin-left: 5px;
 }
   
-  .active:after {
-	content: "\2212";
-  }
-  
-  #code-panel {
-	padding: 0 18px;
+  #resume {
 	background-color: var(--code-bg);
 	max-height: 200px;
 	overflow: hidden;
@@ -272,9 +263,12 @@ temp
 	border-radius: 0 0 10px 10px;
   }
 
+  #resume-box {
+	background-color: var(--code-bg);
+  }
+
   #resume {
-	  border: 1px solid #ddd;
-	  border-radius: 12px;
+	  border:none;
   }
 
   #code-panel pre {
@@ -284,4 +278,39 @@ temp
 	white-space: -pre-wrap;
 	white-space: -o-pre-wrap;
 	word-wrap: break-word;
+  }
+
+  #iframe-panel {
+	  display:none;
+  }
+
+  #iframe-panel iframe {
+	  border: none;
+	  width: 100%;
+	  margin: 0 0 0 0;
+	  overflow-y:hidden;
+	  height: 2200px;
+  }
+
+  .render {
+	  display:initial !important;
+  }
+
+  #resume-box {
+	  width:100%;
+	  border:1px solid #eee;
+	  border-radius:12px;
+  }
+
+  .rbtn {
+	  width:50%;
+  }
+
+  #resume-controls {
+	  width: 100%;
+	  margin-left: auto;
+	  margin-right: auto;
+	  display:flex;
+	  justify-content: space-evenly;
+	  border-bottom: 1px solid #eee;
   }

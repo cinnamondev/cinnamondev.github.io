@@ -53,14 +53,14 @@ let resume = {
         fetch(gist)
             .then(response => response.json()
                     .then(data => {
-                        let json = JSON.stringify(data, null, 3);
+                        let json = JSON.stringify(data, null, '\t');
                         callback(json);
                     }))
     },
     // Switch between iframe HTML view
     "povToggle": () => {
-        let iframe = document.getElementById("render-view");
-        let code = document.getElementById("code-view");
+        let iframe = document.getElementById("iframe-panel");
+        let code = document.getElementById("code-panel");
 
         iframe.classList.toggle("render");
         if(iframe.classList.contains("render")) {
@@ -82,22 +82,31 @@ let resume = {
     },
     "generateJson": (gist, callback) =>{
         resume.fetch(gist, (response) => {
-            let pre = document.createElement("pre");
-            let codeBlock = document.createElement("code");
-            codeBlock.setAttribute("data-language", "javascript");
-            codeBlock.id = "code-view";
-            codeBlock.style = "left:32px !important;";
-            codeBlock.innerText = response;
-            pre.appendChild(codeBlock);
-            callback(pre);
+            Rainbow.color(response, 'javascript', (code) => {
+                let codeBlock = `<pre><code data-language="javascript" id="code-view" style="left:32px !important;">` + code + `</code></pre>`;
+                callback(codeBlock);
+            })
         })
     },
     "init": (gistUrl, callback) => {
         let v1 = document.createElement("div");
         let v2 = document.createElement("div"); // make the containers for the things
+        v1.id = "iframe-panel";
+        v2.id = "code-panel";
+
+        let btn = document.getElementById("btn-expand");
+        btn.addEventListener("click", () => {
+            btn.classList.toggle("active");
+            var panel = document.getElementById("resume");
+            if (!btn.classList.contains("active")) {
+              panel.style.maxHeight = "200px";
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        })
 
         resume.renderBlob("cinnamondev", (blob) => {
-            resume.generateIframe(blob, (result) => {
+            resume.generateIframe(blob, (result) => {           
                 v1.appendChild(result);
             })
         })
@@ -105,7 +114,7 @@ let resume = {
 //<small>Made using the <a href="https://jsonresume.org/">JSON Resume Schema</a>.</small>
 
         resume.generateJson(gistUrl, (result) => {
-            v2.appendChild(result);
+            v2.innerHTML = result;
         });
 
         let final = document.getElementById("resume");
@@ -117,3 +126,4 @@ let resume = {
 
     }
 }
+

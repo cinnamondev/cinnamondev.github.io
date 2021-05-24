@@ -34,7 +34,13 @@
 
         <!-- allow for better hiding of resume-->
         <!--<a href="#" onclick="displayResume()" class="button" id="resumeBtn">Open resume</a>-->
-        <div id="resume" class="fade-in"></div>
+        <div id="resume-box" class="fade-in">
+            <div id="resume-controls">
+                <a href="#" class="rbtn btn-big" onclick="resume.povToggle();" style="border-radius: 10px 0 0 0;">Toggle</a>
+                <a href="#" class="rbtn btn-big" id="btn-expand" style="border-radius: 0 10px 0 0;">Expand/collapse</a>
+            </div>
+            <div id="resume"></div>
+        </div>
     </div>
 
     <!--Work on this later.-->
