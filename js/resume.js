@@ -121,6 +121,7 @@ let resume = {
         final.appendChild(v1);
         final.appendChild(v2);
         
+        resume.povToggle();
         callback();
 
 
