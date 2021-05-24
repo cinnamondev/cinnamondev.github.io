@@ -3,22 +3,41 @@
 let resume = {
     "display": (content) => {
         // Optional button
-        let btn = document.getElementById("resumeBtn");
-        if (btn != null) {
-            button.style="display:none;";
-        }
-
         let resume = document.getElementById("resume");
-        resume.innerHTML = `           
+        
+        let btn = document.createElement("button");
+        let panel = document.createElement("div");
+        btn.id = "resume-btn";
+        btn.innerText="Resume";
+        panel.id = "code-panel";
+        panel.classList.add("fadeIn");
+
+        btn.addEventListener("click", () => {
+            btn.classList.toggle("active");
+            var panel = document.getElementById("code-panel");
+            if (!btn.classList.contains("active")) {
+              panel.style.maxHeight = "200px";
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        })
+
+        resume.appendChild(btn);
+        panel.innerHTML += `        
         <!--jsonresume schema is neat-->
-        <pre id="code" class="fade-in"><h2 style="margin-left: 32px; margin: 5px 0 0 10 px;">Resume</h2>
+        <pre style="width:100%;">
+        <div style="width:100%;border-bottom:1px solid #ddd">
+        <a href="#" class="button" onclick="resume.export('cinnamondev')">Open formatted cv</a>   
+        </div>
             <code data-language="javascript" style="left:32px !important;">`
              + content + 
              `</code>
+        </pre>
+        <small>Made using the <a href="https://jsonresume.org/">JSON Resume Schema</a>.</small>`
+        resume.appendChild(panel);
 
-        <a href="#" class="button" onclick="resume.export('cinnamondev')">Open formatted</a></pre>`
-        
         Rainbow.color(); // trigger rainbow to look for things to highlight
+
     },
     // Use the json resume thingy to export to a pdf with the theming.
     "export": (username) => {

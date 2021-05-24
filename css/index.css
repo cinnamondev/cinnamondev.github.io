@@ -195,7 +195,6 @@ a.button:active{
     /* Opera */
 }
 
-
 @keyframes fadein {
     from {
         opacity:0;
@@ -239,3 +238,53 @@ a.button:active{
 	height:50px;
 	vertical-align: middle;
 }
+
+
+
+/*
+temp
+*/
+#resume-btn {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 14px;
+	width: 100%;
+	border: none;
+	border-radius: 10px 10px 0 0;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	transition: 0.4s;
+  }
+  
+.active, #resume-btn:hover {
+	background-color: #ccc;
+}
+  
+#resume-btn:after {
+	content: '\002B';
+	color: #777;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+  
+  .active:after {
+	content: "\2212";
+  }
+  
+  #code-panel {
+	padding: 0 18px;
+	background-color: #22282A;
+	max-height: 200px;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	width:100%;
+	border-radius: 0 0 10px 10px;
+  }
+
+  #resume {
+	  border: 1px solid #ddd;
+	  border-radius: 12px;
+  }
