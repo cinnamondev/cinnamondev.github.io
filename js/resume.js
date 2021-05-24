@@ -103,7 +103,6 @@ let resume = {
         final.appendChild(v2);
         
         resume.povToggle();
-        callback();
 
 
     }
