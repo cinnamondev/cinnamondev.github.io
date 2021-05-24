@@ -1,8 +1,8 @@
 // Resume manager
 
 let resume = {
-    "renderBlob": (username, callback) => { // all good
-        fetch("https://registry.jsonresume.org/" + username + "?theme=kendall") // fetch tha html :sunglasses:
+    "renderBlob": (username, theme, callback) => { // all good
+        fetch("https://registry.jsonresume.org/" + username + "?theme=" + theme) // fetch tha html :sunglasses:
             .then(response => response.text() // make it play nicely
                 .then(html => {
                     let inject = `
@@ -30,23 +30,6 @@ let resume = {
                     callback(blob);
                 }));
     },
-    "jsonRender": (content) => {
-        panel.innerHTML += `        
-        <!--jsonresume schema is neat-->
-        <pre style="width:100%;border:none !important;">
-        <div style="width:100%;border-bottom:1px solid #ddd">
-        <a href="#" class="button" onclick="resume.export('cinnamondev')">Open in new tab</a>
-        <a href="#" class="button" onclick="resume.povToggle()">Change view</a>  
-        </div>
-            <iframe id="render-view" class="render"></iframe>
-            <code data-language="javascript" id="code-view" style="left:32px !important;">`
-             + content + 
-             `</code>
-</pre>`
-
-        Rainbow.color(); // trigger rainbow to look for things to highlight
-
-    },
     // Use the json resume thingy to export to a pdf with the theming.
     // Fetches the github GIST.
     "fetch": (gist, callback) => {
@@ -73,8 +56,8 @@ let resume = {
         }
     },
     // set everything up
-    "generateIframe": (blob, callback) => {
-        resume.renderBlob("cinnamondev", (blob) => {
+    "generateIframe": (username, theme,callback) => {
+        resume.renderBlob(username, theme, (blob) => {
             let iframe = document.createElement("iframe"); // our iframe
             iframe.src = URL.createObjectURL(blob);
             callback(iframe);
@@ -88,7 +71,7 @@ let resume = {
             })
         })
     },
-    "init": (gistUrl, callback) => {
+    "init": (gistUser, gistUrl, theme, callback) => {
         let v1 = document.createElement("div");
         let v2 = document.createElement("div"); // make the containers for the things
         v1.id = "iframe-panel";
@@ -105,10 +88,8 @@ let resume = {
             } 
         })
 
-        resume.renderBlob("cinnamondev", (blob) => {
-            resume.generateIframe(blob, (result) => {           
-                v1.appendChild(result);
-            })
+        resume.generateIframe(gistUser, theme, (result) => {           
+            v1.appendChild(result);
         })
 
 //<small>Made using the <a href="https://jsonresume.org/">JSON Resume Schema</a>.</small>
