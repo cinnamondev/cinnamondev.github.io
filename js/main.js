@@ -4,6 +4,7 @@ let gist = "https://gist.githubusercontent.com/cinnamondev/a5a99818256d192c2d6ca
 
 window.onload = () => {
     theme.addControls();
-    resume.fetch(gist, (json) => {resume.display(json)});
+    //resume.fetch(gist, (json) => {resume.display(json)});
+    resume.init(gist, () => Rainbow.color());
 }
 
