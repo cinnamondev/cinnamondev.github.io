@@ -6,23 +6,33 @@ let user = "cinnamondev";
 let rth = "kendall";
 
 window.onload = () => {
-    theme.addControls();
+    theme.start();
     //resume.fetch(gist, (json) => {resume.display(json)});
     resume.init(user, gist, rth);
 
-    let themeColor = docu
+    codeTheme();
+
+
+}
+
+function codeTheme() {
     let codeTheme = document.getElementById("rainbow-theme");
     let codes = {
         "dark": "https://cdn.jsdelivr.net/npm/rainbow-code@2.1.7/themes/css/obsidian.css",
         "light": "https://cdn.jsdelivr.net/npm/rainbow-code@2.1.7/themes/css/github.css"
     }
 
-    let name = localStorage.getItem("theme")
+    let name = localStorage.getItem("theme");
     codeTheme.href = codes[name];
+}
 
-
+function betterInvert() {
+    theme.invert();
+    codeTheme();
 }
 
 function resizeIframe(iframe) {
     iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
   }
+
+let test = localStorage.getItem("theme");

@@ -177,52 +177,6 @@ a.button:active{
 	}
 }
 
-.fade-in {
-	animation: fadein 2s;
-    -moz-animation: fadein 2s;
-    /* Firefox */
-    -webkit-animation: fadein 2s;
-    /* Safari and Chrome */
-    -o-animation: fadein 2s;
-    /* Opera */
-}
-
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-moz-keyframes fadein {
-    /* Firefox */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-webkit-keyframes fadein {
-    /* Safari and Chrome */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-o-keyframes fadein {
-    /* Opera */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 #header {
 	border-bottom: 1px solid var(--color-acc);
 	margin-top: 10px;
@@ -261,43 +215,13 @@ temp
 	background-color: var(--code-bg);
 	max-height: 200px;
 	overflow: hidden;
-	transition: max-height 0.2s ease-out;
 	width:100%;
-	border-radius: 0 0 10px 10px;
   }
 
   #resume-box {
 	background-color: var(--code-bg);
   }
 
-  #resume {
-	  border:none;
-  }
-
-  #code-panel pre {
-	overflow-x: auto;
-	white-space: pre-wrap;
-	white-space: -moz-pre-wrap;
-	white-space: -pre-wrap;
-	white-space: -o-pre-wrap;
-	word-wrap: break-word;
-  }
-
-  #iframe-panel {
-	  display:none;
-  }
-
-  #iframe-panel iframe {
-	  border: none;
-	  width: 100%;
-	  margin: 0 0 0 0;
-	  overflow-y:hidden;
-	  height: 2200px;
-  }
-
-  .render {
-	  display:initial !important;
-  }
 
   #resume-box {
 	  width:100%;

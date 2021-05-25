@@ -1,0 +1,90 @@
+
+
+.fade-in {
+	animation: fadein 5s;
+    -moz-animation: fadein 5s;
+    /* Firefox */
+    -webkit-animation: fadein 5s;
+    /* Safari and Chrome */
+    -o-animation: fadein 5s;
+    /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein {
+    /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein {
+    /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+  
+  #resume {
+	max-height: 200px;
+	overflow: hidden;
+	transition: max-height 1s ease-out;
+	border-radius: 0 0 10px 10px;
+    border:none;
+  }
+
+  #code-panel pre {
+	overflow-x: auto;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+  }
+
+
+/* initial iframe container state*/
+#iframe-panel {
+	display:none;
+}
+
+
+/* iframe */
+  #iframe-panel iframe {
+	  border: none;
+	  width: 100%;
+	  margin: 0 0 0 0;
+	  overflow-y:hidden;
+	  height: 2200px;
+  }
+
+/*Tell it to render*/
+  .render {
+	  display:initial !important;
+  }
+
+
+
