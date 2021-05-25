@@ -6,10 +6,4 @@ let rth = "kendall";
 
 window.onload = () => {
     theme.addControls();
-    //resume.fetch(gist, (json) => {resume.display(json)});
-    resume.init(user, gist, rth)
 }
-
-function resizeIframe(iframe) {
-    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
-  }
