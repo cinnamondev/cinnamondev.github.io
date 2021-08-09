@@ -5,9 +5,9 @@
 "use strict";
 
 let theme = {
-    "current": () => {return localStorage.getItem('theme')}, // if you so desire
+    "current": () => {return localStorage.getItem('cinnamondev_theme')}, // if you so desire
     "default": () => {
-        let state = localStorage.getItem('theme');
+        let state = localStorage.getItem('cinnamondev_theme');
         if (state === null ) {
             // attempt to discover value by system preference
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches) {
@@ -18,11 +18,25 @@ let theme = {
     },
     "invert": () => {
         theme.set(
-            parseInt(localStorage.getItem('theme')) ^ 1 // XOR to swap the values :)
+            parseInt(localStorage.getItem('cinnamondev_theme')) ^ 1 // XOR to swap the values :)
             );
     },
     "set": (value) => {
-        localStorage.setItem('theme', value);
-        document.documentElement.className = value;
+        localStorage.setItem('cinnamondev_theme', value);
+        // dumb css
+        let state = "a";
+        switch(value) {
+            case 0:
+                state = "a";
+                break;
+            case 1:
+                state = "b";
+                break;
+            default:
+                state = "a";
+                console.warn("Theme Manager - invalid theme was set! Defualted to light...");
+                break;
+        }
+        document.documentElement.id = state;
     }
 }
