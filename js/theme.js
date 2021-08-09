@@ -1,36 +1,28 @@
-// Javascript color manager.
+// Simple JS Themes! (Supports 2 themes)
+// Cinnamondev, licensed under Apache 2.0
+
+// Simply make your color schemes under either a class called 0 for dark or class called 1 for light.
 "use strict";
 
 let theme = {
-    // Sets the theme on load.
-    "start": () => {
-        // Set to respect the OS/browser scheme preference (if unset)
-        if (localStorage.getItem('theme') === null) {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                theme.set('dark');
-            } else theme.set('light');
-        } else if (localStorage.getItem('theme') === 'dark') {
-            theme.set('dark');
-        } else {
-            theme.set('light');
+    "current": () => {return localStorage.getItem('theme')}, // if you so desire
+    "default": () => {
+        let state = localStorage.getItem('theme');
+        if (state === null ) {
+            // attempt to discover value by system preference
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches) {
+                theme.set(0);
+            } else {theme.set(1);}
         }
+        theme.set(state);
     },
-    // Triggered manually or by the button. Switches color scheme.
     "invert": () => {
-        console.log("Invert is triggered!"); // invert trigger
-
-
-        if (localStorage.getItem('theme') === 'dark') {
-            theme.set('light');
-        } else { 
-            theme.set('dark');
-        }
+        theme.set(
+            parseInt(localStorage.getItem('theme')) ^ 1 // XOR to swap the values :)
+            );
     },
-    "set": (name) => {
-        localStorage.setItem('theme', name);
-        document.documentElement.className = name;
-    } 
+    "set": (value) => {
+        localStorage.setItem('theme', value);
+        document.documentElement.className = value;
+    }
 }
-
-
-
