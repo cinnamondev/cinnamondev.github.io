@@ -185,7 +185,7 @@ let hover = {
         }
         
         .hoverbox a, .hoverbox a:hover,.hoverbox a:active,.hoverbox a:visited,.hoverbox a:link {
-            font-size: 20px;
+            font-size: 17px;
             color: var(--text-black);
             white-space:nowrap;
             overflow:hidden;
@@ -204,18 +204,23 @@ let hover = {
         
         .hover_content {
             margin-top: 10px;
-            max-height: 100px;
+            min-height: 100px;
         
         }
         
         .hover_content img {
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+            position:absolute;
+            bottom: 0;
+            right:0;
             max-width: 100px;
-            display:inline;
-            float:right;
             border-radius: 0 0 10px 0;
         }
         .hover_content p {
-            height: 100px;
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
             width: calc(100% - 110px);
             margin-left: 5px;
             float:left;

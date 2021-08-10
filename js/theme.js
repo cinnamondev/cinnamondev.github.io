@@ -1,7 +1,7 @@
 // Simple JS Themes! (Supports 2 themes)
 // Cinnamondev, licensed under Apache 2.0
 
-// Simply make your color schemes under either a class called 0 for dark or class called 1 for light.
+// Simply make your color schemes under either a class called b for dark or class called a for light.
 "use strict";
 
 let theme = {

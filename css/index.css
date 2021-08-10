@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
+
 #a {
+    --font: 'IBM Plex Serif', serif;
     --text-black: #444;
     --bg-color: #eee;
     --header-color: #bbb;
-    --nav-active: #222;
+    --nav-active: #000;
     --hoverjs-bg: #eee;
     --hoverjs-txt: #444;
 }
@@ -17,6 +20,7 @@ body {
     margin: 0; padding: 0;
     color: var(--text-black);
     background-color: var(--bg-color);
+    font-family: var(--font);
 }
 
 
@@ -27,6 +31,7 @@ body {
     align-items: center;
     flex-direction: column;
     max-width: 1400px;
+    width: 75vw;
 }
 /*Header CSS*/
 #header {
@@ -80,13 +85,12 @@ body {
 
 
 #content {
-    max-width: 1400px;
-    margin-top: 128px;
+    min-width:100%;
+    min-height: calc(100vh - 100px);
 }
 
 
 #footer {
-    position:absolute;
     bottom: 0;
     height: 32px;
     width: 100%;
@@ -105,6 +109,11 @@ body {
 
 .centered {
     text-align: center;
+}
+@media only screen and (max-width: 800px) {
+    #flexdiv {
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 540px) {
     /* move to hamburger menu */
@@ -129,3 +138,22 @@ body {
     }
 
   }
+
+
+
+/* Projects */
+
+.project {
+    width: 100%;
+    border-bottom: 1px solid var(--nav-active);
+    display: flex;
+}
+
+.thumbnail {
+    padding-top: 60px;
+    max-width: 240px;
+}
+.thumbnail a {
+    text-align: center;
+    display: block;
+}
