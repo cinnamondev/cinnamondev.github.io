@@ -1,5 +1,6 @@
-// Open the hamburger on button click
+theme.default();
 
+// Open the hamburger on button click
 function openHamburger() {
     let list = document.getElementById("links");
     if (list.style.display === "flex") {
@@ -17,7 +18,6 @@ window.addEventListener('resize', () => {
     } else { list.style.display = "none"; }
 });
 
-theme.default();
 document.addEventListener("DOMContentLoaded", (e) => {
     hover.init();
 })

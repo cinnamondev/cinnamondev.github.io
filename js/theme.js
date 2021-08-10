@@ -25,7 +25,7 @@ let theme = {
         localStorage.setItem('cinnamondev_theme', value);
         // dumb css
         let state = "a";
-        switch(value) {
+        switch(parseInt(value)) {
             case 0:
                 state = "a";
                 break;
@@ -37,6 +37,7 @@ let theme = {
                 console.warn("Theme Manager - invalid theme was set! Defualted to light...");
                 break;
         }
+        console.log("Theme set to " + value)
         document.documentElement.id = state;
     }
 }
