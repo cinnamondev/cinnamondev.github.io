@@ -1,32 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="a"> <!--If no JS default to light.-->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/theme.js" onload="theme.default();"></script>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/theme.js"></script>
+    <script src="js/hover.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/hover_test.css"/>
 
     <title>cinnamondev site</title>
 </head>
 <body>
-    <div id="header">
-        <h1>Cinnamondev</h1>
-        <!-- Header navigation bar -->
-        <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+    <div id="flexdiv">
+        <div id="header">
+            <h1><a href="#" class="nohover">Cinnamondev</a></h1>
+            <!-- Header navigation bar -->
+            <a href="javascript:void(0)" class="burger nohover" onclick="openHamburger()">
+                <!--Google material icons SVG for Menu-->
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </a>
+            <ul id="links">
+                <li><a href="#" class="active nohover">Home</a></li>
+                <li><a href="#" class="nohover">Projects</a></li>
+                <li><a href="#" class="nohover">Contact</a></li>
+            </ul>
+    
+        </div>
+    
+        <div id="content">
+             <span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor eu odio eget elementum. Donec tempor pharetra augue, vitae euismod massa gravida tincidunt. Proin scelerisque egestas justo et sollicitudin. Duis posuere interdum nisi sed luctus. Vivamus vestibulum metus sed cursus iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi pharetra nunc nisl, id ultrices urna vestibulum in. Vestibulum hendrerit, odio nec commodo egestas, nisl nisl gravida nisl, quis dignissim augue enim porttitor augue.
+<br><br>
+Sed vel lorem turpis. In hac habitasse platea dictumst. Curabitur sagittis arcu at dui scelerisque tempor. In cursus vel turpis eu mattis. Nulla elementum pulvinar nunc vel consectetur. Vestibulum sollicitudin urna quis tellus facilisis vulputate. Cras nec iaculis sem.
+<br><br>
+Morbi fermentum scelerisque mauris at suscipit. Aliquam augue diam, finibus et posuere vitae, elementum vitae erat. Maecenas vulputate, purus a faucibus blandit, sem tellus mattis urna, at feugiat mi dolor eu sapien. Fusce id viverra augue. Nam suscipit vel arcu vitae gravida. Praesent condimentum vitae enim nec bibendum. Nam at lobortis lectus. Sed gravida dolor eros, in blandit tellus facilisis sit amet. Cras sed dui nulla. Duis iaculis est sed quam molestie, sit amet maximus nisi ultricies. Duis tempus, mi quis pretium scelerisque, ipsum nibh aliquet lorem, a rutrum tortor tortor non urna. Nam a pellentesque neque. Ut ultrices mollis nunc sit amet rutrum. Aliquam maximus felis dolor, ac faucibus justo pharetra vel. Pellentesque tristique, dui vitae elementum euismod, eros erat fermentum justo, non ultricies nulla erat et dolor. Phasellus sit amet est quis turpis ultrices euismod.
+<br><br>
+Morbi diam sem, egestas ut mauris eu, dictum dignissim purus. Phasellus ante eros, blandit ac varius vitae, iaculis ut tellus. Duis eget nulla sollicitudin, blandit leo non, dapibus metus. Nam varius efficitur placerat. Duis fermentum interdum hendrerit. Duis ac ipsum tellus. Phasellus eget metus in sem suscipit vehicula sit amet eu enim. Aenean in nisi bibendum, sagittis dolor ac, suscipit neque. Etiam ultricies leo sed justo blandit, congue aliquet ante rutrum. Donec commodo pretium magna sed tempus. Sed nec diam tortor.
+<br><br>
+Nulla sit amet rhoncus mi. Etiam et nibh lobortis, cursus lorem eget, commodo erat. Nunc at metus vehicula, varius magna quis, sodales urna. Fusce rhoncus ligula eget malesuada aliquet. Curabitur posuere risus sit amet luctus sollicitudin. Nullam in euismod eros, sed congue nisi. Ut eu ipsum quis augue faucibus placerat. Donec a risus molestie, feugiat ante et, molestie enim. In eget ex lectus. Duis ultricies tortor at lorem varius imperdiet. Nunc consequat posuere velit, nec hendrerit erat sagittis dapibus. Mauris maximus rutrum felis at aliquam. Cras non aliquet metus. 
+             </span>
+        </div>
+    
+        <div id="footer">
+            <div class="centered">Cinnamondev - Licensed under the Apache 2.0 License. <a href="https://github.com/cinnamondev/">Github</a>
+            <a href="javascript:void(0)" onclick="theme.invert()" class="force-right nohover">Theme</a></div>
 
+        </div>
     </div>
 
-    <div id="content">
-        This is a work in progress.
-    </div>
-
-    <div id="footer">
-        <a href="https://github.com/cinnamondev/">Github</a>
-    </div>
 </body>
 </html>
