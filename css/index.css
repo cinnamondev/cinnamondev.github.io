@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
 
+#b {
+    --font: 'IBM Plex Serif', serif;
+    --text-color: #ccc;
+    --bg-color: #111;
+    --header-color: #bbb;
+    --nav-active: #fff;
+    --hoverjs-bg: #222;
+    --hoverjs-txt: #eee;
+}
+
 #a {
     --font: 'IBM Plex Serif', serif;
-    --text-black: #444;
+    --text-color: #444;
     --bg-color: #eee;
     --header-color: #bbb;
     --nav-active: #000;
@@ -10,15 +20,11 @@
     --hoverjs-txt: #444;
 }
 
-#b {
-    --text-black: green;
-}
-
 body {
     height: 100vh;
     width: 100vw;
     margin: 0; padding: 0;
-    color: var(--text-black);
+    color: var(--text-color);
     background-color: var(--bg-color);
     font-family: var(--font);
 }
@@ -35,13 +41,16 @@ body {
 }
 /*Header CSS*/
 #header {
+    position: fixed;
     height: 64px;
-    width: 100%;
+    width: 75vw;
+    background-color: var(--bg-color);
+    z-index: 999;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     align-items:center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--nav-active);
 }
 
 #header h1 {
@@ -76,7 +85,7 @@ body {
 /* Link text decor*/ 
 #header a, #header a:hover,#header a:active,#header a:visited,#header a:link {
     text-decoration: none;
-    color: var(--text-black);
+    color: var(--text-color);
 }
 
 #header * {
@@ -85,6 +94,7 @@ body {
 
 
 #content {
+    padding-top: 64px;
     min-width:100%;
     min-height: calc(100vh - 100px);
 }
@@ -93,6 +103,7 @@ body {
 #footer {
     bottom: 0;
     height: 32px;
+    font-size: small;
     width: 100%;
 }
 
@@ -137,6 +148,16 @@ body {
         border-bottom: 1px solid black;
     }
 
+    .prjct-thumbnail {
+        padding-top: 30px !important;
+
+        max-width: 240px;
+    }
+    .prjct-thumbnail img {
+        padding-top: 30px !important;
+        width: 100px !important; 
+    }
+
   }
 
 
@@ -144,16 +165,29 @@ body {
 /* Projects */
 
 .project {
-    width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
     border-bottom: 1px solid var(--nav-active);
+    padding-bottom: 5px;
     display: flex;
+    justify-content: space-between;
 }
 
-.thumbnail {
-    padding-top: 60px;
+.license {
+    bottom: 0;
+}
+
+.prjct-thumbnail {
+    padding-top: 30px;
     max-width: 240px;
 }
-.thumbnail a {
+
+.prjct-thumbnail img{
+    max-width: 240px;
+}
+.prjct-thumbnail a {
     text-align: center;
     display: block;
 }
