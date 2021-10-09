@@ -2,22 +2,26 @@
 
 #b {
     --font: 'IBM Plex Serif', serif;
-    --text-color: #ccc;
+    --text-color: #eee;
     --bg-color: #111;
     --header-color: #bbb;
-    --nav-active: #fff;
+    --nav-active: #ffcff1;
     --hoverjs-bg: #222;
     --hoverjs-txt: #eee;
+
+    --link: #ffcff1;
 }
 
 #a {
     --font: 'IBM Plex Serif', serif;
-    --text-color: #444;
-    --bg-color: #eee;
+    --text-color: #555;
+    --bg-color: #ffddfb;
     --header-color: #bbb;
     --nav-active: #000;
-    --hoverjs-bg: #eee;
+    --hoverjs-bg: #ffe7f7;
     --hoverjs-txt: #444;
+
+    --link: #852565;
 }
 
 body {
@@ -173,6 +177,7 @@ body {
     padding-bottom: 5px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .license {
@@ -181,13 +186,46 @@ body {
 
 .prjct-thumbnail {
     padding-top: 30px;
+    padding-left: 30px;
     max-width: 240px;
 }
 
 .prjct-thumbnail img{
     max-width: 240px;
+    border: 1px solid var(--nav-active);
+    border-radius: 15px;
+    background-color: #eee;
 }
 .prjct-thumbnail a {
     text-align: center;
     display: block;
+}
+
+#main_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#main_center h1 {
+    font-size: 48px;
+    margin: 0 0 0 0;
+}
+
+#main_center h2 {
+    font-size: 30px;
+    margin: 0 0 0 0;
+}
+#main_center p {
+    font-size: 20px;
+}
+
+#main_center a:any-link {
+    font-style: italic;
+    padding-right: 30px;
+    color: var(--link);
+    text-decoration: none;
 }
