@@ -12,6 +12,7 @@
     --link: #ffcff1;
 }
 
+
 #a {
     --font: 'IBM Plex Serif', serif;
     --text-color: #555;
@@ -62,12 +63,10 @@ body {
 }
 #header ul {
     list-style-type: none;
-    margin:0 32px 0 0;
+    margin:0 0px 0 0;
     padding:0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 5px;
 
 }
 #header li {
@@ -140,6 +139,13 @@ body {
         line-height: 64px;
 
     }
+
+    #a .hamburger-darkmode {
+        display: none;
+    }
+    #b .hamburger {
+        display: none;
+    }
     #header ul {
         display:none;
         flex-direction: column;
@@ -149,7 +155,7 @@ body {
     }
 
     #header li {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid var(--nav-active);
     }
 
     .prjct-thumbnail {
