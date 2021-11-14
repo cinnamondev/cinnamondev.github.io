@@ -30,7 +30,7 @@
     --link: #852565;
 }
 html {
-    max-width: 100%;margin:0 0 0 0;padding:0 0 0 0;
+    max-width: 100%;margin:0 0 0 0;padding:0 0 0 0;margin-left: calc(100vw - 100%); /* accounts for scrollbar and % dont */
 }
 
 body {
@@ -113,11 +113,10 @@ body {
     min-height: calc(100vh - 100px);
 }
 
-
 #footer {
     bottom: 0;
     height: 32px;
-    font-size: small;
+    font-size: 15px;
     width: 100%;
 }
 
