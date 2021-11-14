@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Quicksand:wght@700&display=swap');
 
 #b {
     --font: 'IBM Plex Serif', serif;
@@ -195,6 +194,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.project:last-child {
+    border-bottom:none;
+    padding-bottom: 32px;
 }
 
 .license {
