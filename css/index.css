@@ -250,3 +250,7 @@ body {
     color: var(--link);
     text-decoration: none;
 }
+
+.thumbnails img {
+    width: 150px !important;
+}

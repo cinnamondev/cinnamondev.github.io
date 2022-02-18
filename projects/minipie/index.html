@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" id="a"> <!--If no JS default to light.-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/index.css"/>
+    <script src="../../js/theme.js"></script>
+    <!--<script src="js/hover.js"></script>-->
+    <script src="../../js/index.js"></script>
+
+    <title>Project: Minipie</title>
+</head>
+<body>
+    <div id="flexdiv">
+        <div id="header">
+            <h1><a href="index.html" class="nohover">Cinnamondev</a></h1>
+            <!-- Header navigation bar -->
+            <a href="javascript:void(0)" class="burger nohover" onclick="openHamburger()">
+                <!--Google material icons SVG for Menu-->
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </a>
+            <ul id="links">
+                <li><a href="../../index.html" class="nohover">Home</a></li>
+                <li><a href=".." class="active nohover">Projects</a></li>
+                <li><a href="../../contact.html" class="nohover">Contact</a></li>
+            </ul>
+    
+        </div>
+        <div id="content">
+            <article class="project">
+                <div>
+                    <h2>Pie handheld</h2>
+                    <p>
+                        Handheld device powered by the Compute Module 4.
+                        To be finished, parts are on backorder, with
+                        a custom shell being designed.
+                    </p>
+                </div>
+                <div class="prjct-thumbnail">
+                    <img src="../assets/project-minipie.png"/>
+                    <little><a href="https://github.com/cinnamondev/gamepithing">Github</a></little>
+                </div>
+            </article>
+            <article class="project">
+                
+                <div>
+                    <h2>Design</h2>
+                    <p>
+                        Initial idea: CM4 carrier connected to a screen in a GBA SP shell.
+                    </p>
+                    <p>
+                        Issues with initial idea:
+                        <ul>
+                            <li>Thin dimensions, not much room to work with for cooling/batties/etc..</li>
+                            <li>Smaller dimenions meant only smaller batteries (~2000mAh) could be used.</li>
+                            <li>Relatively high power consumption of CM4 meant this may mean issues with short (&lt;1h) battery life </li>
+                        </ul>
+                        Too thin to store larger batteries, smaller size worsened problem. No exact dimensions available to work with
+                        Screen was quite small.
+                    </p>
+                    <p>
+                        New idea: CM4 carrier connected to a screen in a custom, 3d printed shell. Screen is on a slider mechanism to reveal gamepad/accessory pad. Magnets used to lock screen in desired positions.
+                    </p>
+                </div>
+                <div class="thumbnails">
+                    <div class="prjct-thumbnail">
+                        <img src="gbasp.jpg" alt="Gameboy Advance SP" title="By Pippi - I made it myself., CC BY-SA 3.0 https://commons.wikimedia.org/w/index.php?curid=4405691"></img>
+                        <little><a href="https://commons.wikimedia.org/w/index.php?curid=4405691">Image source (WM Commons)</a></little>
+                    </div>
+                    <div class="prjct-thumbnail">
+                        <img src="gbasp.jpg" alt="placeholder image render"></img>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project">
+                <div>
+                    <h2>Final component choices (BOM & some reasoning here)</h2>
+                    <p>
+                        INCLUDE EXCEL LINK OR MD PORT
+                    </p>
+                </div>
+            </article>
+
+            <article class="project">
+                <div>
+                    <h2>Download, Contributing & Other information</h2>
+                    <p>
+                        Download the repository from github: Download as ZIP or use the git client. (<a href="https://git-scm.com/">git</a> required)<br>
+                        <code>git clone https://www.github.com/cinnamondev/gamepithing</code>
+                        Kicad Version 6+ is required.
+                    </p>
+                    <p>
+                        Feel free to improve! If you are merging to this repository, please state what has been changed and why. Contributions are always welcome!
+                    </p>
+                    <p class="license">Licensed under <a href="https://ohwr.org/cern_ohl_s_v2.pdf">CERN Open Hardware Licence V2 - Strongly Reciprocal</a>.</p>
+                </div>
+            </article>
+
+
+
+        </div>
+    
+        <div id="footer">
+            <div class="centered">Cinnamondev - Licensed under the Apache 2.0 License. <a href="https://github.com/cinnamondev/">Github</a>
+            <a href="javascript:void(0)" onclick="theme.invert()" class="force-right nohover">Theme</a></div>
+            <a href=".." onclick="" class="force-right nohover">Back to projects</a></div>
+
+        </div>
+    </div>
+
+</body>
+</html>
