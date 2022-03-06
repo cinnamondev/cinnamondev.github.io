@@ -39,5 +39,9 @@ let theme = {
         }
         console.log("Theme set to " + value)
         document.documentElement.id = state;
+    },
+    "removePreference": () => {
+        localStorage.removeItem('cinnamondev_theme');
+        theme.default();
     }
 }

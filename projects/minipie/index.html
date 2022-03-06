@@ -30,11 +30,11 @@
         <div id="content">
             <article class="project">
                 <div>
-                    <h2>Pie handheld</h2>
+                    <h2>Development log - Pie Handheld</h2>
                     <p>
                         Handheld device powered by the Compute Module 4.
                         To be finished, parts are on backorder, with
-                        a custom shell being designed.
+                        a custom shell being designed (3d printed)
                     </p>
                 </div>
                 <div class="prjct-thumbnail">
@@ -63,17 +63,17 @@
                     <p>
                         Issues with new idea
                         <ul>
-                            <li>It will be thiccer :(</li>
+                            <li>It will be thicker :(</li>
                         </ul>
                         Pros with new idea
                         <ul>
                             <li>Complete control on port placement, button placement, etc...</li>
-                            <li>Additional room for cooling</li>
-                            <li>Bigger battery</li>
+                            <li>Additional room for cooling (passive heatsinks, etc)</li>
+                            <li>Bigger battery (big plus)</li>
                         </ul>
                         Current additional ideas:
                         <ul>
-                            <li>Seperate gamepad board into seperate daughter board communicating with main board, allows for customisable design based on current bos</li>
+                            <li><strike>Seperate gamepad board into seperate daughter board communicating with main board, allows for customisable design based on current bos</strike> Impractical fn!</li>
                         </ul>
                     </p>
                 </div>
@@ -84,6 +84,57 @@
                     </div>
                     <div class="prjct-thumbnail">
                         <img src="pie.png" alt="Render of WIP new shell." title="Render of WIP new shell."></img>
+                        <little>Earlier revision of the design (no adaptor board)</little>
+                    </div>
+                    <div class="prjct-thumbnail">
+                        <img src="pierev3.png" alt="Render of WIP new shell." title="Render of WIP new shell."></img>
+                        <little>Later revision of the design (adaptor board)</little>
+                    </div>
+                </div>
+            </article>
+            <article class="project">
+                <div>
+                    <h2>Design - Prototype casings</h2>
+                    <p>
+                        (Images of previous casing designs, with issues and changes. There were some different minor revisions between that do not need mentioning.)
+                    </p>
+                    <ol>
+                        <li>
+                            <p>Initial design featured dovetail slides in the plastic, with very little tolerance, meaning lots of post processing was required in order to get any sort of functionality.</p> 
+                            <p> No tracks on the edge were made either, allowing for the head 'screen' unit to move side-to-side along the fixed post, causing it to catch, preventing the sliding of the 2 parts</p> 
+                            <p>The positioning in the initial state of the cable entry point on the screen would've also meant that the ribbon cable connecting the screen to the mainboard would be allowed to catch/pinch when in a closed state, causing potentially damage over time.</p>                       
+                        </li>
+                        <li>
+                            <p>(No bottom part was printed in this revision).<br>Major changes: Additional thickness added to screen to accomodate real display (DFRobot DFR0550). New entry point for ribbon cable</p>
+                            <p>Part was not developed past this due to some issues with the lower screw holes printing incorrectly, insufficent distance for the counterbored screw hole without the hole collapsing somewhat.</p>
+                            <p>Parts were also still, too high tolerances (screen needs additional room to prevent ribbon being pinched, magnet diameter too exact to accomodate tolerances in manufacturing...</p>
+                        </li>
+                        <li>
+                            <p>This revision was a major redesign. Most parts were remade with new tolerances in mind and the additional side tracks were added to stop the screen moving side-to-side and catching. Screen fits in this one! Bottom part was also printed in this revision.</p>
+                            <p>Major issues found later: The screen cable is still likely to be stressed due to the bends it has to take to connect to the main board, and as it slides it will be frequently bent in many directions. In the next revision this should be accomodated for. The screen brightness control is also hard to access (small hole)</p>
+                        </li>
+                        <li>
+                            <p>Semi-redesigned... ish. The part was resized to accomodate for battery choices and new parts (bottom of the base component) has now been designed. An adaptor board has been designed to prevent stress on the cable in the screen component (see above), which will hopefully prevent most stress situations.</p>
+                            <p>This one is to be printed (ran out of PLA :( )</p>
+                        </li>
+                    </ol>
+                </div>
+                <div>
+                    <div class="prjct-thumbnail">
+                        <img src="rev0Proto.jpg"/>
+                        <little style="text-align: center; display: block;">Figure 1</little>
+                    </div>
+                    <div class="prjct-thumbnail">
+                        <img src="rev1Proto.jpg"/>
+                        <little style="text-align: center; display: block;">Figure 2</little>
+                    </div>
+                    <div class="prjct-thumbnail">
+                        <img src="rev2Proto.jpg"/>
+                        <little style="text-align: center; display: block;">Figure 3</little>
+                    </div>
+                    <div class="prjct-thumbnail">
+                        <img src="pierev3.png"/>
+                        <little style="text-align: center; display: block;">Figure 4</little>
                     </div>
                 </div>
             </article>
@@ -109,6 +160,11 @@
                         Feel free to improve! If you are merging to this repository, please state what has been changed and why. Contributions are always welcome!
                     </p>
                     <p class="license">Licensed under <a href="https://ohwr.org/cern_ohl_s_v2.pdf">CERN Open Hardware Licence V2 - Strongly Reciprocal</a>.</p>
+                </div>
+                <div class="thumbnails">
+                    <div class="prjct-thumbnail">
+                        <img src="../assets/oshw-logo-800-px.png" style="padding:5px;">
+                    </div>
                 </div>
             </article>
 
