@@ -10,6 +10,8 @@
     <script src="js/index.js"></script>
 
     <title>cinnamondev site</title>
+
+    <!-- Testing branch: testing project 'drawer' concept and Single page.-->
 </head>
 <body>
     <div id="flexdiv">

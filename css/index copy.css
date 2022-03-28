@@ -1,21 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Quicksand:wght@700&display=swap');
-/*Palette*/
 
-/* Color palette (Light)*/
 #b {
     --font: 'IBM Plex Serif', serif;
     --text-color: #eee;
-    --bg-color: #212121;
+    --bg-color: #222;
     --header-color: #bbb;
-    --__nav-active: rgba(255, 209, 241, 0);
-    --nav-active: rgb(255, 209, 241);
+    --nav-active: #ffcff1;
     --hoverjs-bg: #222;
     --hoverjs-txt: #eee;
 
     --link: #ffcff1;
 }
 
-/* Color palette (Dark)*/
+
 #a {
     --font: 'IBM Plex Serif', serif;
     --text-color: #555;
@@ -25,21 +22,14 @@
 --pale-pink: hsla(351, 47%, 88%, 1);
     --bg-color: var(--languid-lavender);
     --header-color: #bbb;
-    --__nav-active: rgba(0, 0, 0, 0);
-    --nav-active: rgba(0, 0, 0, 1);
+    --nav-active: #000;
     --hoverjs-bg: #ffe7f7;
     --hoverjs-txt: #444;
 
     --link: #852565;
 }
-
-
-/*Palette*/
-
-
 html {
-    max-width: 100vw;margin:0 0 0 0;padding:0 0 0 0;margin-left: calc(100vw - 100%); /* accounts for scrollbar and % dont */
-    scroll-behavior: smooth;
+    max-width: 100%;margin:0 0 0 0;padding:0 0 0 0;margin-left: calc(100vw - 100%); /* accounts for scrollbar and % dont */
 }
 
 body {
@@ -65,35 +55,18 @@ body {
 }
 /*Header CSS*/
 #header {
+    position: fixed;
     height: 64px;
-    width: 40%;
+    width: 75vw;
+    background-color: var(--bg-color);
     z-index: 999;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     align-items:center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#headerExterior {
-    position: fixed;
-    height: 64px;
-    width:90%;
-    background-color: var(--bg-color);
-    z-index: 999;
-    /*border-bottom: 1px solid var(--nav-active);
-    backdrop-filter: blur(5px);*/
-    transition: background 0.5s linear;
-}
-
-.headerBorder {
     border-bottom: 1px solid var(--nav-active);
-    animation: fadeInBorder 5s;
-    -webkit-animation: fadeInBorder 5s;
-    -moz-animation: fadeInBorder 5s;
-    -o-animation: fadeInBorder 5s;
-    -ms-animation: fadeInBorder 5s;  
+    backdrop-filter: blur(5px);
+    transition: background 0.5s linear;
 }
 
 #header h1 {
@@ -133,7 +106,7 @@ body {
 }
 
 
-.content {
+#content {
     padding-top: 64px;
     min-width:100%;
     min-height: calc(100vh - 100px);
@@ -286,42 +259,3 @@ body {
     display: flex;
     flex-direction: row;
 }
-
-
-/* border uses var(--nav-active)*/
-@keyframes fadeInBorder {
-    0% {border-color: var(--__nav-active); }
-    100% {border-color: var(--nav-active);}
-  }
-  
-  @-moz-keyframes fadeInBorder {
-    0% {border-color: var(--__nav-active); }
-    100% {border-color: var(--nav-active);}
-  }
-  
-  @-webkit-keyframes fadeInBorder {
-    0% {border-color: var(--__nav-active); }
-    100% {border-color: var(--nav-active);}
-  }
-  
-  @-o-keyframes fadeInBorder {
-    0% {border-color: var(--__nav-active); }
-    100% {border-color: var(--nav-active);}
-  }
-  
-  @-ms-keyframes fadeInBorder {
-    0% {border-color: var(--__nav-active); }
-    100% {border-color: var(--nav-active);}
-  }
-
-  .sectionHeader {
-      width: 75%;
-      height: 64px;
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
-      text-align: center;
-      border-bottom: 1px solid var(--nav-active);
-      padding-top: 64px;
-      margin-top: -64px;
-    }

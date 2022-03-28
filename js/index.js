@@ -22,3 +22,13 @@ document.addEventListener("DOMContentLoaded", (e) => {
     //hover.init();
     console.warn("HoverJS disabled until bug fix - see https://github.com/cinnamondev/cinnamondev.github.io/issues/1")
 })
+
+document.addEventListener('scroll', (function() {
+    scrollTop = window.scrollY;
+    if (scrollTop > 100){  
+        document.getElementById("headerExterior").classList.add("headerBorder");
+    }
+    else{
+        document.getElementById("headerExterior").classList.remove("headerBorder");
+    }
+}));
