@@ -1,192 +1,135 @@
 <!DOCTYPE html>
-<html lang="en" id="a"> <!--If no JS default to light.-->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css"/>
     <script src="js/theme.js"></script>
-    <!--<script src="js/hover.js"></script>-->
+    <script src="js/accordian.js"></script>
     <script src="js/index.js"></script>
-
-    <title>cinnamondev site</title>
+    <title>Jemma B</title>
 </head>
-<body>
-    <div id="flexdiv">
-        <div id="headerExterior">
-            <div id="header">
-                <h1><a href="index.html" class="nohover">Cinnamondev</a></h1>
-                <!-- Header navigation bar -->
-                <a href="javascript:void(0)" class="burger nohover" onclick="openHamburger()">
-                    <!--Google material icons SVG for Menu-->
-                    <svg class="hamburger-darkmode"xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-                    <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-                </a>
-                <ul id="links">
-                    <li><a href="#" class="active nohover">Home</a></li>
-                    <li><a href="#Projects" class="nohover">Projects</a></li>
-                </ul>
-            </div>
-    
-        </div> 
-        <div class="content">
-                
-            <div id="main_center">
-                <h1>Hi!</h1>
-                <h2>I make things :)</h2>
+<body id="a" class="preload">
+    <!-- Header -->
+    <section id="header">
+        <h1><a href="index.html">Cinnamondev</a></h1>
+        <!--<nav>
+            <ul>
+                <li>
+                    <a href="#">Item</a>
+                </li>
+                <li>
+                    <a href="#">Item</a>
+                </li>
+                <li>
+                    <a href="#">Item</a>
+                </li>
+                <li>
+                    <a href="#">Item</a>
+                </li>
+                <li>
+                    <a href="#">Item</a>
+                </li>
+               
+            </ul>
+        </nav>-->
+    </section>
+
+    <!-- Main section -->
+    <section id="introductory">
+        <section>
+            <p id="introMotto">Hi!</p>
+            <p>I'm Jemma. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec libero arcu. Ut mattis posuere varius. Maecenas ultricies massa ac lorem pellentesque, non fringilla diam sagittis. Vestibulum sed aliquet arcu, non mollis massa. Nam in dapibus augue. Nullam dapibus mollis quam, ut sodales enim semper sit amet. Sed mattis risus sed turpis volutpat feugiat. Vestibulum bibendum dui in neque ornare, ac finibus massa posuere. Aliquam erat volutpat. Maecenas pharetra ligula nibh, sit amet egestas eros ornare a. Fusce venenatis consectetur risus ut auctor. Aliquam erat volutpat. Vestibulum sit amet lacus in arcu iaculis convallis vitae quis justo. </p>
+        </section>
+        <aside>
+            <ul>
+                <li><a href="#" class="nav-active">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="#resume">Contact</a></li>
+            </ul>
+        </aside>
+        <a href="#projects" id="introJump"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg></a>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <article class="project">
+            <a onclick="Accordian.toggle('projectName', '100vh')"><div>Pi Handheld 
+                <aside>
+                <img src="assets/Resistor_symbol_Europe.svg" title="Electronics project" class="projectSymb symbEUResist"/>
+                <img src="assets/ISO_C++_Logo.svg" title="C++ Programming" class="projectSymb"/>
+                <img src="assets/Fusion_360_Logo.png" title="F360 CAD Suite" class="projectSymb"/>
+                <img src="assets/KiCad-Logo.svg" title="EDA Software KICAD" class="projectSymb"/>
+            </aside></div></a>
+            <div id="projectName" class="projectContents">
                 <p>
-                    <a href="https://github.com/cinnamondev" class="nohover" target="_blank">Github</a>
-                    <a href="https://gitlab.com/pr0mpted"class="nohover" target="_blank">Gitlab</a>
-                    <a href="./projects/index.html"class="nohover">Projects</a>
-                    <a href="contact.html"class="nohover" style="padding-right:0 !important;">Contact</a>
-                </p>
-                <p id="contactLinks">
-                    <a href="https://twitter.com/swwtcinnamon" target="_blank"class="nohover">Twitter</a>
-                    <a href="https://github.com/cinnamondev" target="_blank" class="nohover">Github</a>
-                    <a href="https://en.wikipedia.org/wiki/User:Prompt0259" target="_blank" class="nohover">EnWiki (Wikipedia)</a>
-                    <a href="https://discordapp.com/users/303632699057504266"target="_blank" class="nohover" style="padding-right:0 !important;">Discord (Prompt)</a>
+                    Handheld portable designed around the Compute Module 4, which is a SBC designed for use with custom designs.
                 </p>
                 <p>
-                    <a href="#" onclick="theme.invert()">(Set theme)</a>
-                    <a href="#" onclick="theme.removePreference();">(Reset theme)</a>
+                    This was my first major electronics project, using KiCAD for PCB design and F360 for designing the casing, which was 3D printed.
                 </p>
             </div>
+        </article>
 
+        <article class="project">
+            <a onclick="Accordian.toggle('csElec', '100vh')"><div>(CW) PIC Keypad
+                <aside>
+                    <img src="assets/Resistor_symbol_Europe.svg" title="Electronics Project" class="projectSymb symbEUResist"/>
+                </aside>
+            </div></a>
+            <div id="csElec" class="projectContents">
+                <p>
+                    Used MPASM assembly on a PIC16 to develop a 'code-checker' that read a keypad using multiplexer techniques that are similar to how any traditional keyboard is read today.
+                </p>
+                <p>
+                    There was also an additional project to develop a dtmf transmitter/reciever.
+                </p>
+                <p>
+                    Source will not be shared as this is board submitted work.
+                </p>
+            </div>
+        </article>
+        <article class="project">
+            <a onclick="Accordian.toggle('csCW', '100vh')"><div>(CW) Quiz program
+                <aside>
+                    <img src="assets/csharp.svg" title="C# Programming" class="projectSymb"/>
+                    <img src="assets/logo_vb.svg" title="VBA Programming" class="projectSymb"/>
+                </aside>
+            </div></a>
+            <div id="csCW" class="projectContents">
+                <p>
+                    Quiz program made during A-Levels for Computer Science that used .NET to develop a quiz program for students. Done as part of coursework.
+                </p>
+                <p>
+                    Source will not be shared as this is board submitted work.
+                </p>
+            </div>
+        </article>
+        <article class="project lastProject">
+            <a onclick="Accordian.toggle('website', '100vh')"><div>Website & HoverJS
+                <aside>
+                    <img src="assets/Unofficial_JavaScript_logo_2.svg" title="Javascript" class="projectSymb"/>
+                    <img src="assets/HTML5 Logo.svg" title="HTML" class="projectSymb"/>
+                    <img src="assets/CSS3_logo_and_wordmark.svg" title="CSS" class="projectSymb"/>
+                </aside>
+            </div></a>
+            <div id="website" class="projectContents">
+                <p>
+                    A place for projects
+                </p>
+                <p>Licensed under Apache 2.0</p>
+            </div>
+        </article>
 
-
-
-        </div>
-        
-        <div class="content">
-            <div id="Projects"/>
-            <section class="sectionHeader">
-                <h1>Projects</h1>
-            </section>
-            <article class="project">
-                <div>
-                    <h2>Pi Handheld (Name T.B.D)</h2>
-                    <p>
-                        Handheld device powered by the Compute Module 4.
-                        To be finished, parts are on backorder, with
-                        a custom shell being designed.
-                    </p>
-                    <p class="license">Licensed under the CERN Open Hardware Licence V2 - Strongly Reciprocal</p>
-                    <!--
-                    <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor eu odio eget elementum. Donec tempor pharetra augue, vitae euismod massa gravida tincidunt. Proin scelerisque egestas justo et sollicitudin. Duis posuere interdum nisi sed luctus. Vivamus vestibulum metus sed cursus iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi pharetra nunc nisl, id ultrices urna vestibulum in. Vestibulum hendrerit, odio nec commodo egestas, nisl nisl gravida nisl, quis dignissim augue enim porttitor augue.
-                    </span>    
-                -->
-                </div>
-                <div class="prjct-thumbnail">
-                    <img src="./assets/project-minipie.png"/>
-                    <little><a href="minipie/">Project page</a></little>
-                    <little><a href="https://github.com/cinnamondev/gamepithing">Github</a></little>
-                </div>
-            </article>
-            <article class="project">
-                <div>
-                    <h2>Website</h2>
-                    <p>
-                        A place for all my projects to nicely go - designed for readability and simplicity.<br>
-                    </p>
-                    <p>Feel free to take any code you want from this! Particularly happy with the hover.js component of this project
-                        (Hyperlink preview with metadata). The theme thing is also neat and very simple to setup. Just probably change the item names so that it doesnt confuse your site.
-                    </p>
-                    <p><strike><a href="hoverdemo.html" style="pointer-events: none;cursor: default;">Demo for hover link</a></strike></p>
-                    <p class="license">Licensed under the Apache 2 License</p>
-                    <!--
-                    <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor eu odio eget elementum. Donec tempor pharetra augue, vitae euismod massa gravida tincidunt. Proin scelerisque egestas justo et sollicitudin. Duis posuere interdum nisi sed luctus. Vivamus vestibulum metus sed cursus iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi pharetra nunc nisl, id ultrices urna vestibulum in. Vestibulum hendrerit, odio nec commodo egestas, nisl nisl gravida nisl, quis dignissim augue enim porttitor augue.
-                    </span>    
-                -->
-                </div>
-                <div class="prjct-thumbnail">
-                    <img src="./assets/project_website.png"/>
-                    <little><a href="https://github.com/cinnamondev/cinnamondev.github.io">Github</a></little>
-                </div>
-            </article>
-            <article class="project">
-                <div>
-                    <h2>HoverDotCS</h2>
-                    <p>
-                        To tie in with website (Hyperlink preview/Hover.js)
-                    </p>
-                    <p>
-                        An experiment making a web-scraper to get Open Graph (or otherwise) metadata from a web page.
-                    </p>
-                    <p> It will have to deal with various issues such as caching said metadata / deciding how long to keep it too. Will likely be next project once existing projects are dealt with</p>
-                    <p class="license">Licensed under the Apache 2 License</p>
-                    <!--
-                    <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor eu odio eget elementum. Donec tempor pharetra augue, vitae euismod massa gravida tincidunt. Proin scelerisque egestas justo et sollicitudin. Duis posuere interdum nisi sed luctus. Vivamus vestibulum metus sed cursus iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi pharetra nunc nisl, id ultrices urna vestibulum in. Vestibulum hendrerit, odio nec commodo egestas, nisl nisl gravida nisl, quis dignissim augue enim porttitor augue.
-                    </span>    
-                -->
-                </div>
-                <div class="prjct-thumbnail">
-                    <img src="./assets/project_website.png"/>
-                    <little><strike><a href="#" style="pointer-events: none;cursor: default;">Github</a></strike></little>
-                </div>
-            </article>
-            <article class="project">
-                <div>
-                    <h2>ESP32 Alarm</h2>
-                    <p>
-                        (TBF) ESP32 clock that allows for alarms to be played as well as additional automation tasks (easy toggle light switches via buttons, etc...)
-                    </p>
-                    <p class="license">Currently unlicensed. (Not made)</p>
-                </div>
-                <div class="prjct-thumbnail">
-                    <img src="./assets/notfound.png"/>
-                    <little><strike><a href="#" style="pointer-events: none;cursor: default;">Github</a></strike></little>
-                </div>
-            </article>
-            <article class="project">
-                <div>
-                    <h2>'Math Program'</h2>
-                    <p>
-                        Unavailable due to use as coursework. C# Winforms math quizzing program.
-                    </p>
-                    <p>
-                        I am keeping this private U.F.N due to trying to avoid possible conflicts with coursework, but it has a focus on many mathmatics related algorithms such as the Shunting Yard algorithm, etc...
-                    </p>
-                    <p class="license">Unlicensed (Not for release)</p>
-                </div>
-                <div class="prjct-thumbnail">
-                    <img src="./assets/graphicFrog.jpg"/>
-                    <little><strike><a href="#" style="pointer-events: none;cursor: default;">Github</a></strike></little>
-                </div>
-            </article>
-<!--
-            <article class="project">
-                <div>
-                    <h2>Coinchecker</h2>
-                    <p>
-                        C# (was VB originally)/ WPF experiment - interfaces with the coinbase API to try and display some info on coins (also see: cb-api repo)
-                    </p>
-                    <p>
-                        Partially completed, abandoned mostly because why the hell does no .NET UI have graphs :(
-                    </p>
-                    <p class="license">Licensed under the MIT License</p>
-                </div>
-                <div class="prjct-thumbnail">
-                    <img src="./assets/notfound.png"/>
-                    <little><a href="https://github.com/cinnamondev/coinchecker">Github</a></little>
-                </div>
-            </article>
-        -->
-
-
-
-        </div>
-
-
-
-        <div id="footer">
-            <div class="centered">Cinnamondev - Licensed under the Apache 2.0 License. <a href="https://github.com/cinnamondev/">Github</a>
-            <a href="javascript:void(0)" onclick="theme.invert()" class="force-right nohover">Set theme</a></div>
-
-        </div>
-    </div>
-
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+    </section>
+    <section id="footer">
+        <p>Licensed under the Apache 2 license, made by me! <a href="https://www.github.com/cinnamondev">Steal my code</a></p>
+    </section>
+    <a href="#" id="toTopButton"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg></a>
 </body>
-</html>
+</html>3

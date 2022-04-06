@@ -1,3 +1,4 @@
+/*
 theme.default();
 
 // Open the hamburger on button click
@@ -23,12 +24,21 @@ document.addEventListener("DOMContentLoaded", (e) => {
     console.warn("HoverJS disabled until bug fix - see https://github.com/cinnamondev/cinnamondev.github.io/issues/1")
 })
 
+
+*/
+setTimeout(function(){
+    document.body.className="";
+},500);
+
+
 document.addEventListener('scroll', (function() {
-    scrollTop = window.scrollY;
-    if (scrollTop > 100){  
-        document.getElementById("headerExterior").classList.add("headerBorder");
+    let scrollTop = window.scrollY;
+    if (scrollTop > 500){
+        if (window.matchMedia('(max-width: 700px)').matches) { document.getElementById("introJump").style = "display: none;"; }
+        document.getElementById("toTopButton").classList.add("show");
     }
     else{
-        document.getElementById("headerExterior").classList.remove("headerBorder");
+        if (window.matchMedia('(max-width: 700px)').matches) { document.getElementById("introJump").style = "display: fixed;";  } else { document.getElementById("introJump").style = "display: initial;"; }
+        document.getElementById("toTopButton").classList.remove("show");
     }
 }));

@@ -3,25 +3,10 @@
 
 // Simply make your color schemes under either a class called b for dark or class called a for light.
 "use strict";
-
 let theme = {
-    "current": () => {return localStorage.getItem('cinnamondev_theme')}, // if you so desire
-    "default": () => {
-        let state = localStorage.getItem('cinnamondev_theme');
-        if (state === null ) {
-            // attempt to discover value by system preference
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches) {
-                theme.set(0);
-            } else {theme.set(1);}
-        }
-        theme.set(state);
-    },
-    "invert": () => {
-        theme.set(
-            parseInt(localStorage.getItem('cinnamondev_theme')) ^ 1 // XOR to swap the values :)
-            );
-    },
-    "set": (value) => {
+    "current": () => {return localStorage.getItem(theme.config.location);},
+
+    "Set": (value) => {
         localStorage.setItem('cinnamondev_theme', value);
         // dumb css
         let state = "a";
@@ -40,8 +25,24 @@ let theme = {
         console.log("Theme set to " + value)
         document.documentElement.id = state;
     },
-    "removePreference": () => {
+
+    "SetToPreferred": () => {
+        if ( localStorage.getItem(theme.config.location) == null) {
+            // Attempt to discover by system preference. if all else fails it will revert to Theme B.
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches) {
+                theme.Set(0);
+            } else {theme.Set(1);}
+        }
+    },
+
+    "Invert": () => {
+        theme.Set(
+            parseInt(localStorage.getItem('cinnamondev_theme')) ^ 1 // XOR to swap the values :)
+            );
+    },
+
+    "RemovePreference": () => {
         localStorage.removeItem('cinnamondev_theme');
-        theme.default();
+        theme.SetToPreferred();
     }
 }
