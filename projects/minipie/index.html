@@ -44,7 +44,10 @@
                             <a href="#design">Design</a>
                         </li>
                         <li>
-                            <a href="#designP">Design - Prototyping</a>
+                            <a href="#designP">Design - Prototyping (Shell)</a>
+                        </li> 
+                        <li>
+                            <a href="#designElec">Designing the carrier</a>
                         </li>
                         <li>
                             <a href="#licensing">Downloading, contributing and other information</a>
@@ -131,6 +134,9 @@
                             <p>Semi-redesigned... ish. The part was resized to accomodate for battery choices and new parts (bottom of the base component) has now been designed. An adaptor board has been designed to prevent stress on the cable in the screen component (see above), which will hopefully prevent most stress situations.</p>
                             <p>This one is to be printed (ran out of PLA :( )</p>
                         </li>
+                        <li>
+                            <p>Newest design (from 11/04/22) will reflect component placement decisions. Some parts like the cable will be in slightly different positions to accomodate the place on the PCB preventing stress by creating bends etc...</p>
+                        </li>
                     </ol>
                 </div>
                 <div>
@@ -152,6 +158,30 @@
                     </div>
                 </div>
             </article>
+            <article class="project id="designElec">
+                <div>
+                    <h2>Designing the electronics</h2>
+                    <h3>1. Part choices</h3>
+                    <p>A lot of components seem to be out of stock or backordered, so part choices were limited. See Figure 1. for basic block diagram</p>
+                    <h3>2. Building the schematic</h3>
+                    <p>This is the first project I'm designing using professional EDA software, and I had some to learn before making the second revision of the board (first revision was for GBASP Shell).
+                        I found between revisions reading on some advice on PCB design was helpful. <a href="http://alternatezone.com/electronics/files/PCBDesignTutorialRevA.pdf">David L. Jone's 'PCB Design' document</a> was particularly helpful.
+                        Using this, I stuck to a 50thou grid in my schematic, and carrying forward 50/100thou grids when it comes to PCB design.
+                    </p>
+                    <h3>3. Building the PCB (indev)</h3>
+                    <p>Work In progress (check later)</p>
+                </div>
+                <div>
+                    <div class="prjct-thumbnail">
+                        <a href="Block diagram.svg"><img src="Block diagram.svg"/></a>
+                        <little style="text-align: center; display: block;">Figure 1</little>
+                    </div>
+                    <div class="prjct-thumbnail">
+                        <a href="CM4Carrier.svg"><img src="CM4Carrier.svg"/></a>
+                        <little style="text-align: center; display: block;">Figure 2</little>
+                    </div>
+                </div>
+            </article>
 <!--
             <article class="project">
                 <div>
@@ -169,6 +199,9 @@
                         Download the repository from github: Download as ZIP or use the git client. (<a href="https://git-scm.com/">git</a> required)<br>
                         <code>git clone https://www.github.com/cinnamondev/gamepithing</code><br>
                         Kicad <strong>Version 6+</strong> is required.
+                    </p>
+                    <p>
+                        Note: The Fusion 360 files are not yet available because they are still being actively worked on and I don't want to bother with exporting and importing and all that fuss. I will include them in Github releases of Gerbers etc when the design is 'ready for hackery'
                     </p>
                     <p>
                         Feel free to improve! If you are merging to this repository, please state what has been changed and why. Contributions are always welcome!
