@@ -5,7 +5,6 @@
 "use strict";
 let theme = {
     "current": () => {return localStorage.getItem(theme.config.location);},
-
     "Set": (value) => {
         localStorage.setItem('cinnamondev_theme', value);
         // dumb css

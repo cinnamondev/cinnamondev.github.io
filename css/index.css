@@ -100,6 +100,20 @@ body {
     padding: 0 0 0 0;
     margin: 0 0 0 0;
 }
+#header input {
+    font-family: 'IBM Plex Serif', serif;
+    color: var(--header-color);
+    font-size: 2em;
+    text-align: center;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    vertical-align:middle;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    
+}
+
 h1 a:any-link {
     color: var(--header-color);
     text-decoration: none;
@@ -312,4 +326,9 @@ div.projectContents{
 }
 .symbEUResist {
     filter: invert(97%) sepia(50%) saturate(85%) hue-rotate(222deg) brightness(112%) contrast(87%);
+}
+
+.header404 {
+    text-align: center;
+    vertical-align:middle;
 }
