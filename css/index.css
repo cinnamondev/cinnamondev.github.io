@@ -201,14 +201,7 @@ body {
         border-bottom: 1px solid var(--nav-active);
     }
 
-    .prjct-thumbnail {
-        padding-top: 30px !important;
-
-        max-width: 240px;
-    }
-
     .prjct-thumbnail img {
-        padding-top: 30px !important;
         width: 100px !important;
     }
 
@@ -295,5 +288,5 @@ body {
 }
 
 .thumbnails img {
-    width: 150px !important;
+    width: 100px !important;
 }
