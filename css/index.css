@@ -18,8 +18,8 @@
     --text-color: #555;
     /*--bg-color: #ffddfb;*/
     --manatee: hsla(218, 17%, 62%, 1);
---languid-lavender: hsla(275, 18%, 79%, 1);
---pale-pink: hsla(351, 47%, 88%, 1);
+    --languid-lavender: hsla(275, 18%, 79%, 1);
+    --pale-pink: hsla(351, 47%, 88%, 1);
     --bg-color: var(--languid-lavender);
     --header-color: #bbb;
     --nav-active: #000;
@@ -28,17 +28,23 @@
 
     --link: #852565;
 }
+
 html {
-    max-width: 100%;margin:0 0 0 0;padding:0 0 0 0;margin-left: calc(100vw - 100%); /* accounts for scrollbar and % dont */
+    max-width: 100%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    margin-left: calc(100vw - 100%);
+    /* accounts for scrollbar and % dont */
 }
 
 body {
     height: 100vh;
-    margin: 0 0 0 0; padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
     color: var(--text-color);
-	background: var(--bg-color);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+    background: var(--bg-color);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: var(--font);
     transition: background 0.5s linear;
 }
@@ -53,6 +59,7 @@ body {
     max-width: 1400px;
     width: 75vw;
 }
+
 /*Header CSS*/
 #header {
     position: fixed;
@@ -60,43 +67,59 @@ body {
     width: 75vw;
     background-color: var(--bg-color);
     z-index: 999;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:center;
+    align-items: center;
     border-bottom: 1px solid var(--nav-active);
     backdrop-filter: blur(5px);
     transition: background 0.5s linear;
 }
 
 #header h1 {
-    padding-left: 32px;
+    position: absolute;
+    line-height: 32px;
+    top:0;
+    width:100%;
+    height:64px;
+    padding: 0 0 0 0;
+    margin-top: 12px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
 }
+
 #header ul {
     list-style-type: none;
-    margin:0 0px 0 0;
-    padding:0;
-    display: flex;
-    flex-direction: row;
+    margin: 0 0px 0 0;
+    padding: 0;
+    position: absolute;
+    right:0;
+    top: 0;
 
 }
+
 #header li {
-    display:block;
+    display: inline-block;
     padding: 0 16px 0 16px;
     height: 64px;
     line-height: 64px;
     text-align: center;
 }
+
 .active {
     color: var(--nav-active) !important;
 }
+
 #header li a {
-    font-size:x-large;
+    font-size: x-large;
     display: block;
 }
 
-/* Link text decor*/ 
-#header a, #header a:hover,#header a:active,#header a:visited,#header a:link {
+/* Link text decor*/
+#header a,
+#header a:hover,
+#header a:active,
+#header a:visited,
+#header a:link {
     text-decoration: none;
     color: var(--text-color);
 }
@@ -108,7 +131,7 @@ body {
 
 #content {
     padding-top: 64px;
-    min-width:100%;
+    min-width: 100%;
     min-height: calc(100vh - 100px);
 }
 
@@ -133,18 +156,21 @@ body {
 .centered {
     text-align: center;
 }
+
 @media only screen and (max-width: 800px) {
     #flexdiv {
         width: 100%;
     }
 }
+
 @media only screen and (max-width: 540px) {
+
     /* move to hamburger menu */
     .burger {
         display: block;
         visibility: visible;
         margin-right: 32px;
-        height:64px;
+        height: 64px;
         line-height: 64px;
 
     }
@@ -152,12 +178,14 @@ body {
     #a .hamburger-darkmode {
         display: none;
     }
+
     #b .hamburger {
         display: none;
     }
+
     #header ul {
         background-color: var(--bg-color);
-        display:none;
+        display: none;
         flex-direction: column;
         position: absolute;
         width: 100%;
@@ -173,12 +201,13 @@ body {
 
         max-width: 240px;
     }
+
     .prjct-thumbnail img {
         padding-top: 30px !important;
-        width: 100px !important; 
+        width: 100px !important;
     }
 
-  }
+}
 
 
 
@@ -195,8 +224,9 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 .project:last-child {
-    border-bottom:none;
+    border-bottom: none;
     padding-bottom: 32px;
 }
 
@@ -210,12 +240,13 @@ body {
     max-width: 240px;
 }
 
-.prjct-thumbnail img{
+.prjct-thumbnail img {
     max-width: 240px;
     border: 1px solid var(--nav-active);
     border-radius: 15px;
     background-color: #eee;
 }
+
 .prjct-thumbnail a {
     text-align: center;
     display: block;
@@ -240,6 +271,7 @@ body {
     font-size: 30px;
     margin: 0 0 0 0;
 }
+
 #main_center p {
     font-size: 20px;
 }
