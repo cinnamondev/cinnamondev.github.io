@@ -14,7 +14,12 @@
 <body>
     <div id="flexdiv">
         <div id="header">
-            <h1><a href="index.html" class="nohover">Cinnamondev</a></h1>
+            <h1>
+                <div class="header404">
+                    <input value="Cinnamondev onkeydown=event.keycode===13 && this.blur();" id="eeInput"/>
+                    
+                </div>
+            </h1>
             <!-- Header navigation bar -->
             <a href="javascript:void(0)" class="burger nohover" onclick="openHamburger()">
                 <!--Google material icons SVG for Menu-->
@@ -38,35 +43,43 @@
             <a href="javascript:void(0)" onclick="theme.invert()" class="force-right nohover">Theme</a></div>
 
         </div>
-
-        <script>
-            let audio = new Audio('');
-            let element = document.getElementById("eeInput");
-            element.value = "Cinnamondev"
-            element.addEventListener('blur', (e) => {
-                easterParser(element.value)
-            }, false)
-    
-            function easterParser(value) {
-                audio.loop = false; audio.pause();
-                document.body.style = "";
-                value = value.toLowerCase()
-                switch (value) {
-                    case "vine":
-                        console.log("vine boom");
-                        audio = new Audio('./assets/vine-boom.mp3');
-                        audio.loop = true;
-                        audio.play();
-                        document.body.style = "background-image: url('../assets/looking-kinda-sus.gif');background-size:300px;"
-                        break;
-                    case "sussy":
-                        break;
-                    default:
-                        break;
-                }
-            }
-        </script>
     </div>
 
+    <script>
+        let audio = new Audio('');
+        let element = document.getElementById("eeInput");
+        element.value = "Cinnamondev"
+        element.addEventListener('blur', (e) => {
+            easterParser(element.value)
+        }, false)
+
+        function easterParser(value) {
+            audio.loop = false; audio.pause();
+            document.body.style = "";
+            value = value.toLowerCase()
+            switch (value) {
+                case "vine":
+                    console.log("vine boom");
+                    audio = new Audio('./assets/vine-boom.mp3');
+                    audio.loop = true;
+                    audio.play();
+                    document.body.style = "background-image: url('../assets/looking-kinda-sus.gif');background-size:300px;"
+                    break;
+                case "sussy":
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+    <style>
+        #header {
+            background-color: var(--background-color) !important;            
+        }
+        #introductory section {
+            background-color: var(--background-color) !important;
+            border-radius: 15px;
+        }
+    </style>
 </body>
 </html>
