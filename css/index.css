@@ -35,6 +35,7 @@ html {
     padding: 0 0 0 0;
     margin-left: calc(100vw - 100%);
     /* accounts for scrollbar and % dont */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -156,18 +157,23 @@ body {
     text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
     #flexdiv {
-        width: 100%;
+        width: 100% !important;
+    }
+    #header {
+        width: 100% !important;
     }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 900px) {
 
     /* move to hamburger menu */
     .burger {
         display: block;
+        position: absolute;
         visibility: visible;
+        right:0;
         margin-right: 32px;
         height: 64px;
         line-height: 64px;
@@ -280,6 +286,12 @@ body {
     padding-right: 30px;
     color: var(--link);
     text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .project {
+        flex-direction: column;
+    }
 }
 
 .thumbnails img {
