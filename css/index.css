@@ -43,7 +43,7 @@ body {
     padding: 0 0 0 0;
     color: var(--text-color);
     background: var(--bg-color);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: fixed;
     font-family: var(--font);
     transition: background 0.5s linear;
