@@ -1,61 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" id="a"> <!--If no JS default to light.-->
+<html lang="en" id="a">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="js/index.js" defer></script>
     <script src="js/theme.js"></script>
-    <!--<script src="js/hover.js"></script>-->
-    <script src="js/index.js"></script>
-
-    <title>Cinnamondev - Projects</title>
+    <title>Cinnamondev</title>
 </head>
-<body>
-    <div id="flexdiv">
-        <div id="header">
-            <h1><a href="index.html" class="nohover">Cinnamondev</a></h1>
-            <!-- Header navigation bar -->
-            <a href="javascript:void(0)" class="burger nohover" onclick="openHamburger()">
-                <!--Google material icons SVG for Menu-->
-                <svg class="hamburger-darkmode"xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-                <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-            </a>
-            <ul id="links">
-                <li><a href="index.html" class="active nohover">Home</a></li>
-                <li><a href="./projects/minipie/" class="nohover">Projects</a></li>
-                <li><a href="contact.html" class="nohover">Contact</a></li>
+<body onload="theme.default();">
+    <div id="headerUnder">
+        <header>
+            <h1><a href="#">Cinnamondev</a></h1>
+            <a href="javascript:;" onclick="toggleHamburger()" class="hamburger"><img src="./assets/menu_FILL1_wght400_GRAD0_opsz48.svg" style="filter:var(--pallete);"></a>
+            <ul class="nav" id="mainNav">
+                <li><a href="javascript:;" class="burgerItem">Home</a></li>
+                <li><a href="javascript:;">Projects</a></li>
+                <li><a href="javascript:;">Resume</a></li>
+                <li><a href="javascript:;">Contact</a></li>
+                <li id="closeBurger"><a href="javascript:;" onclick="toggleHamburger()">x</a></li>
             </ul>
-    
-        </div>
-        <div id="content">
-                
-            <div id="main_center">
-                <h1>Hi!</h1>
-                <h2>I make things :)</h2>
-                <p>
-                    <a href="https://github.com/cinnamondev" class="nohover" target="_blank">Github</a>
-                    <a href="https://gitlab.com/pr0mpted"class="nohover" target="_blank">Gitlab</a>
-                    <a href="./projects/minipie/"class="nohover">Projects</a>
-                    <a href="contact.html"class="nohover" style="padding-right:0 !important;">Contact</a>
-                </p>
-                <p>
-                    <a href="#" onclick="theme.invert()">(Set theme)</a>
-                    <a href="#" onclick="theme.removePreference();">(Reset theme)</a>
-                </p>
-            </div>
-
-
-
-
-        </div>
-    
-        <div id="footer">
-            <div class="centered">Cinnamondev - Licensed under the Apache 2.0 License. <a href="https://github.com/cinnamondev/">Github</a>
-            <a href="javascript:void(0)" onclick="theme.invert()" class="force-right nohover">Set theme</a></div>
-
-        </div>
+        </header>
     </div>
-
+    <section id="p1">
+            <div>
+                <p class="greeting">Hi!</p>
+                <section>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan aliquet orci sed commodo. Curabitur rutrum eget nunc a condimentum. Phasellus et porttitor nisl. Morbi sed efficitur massa. Nunc eu dui dictum, suscipit nunc a, sodales ligula. Nam suscipit nisl vitae suscipit fermentum. In nec dolor venenatis, bibendum leo tincidunt, commodo enim. Etiam auctor dolor ut est gravida fringilla. Praesent vulputate at nibh quis laoreet. Cras tincidunt nisi ac neque auctor suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus neque lectus, pharetra a dui quis, gravida ornare diam. Maecenas urna urna, pharetra ac placerat iaculis, mollis non neque. Quisque maximus neque ut ornare vestibulum. Nunc sit amet aliquet turpis. </p>
+                </section>
+            </div>
+            <little class="scrollToolTip">
+                <div>
+                    <a href="https://www.github.com/cinnamondev" target="_blank" height="32"><img class="github"/></a> 
+                </div>
+                <p>Scroll to see projects...</p></little>
+    </section>
+    <section>
+        <img src="assets/drip.png" height="128">
+    </section>
+    <section>
+        <img src="assets/drip.png" height="128">
+    </section>    <section>
+        <img src="assets/drip.png" height="128">
+    </section>    <section>
+        <img src="assets/drip.png" height="128">
+    </section>    <section>
+        <img src="assets/drip.png" height="128">
+    </section>    <section>
+        <img src="assets/drip.png" height="128">
+    </section>    <section>
+        <img src="assets/drip.png" height="128">
+    </section>    <section>
+        <img src="assets/drip.png" height="128">
+    </section>    <section>
+        <img src="assets/drip.png" height="128">
+    </section>
+    <footer>
+        Cinnamondev 2022. Licensed under the Apache License 2.0. <a href="#" onclick="theme.invert();">Set theme</a>
+        <a href="#" onclick="theme.removePreference     ();">Reset theme</a>
+    </footer>
 </body>
 </html>
