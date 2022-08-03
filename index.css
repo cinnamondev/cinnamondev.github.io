@@ -103,6 +103,7 @@ section {
 	color: var(--on-surface-variant);
 	border-bottom: 1px solid var(--outline);
 	transition: background 0.5s linear;
+	z-index: 9999;
 }
 
 img {
@@ -116,7 +117,7 @@ img {
 	-o-transition: none !important;
 	transition: none !important;
   }
-header {
+#headerUnder > header {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
@@ -209,6 +210,7 @@ footer {
 	width:80%;
 	text-align: center;
 	padding-bottom: 8px;
+	z-index: 2;
 }
 
 
@@ -342,4 +344,17 @@ h1>a:any-link {
 
 img {
 	border: none;
+}
+
+.projectArticle {
+	display: flex;
+	flex-direction: row;
+}
+
+#leviathan {
+	--rev3: url("./assets/pierev3.png");
+}
+
+.projectCard img {
+	content: var(--rev3);
 }
