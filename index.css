@@ -29,7 +29,8 @@
 	--inverse-on-surface: #F4EFF4;
 
 	--pallete: invert(100%) sepia(0%) saturate(7485%) hue-rotate(238deg) brightness(105%) contrast(104%);
-	--gh: url("./assets/GitHub-Mark-64px.png");
+	--gh: url("./assets/GitHub-Mark-Light-64px.png");
+	--gh-lr:  url("./assets/GitHub-Mark-Light-32px.png");
 }
 
 #b {
@@ -62,6 +63,7 @@
 	
 	--pallete: invert(18%) sepia(39%) saturate(2378%) hue-rotate(235deg) brightness(87%) contrast(109%);
 	--gh: url("./assets/GitHub-Mark-Light-64px.png");
+	--gh-lr:  url("./assets/GitHub-Mark-Light-32px.png");
 }
 
 html {
@@ -89,6 +91,9 @@ body {
     /*font-family:  'IBM Plex Serif', serif;*/
     font-family: 'Roboto', sans-serif;
     transition: background 0.5s linear;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
 section {
@@ -119,6 +124,7 @@ img {
   }
 #headerUnder > header {
 	width: 80%;
+	max-width: 1280px;
 	margin-left: auto;
 	margin-right: auto;
 	display:flex;
@@ -132,12 +138,16 @@ img {
 header h1 {
 	font-family: 'Quicksand', sans-serif;
 	z-index: 99999;
+	padding-right: 0;
+	margin-right: 0;
 }
 header little {
 	position: absolute;
 }
 ul.nav {
 	display: flex;
+	margin-left: 0;
+	padding-left: 0;
 }
 ul.nav > li {
 	display: block;
@@ -169,30 +179,50 @@ footer {
 	text-align: center;
 }
 
+/* First section*/
 #p1 {
-	height: 100%;
+	/*height: calc(100vh - 85px);*/
+	min-height: 700px;
+	max-height: 50%;
 	padding-top: 85px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
 }
+/* Card settings */
 #p1 > div {
-	margin-top: 5%;
-	min-height: 50%;
+	margin-top: 10%;
+	padding: 2vh 0 2vh 0;
 	display: flex;
 	justify-content:space-around;
 	flex-wrap: wrap;
 	align-items: center;
 	width: 100%;
-	border: 1px solid;
-	border-radius: 2em;
+	max-width: 1280px;
 	background-image: url("./assets/gerda-ZLtZfjJfjj0-unsplash.jpg");
-	background-size: cover;
-	background-position: center;
-	background-color: var(--primary-a); /* Tint color */
-	background-blend-mode: multiply;
 	/*color: var(--on-primary);*/
 	color:#FFFFFF;
 }
 
+/* Make a 'card' */
+.cardGeneric {
+	padding: 16px 16px 16px 16px;
+	/* Background image is expected.*/
+	background-size: cover;
+	background-position: center;
+	background-color: var(--primary-a); /* Tint color */
+	background-blend-mode: multiply;
+	/*border: 1px solid var(--primary-container);*/
+	border:none;
+	border-radius: 2em;
+	transition: border-radius 0.2s;
+}
+.cardGeneric:hover {
+	border-radius: 1em;
+}
 
+/* Non-standard font greeting ('Hi!')*/
 .greeting {
 	font-family: 'Quicksand', sans-serif;
 	font-size: 8em;
@@ -200,97 +230,10 @@ footer {
 	vertical-align: middle; 
 }
 
+/* RHS should be seperated*/
 #p1 section {
 	width: 50%;
 }
-
-.scrollToolTip {
-	position:absolute;
-	bottom: 0;
-	width:80%;
-	text-align: center;
-	padding-bottom: 8px;
-	z-index: 2;
-}
-
-
-.hamburger {
-	display: none;
-	visibility: hidden;
-}
-
-.burgerItem {
-	display: none;
-	visibility: hidden;
-}
-@media only screen and (max-width: 820px){
-	.burgerItem {
-		visibility: visible !important;
-		display: blocks !important;
-	}
-	ul.nav {
-		display: none;
-		visibility: hidden;
-	}
-	header {
-		width: 100%;
-	}
-	header h1 {
-		padding-left: 32px;
-	}
-	.hamburger {
-		display: initial;
-		visibility: visible;
-		margin-right: 32px;
-	}
-
-	#p1 {
-		flex-direction: column;
-		align-items: center;
-		align-content: stretch;
-		justify-content: flex-start;
-	}
-	#p1 section {
-		width: 90%;
-	}
-	.greeting {
-		padding-bottom: 0;
-		margin-bottom: 0;
-	}
-	body {
-		width: 100% !important;
-	}
-	.github {
-		height: 32px !important;
-	}
-	.scrollToolTip {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-	}
-}
-
-ul.burgerOpen {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	height: 100vh;
-	justify-content: center;
-	align-items: stretch;
-	left: 0;
-	top: 0; 	
-	padding: 0 0 0 0;
-	margin: 0 0 0 0;
-	position: absolute;
-	background-color: var(--background);
-	opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in-out;
-	animation-duration: 0.2s;
-
-}
-
 
 @keyframes fadeInOpacity {
 	0% {
@@ -301,6 +244,30 @@ ul.burgerOpen {
 	}
 }
 
+h1>a:any-link {
+	text-decoration: none;
+	color: var(--on-surface-variant);
+}
+
+.github {
+	margin-top: 8px;
+	content: var(--gh);
+	height: 64px;
+	filter:var(--pallete);
+}
+
+
+img {
+	border: none;
+}
+
+
+.hamburger {
+	display: none;
+	visibility: hidden;
+}
+
+/* Hamburger items */
 ul.burgerOpen > li {
 	display: block;
 	margin-bottom: 12px;
@@ -331,30 +298,125 @@ ul.burgerOpen > li#closeBurger {
 	left: 50%;
 	transform: translateX(-50%);
 }
-h1>a:any-link {
-	text-decoration: none;
-	color: var(--on-surface-variant);
+
+.burgerItem {
+	display: none !important;
+	visibility: hidden;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+@media only screen and (max-width: 800px){
+	/* Enable hamburger */
+	.burgerItem {
+		visibility: visible !important;
+		display: block !important;
+	}
+	.hamburger {
+		display: initial;
+		visibility: visible;
+		margin-right: 32px;
+	}
+	ul.nav {
+		display: none;
+		visibility: hidden;
+	}
+
+	/* Header should take over */
+	header {
+		width: 100%;
+	}
+	header h1 {
+		padding-left: 8px;
+	}
+
+
+	/* Force p1 sizing */
+	#p1 > div {
+		min-height: 40%;
+		height: 40%;
+		max-height: 80%;
+	}
+	.cardGeneric {
+		padding: 16px 0 16px 0 !important;
+	}
+	.cardGeneric h1 {
+		padding: 0 0 0 0;
+		margin: 0 0 0 0;  
+	}
+	#p1 section {
+		width: 90%;
+	}
+	.greeting {
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	/* Give more room*/
+	body {
+		width: 95% !important;
+	}
+	/* Github button smaller*/
+	.github {
+		height: 32px !important;
+		content: var(--gh-lr) !important;
+	}
+	.scrollToolTip {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	#p1 {
+		min-height: calc(100% - 85px) !important;
+		max-height: calc(100% - 85px) !important;
+		height: calc(100% - 85px) !important;
+	}
 }
 
-.github {
-	content: var(--gh);
-	height: 64px;
-}
-
-
-img {
-	border: none;
-}
-
-.projectArticle {
+ul.burgerOpen {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: stretch;
+	left: 0;
+	top: 0; 	
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	position: absolute;
+	background-color: var(--background);
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-duration: 0.2s;
+
 }
 
-#leviathan {
-	--rev3: url("./assets/pierev3.png");
+
+
+
+.skillLogo {
+	height: 48px;
+	margin-right: 8px;
 }
 
-.projectCard img {
-	content: var(--rev3);
+.rustLang {
+	content: url("./assets/rust-logo-blk.svg");
+	filter: var(--pallete);
+}
+
+.electronics {
+	content: url("./assets/elec.svg");
+	filter: var(--pallete);
+}
+
+/*
+Attribution
+Howe1, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
+*/
+.fusionWare {
+	content: url("./assets/Fusion_360_Logo.png");
+	width: 48px;
+	object-fit: contain;
 }
