@@ -3,6 +3,7 @@
 #a {
     --primary: #9373b8;
 	--primary-a: rgba(102, 80, 164, 0.555);
+	--primary-t: rgba(102, 80, 164, 0.555);
 	--on-primary: #FFFFFF;
 	--primary-container: #EADDFF;
 	--on-primary-container: #21005D;
@@ -19,7 +20,7 @@
 	--error-container: #F9DEDC;
 	--on-error-container: #410E0B;
 	--outline: #79747E;
-	--background: #e2dee4;
+	--background: #dccfe2;
 	--on-background: #1C1B1F;
 	--surface: #FFFBFE;
 	--on-surface: #1C1B1F;
@@ -29,13 +30,14 @@
 	--inverse-on-surface: #F4EFF4;
 
 	--pallete: invert(100%) sepia(0%) saturate(7485%) hue-rotate(238deg) brightness(105%) contrast(104%);
-	--gh: url("./assets/GitHub-Mark-Light-64px.png");
-	--gh-lr:  url("./assets/GitHub-Mark-Light-32px.png");
+	--gh: url("/assets/GitHub-Mark-Light-64px.png");
+	--gh-lr:  url("/assets/GitHub-Mark-Light-32px.png");
 }
 
 #b {
 	--primary: #D0BCFF;
-	--primary-a: rgb(208, 188, 255, 0.555);
+	--primary-a: rgba(208, 188, 255, 0.555);
+	--primary-t: rgba(102, 80, 164, 0.555);
 	--on-primary: #381E72;
 	--primary-container: #4F378B;
 	--on-primary-container: #EADDFF;
@@ -62,8 +64,8 @@
 	--inverse-on-surface: #313033;
 	
 	--pallete: invert(18%) sepia(39%) saturate(2378%) hue-rotate(235deg) brightness(87%) contrast(109%);
-	--gh: url("./assets/GitHub-Mark-Light-64px.png");
-	--gh-lr:  url("./assets/GitHub-Mark-Light-32px.png");
+	--gh: url("/assets/GitHub-Mark-Light-64px.png");
+	--gh-lr:  url("/assets/GitHub-Mark-Light-32px.png");
 }
 
 html {
@@ -212,6 +214,12 @@ h1>a:any-link {
 	color: var(--on-surface-variant);
 }
 
+.link:any-link {
+	color: var(--on-surface-variant);
+	font-size: 20px;
+}
+
+
 .github {
 	margin-top: 8px;
 	content: var(--gh);
@@ -220,9 +228,7 @@ h1>a:any-link {
 }
 
 
-img {
 
-}
 
 
 .hamburger {
@@ -351,12 +357,12 @@ ul.burgerOpen {
 }
 
 .rustLang {
-	content: url("./assets/rust-logo-blk.svg");
+	content: url("/assets/rust-logo-blk.svg");
 	filter: var(--pallete);
 }
 
 .electronics {
-	content: url("./assets/elec.svg");
+	content: url("/assets/elec.svg");
 	filter: var(--pallete);
 }
 
@@ -365,7 +371,7 @@ Attribution
 Howe1, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
 */
 .fusionWare {
-	content: url("./assets/Fusion_360_Logo.png");
+	content: url("/assets/Fusion_360_Logo.png");
 	width: 48px;
 	object-fit: contain;
 }
@@ -379,11 +385,12 @@ h2 {
 
 body > article {
 	width: 80%;
+	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#introCard {
+.introCard {
 	margin-top: 32px;
 	display: flex;
 	flex-direction: row;
@@ -392,16 +399,17 @@ body > article {
 	color: whitesmoke
 }
 
-#introCard > img {
+.introCard > img {
 	margin-right: 16px;
+	content: var(--image);
 }
 
-#introCard > aside > p {
+.introCard > aside > p {
 	font-size: 18px;
 }
 
 .gravatar {
-	content: url(./assets/grav.png);
+	content: url(/assets/grav.png) !important;
 }
 
 .cardGeneric > img {
@@ -409,11 +417,20 @@ body > article {
 	border: 1px solid whitesmoke;
 }
 
-.bathBomb {
-	--img: url(./assets/gerda-ZLtZfjJfjj0-unsplash.jpg);
-	--text-col: #eee2f3;
+a.cardGeneric {
+	color: whitesmoke;
+	text-decoration: none;
 }
-
+.bathBomb {
+	--img: url(/assets/gerda-ZLtZfjJfjj0-unsplash.jpg);
+	--text-col: #eee2f3;
+	background-color: var(--primary-t) !important; /* Tint color */
+}
+.bathBomb2 {
+	--img: url(/assets/gerda-hwmw123QZqI-unsplash.jpg);
+	--text-col: #d3c7d8;
+	background-color: var(--primary-t) !important; /* Tint color */
+}
 
 #Projects > div{
 	display: flex;
@@ -441,5 +458,14 @@ h3 {
 }
 
 #leviathan {
-	--image: url(./assets/leviathanrender.png);
+	--image: url(/assets/leviathanrender.png);
+}
+
+.sadmac {
+	--image: url(/assets/sadmac.png);
+}
+
+.guru {
+	width: 100%;
+	margin-top: 32px;
 }

@@ -5,27 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css"/>
-    <script src="js/index.js" defer></script>
-    <script src="js/theme.js"></script>
+    <script src="/js/index.js" defer></script>
+    <script src="/js/theme.js"></script>
     <title>Cinnamondev</title>
 </head>
 <body onload="theme.default();">
     <div id="headerUnder">
         <header>
-            <h1><a href="#">Cinnamondev</a></h1>
+            <h1><a href="/">Cinnamondev</a></h1>
             <a href="javascript:;" onclick="toggleHamburger()" class="hamburger"><img src="./assets/menu_FILL1_wght400_GRAD0_opsz48.svg" style="filter:var(--pallete);"></a>
             <ul class="nav" id="mainNav">
-                <li class="burgerItem"><a href="javascript:;" class="burgerItem">Home</a></li>
-                <li><a href="javascript:;">Projects</a></li>
-                <li><a href="javascript:;">Resume</a></li>
-                <li><a href="javascript:;">Github</a></li>
-                <li><a href="javascript:;">Contact</a></li>
+                <li class="burgerItem"><a href="/" class="burgerItem">Home</a></li>
+                <li><a href="/#Projects">Projects</a></li>
+                <li><a href="/#Resume">Resume</a></li>
+                <li><a href="https://www.github.com/cinnamondev" target="_blank">Github</a></li>
+                <li><a href="/#Contact">Contact</a></li>
                 <li id="closeBurger"><a href="javascript:;" onclick="toggleHamburger()">x</a></li>
             </ul>
         </header>
     </div>
     <article>
-        <section class="cardGeneric bathBomb" id="introCard">
+        <section class="cardGeneric bathBomb introCard" id="">
             <img class="gravatar" height="256" alt="Gravatar Profile Picture" title="Cinnamondev"/>
             <aside>
                 <h2>Hi! I like to make stuff.</h2>
@@ -37,18 +37,26 @@
     <article id="Projects">
         <h2>Projects</h2>
         <div>
-            <section class="cardGeneric projectCard" id="leviathan">
+            <a class="cardGeneric projectCard" id="leviathan" href="./projects/leviathan/">
                 <img/>
                 <aside>
                     <header>
                         <h3>Pi handheld</h3>   
-                    </header>                 
+                    </header>
+                    <p>
+                    Powered by a Compute Module 4, leviathan is a 3d printed portable device designed for games and emulation- designed in KiCAD and Fusion 360
+                    </p>               
+                    <p>
+                        Project is TBF due to supply constraints, but can be made with off the shelf parts and a 3d printer.
+                    </p>
+                    <p>
+                        Battery should last at least a few hours and uses a 21700 battery which can be bought reliably and charged internally or externally.
+                        
+                    </p>
                 </aside>
-                <p>
-                    
-                </p>
 
-            </section>
+
+            </a>
         </div>
     </article>
     <footer>
