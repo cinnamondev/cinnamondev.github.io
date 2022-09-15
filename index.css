@@ -200,6 +200,10 @@ footer {
 	border-radius: 1em;
 }
 
+.cardGeneric {
+	margin-top: 32px;
+}
+
 @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;
@@ -417,7 +421,7 @@ body > article {
 	border: 1px solid whitesmoke;
 }
 
-a.cardGeneric {
+.cardGeneric {
 	color: whitesmoke;
 	text-decoration: none;
 }
@@ -468,4 +472,9 @@ h3 {
 .guru {
 	width: 100%;
 	margin-top: 32px;
+}
+
+.contactCard {
+	display: flex;
+	flex-direction: column;
 }

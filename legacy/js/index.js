@@ -22,3 +22,4 @@ document.addEventListener("DOMContentLoaded", (e) => {
     //hover.init();
     console.warn("HoverJS disabled until bug fix - see https://github.com/cinnamondev/cinnamondev.github.io/issues/1")
 })
+

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="indexmin.css"/>
-    <title>Cinnamondev</title>
+    <title>Uhoh (cinnadev)</title>
 </head>
 <body>
     <div id="headerUnder">
@@ -17,16 +17,24 @@
         <img src="/assets/Guru_meditation.gif" class="guru"/>
         <h2>It seems you've taken a wrong turn!</h2>
         <p>Left click to continue <a href="/">home</a>.</p>
-        <video width="640" controls>
+        <p id="easter"><a href="./legacy/index.html">Find the old site!</a></p>
+        <video width="640" controls autoplay class="videoPlayer" id="eggman">
             <source src="/assets/announcement.mp4" type="video/mp4">
           Your browser does not support the video tag.
-          </video> 
+        </video> 
+        <video width="640" controls autoplay class="videoPlayer" id="woke">
+            <source src="/assets/moralists.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video> 
     </article>
     <footer>
         Cinnamondev 2022. Licensed under the Apache License 2.0.
     </footer>
      <script>
         let audio = new Audio('');
+        let video1 = document.getElementById("eggman");
+        let video2 = document.getElementById("woke");
+        let egg = document.getElementById("easter");
         let element = document.getElementById("eeInput");
         element.value = "Cinnamondev"
         element.addEventListener('blur', (e) => {
@@ -35,16 +43,12 @@
 
         function easterParser(value) {
             audio.loop = false; audio.pause();
+            video1.style="";video1.pause();
+            video2.style="";video2.pause();
+            easter.style="";
             document.body.style = "";
             value = value.toLowerCase()
             switch (value) {
-                case "nerd sniping":
-                    console.log("uh oh");
-                    audio = new Audio('/assets/Crash Mac LC.wav');
-                    audio.loop = false;
-                    audio.play();
-                    document.body.style = "background-image: url('/assets/sadmac.png');background-size:300px;"
-                    break;
                 case "hazardous drip":
                     console.log("vine boom");
                     audio = new Audio('/assets/drip.m4a');
@@ -52,19 +56,16 @@
                     audio.play();
                     document.body.style = "background-image: url('/assets/scienceteam.jpg');background-size:300px;"
                     break;
-                case "mr freeman":
+                case "piss":
                     console.log("vine boom");
-                    audio = new Audio('/assets/hello-gordon-dr.mp3');
-                    audio.loop = false;
-                    audio.play();
-                    document.body.style = "background-image: url('/assets/kleiner.png');background-size:300px;"
-                    break;
-                case "pronouns":
-                    console.log("vine boom");
-                    audio = new Audio('/assets/hello-gordon-dr.mp3');
-                    audio.loop = false;
-                    audio.play();
+                    video1.style="display:initial !important;";
+                    video1.play()
                     document.body.style = "background-image: url('/assets/bluehair.jpg');background-size:300px;"
+                    break;
+                case "old":
+                    easter.style="display:initial;"
+                    video2.style="display:initial !important;";
+                    video2.play()
                     break;
                 default:
                     break;

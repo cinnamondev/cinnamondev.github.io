@@ -17,7 +17,7 @@
             <ul class="nav" id="mainNav">
                 <li class="burgerItem"><a href="/" class="burgerItem">Home</a></li>
                 <li><a href="/#Projects">Projects</a></li>
-                <li><a href="/#Resume">Resume</a></li>
+                <li><a href="/resume.pdf" target="_blank">Resume</a></li>
                 <li><a href="https://www.github.com/cinnamondev" target="_blank">Github</a></li>
                 <li><a href="/#Contact">Contact</a></li>
                 <li id="closeBurger"><a href="javascript:;" onclick="toggleHamburger()">x</a></li>
@@ -37,7 +37,7 @@
     <article id="Projects">
         <h2>Projects</h2>
         <div>
-            <a class="cardGeneric projectCard" id="leviathan" href="./projects/leviathan/">
+            <a class="cardGeneric projectCard" id="leviathan" href="./projects/leviathan/" style="margin-top: 0;">
                 <img/>
                 <aside>
                     <header>
@@ -58,6 +58,21 @@
 
             </a>
         </div>
+    </article>
+    <article id="Contact">
+        <section class="cardGeneric contactCard" id="ccardinner">
+                <header>
+                    <h3>Contact us</h3>   
+                </header>
+                <ul class="nav">
+                    <li><a href="#" onclick="navigator.clipboard.writeText(window.location.href);copyHome('Website url');">Website</a></li>
+                    <li><a href="#" onclick="navigator.clipboard.writeText('tbf');copyHome('Discord');">Discord</a></li>
+                    <li><a href="#" onclick="navigator.clipboard.writeText('@-cinnamon:matrix.org');copyHome('Matrix');">Matrix</a></li>
+                    <li><a href="https://www.github.com/cinnamondev" target="_blank">Github</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/User:Prompt0259" target="_blank">Wikipedia (enwiki)</a></li>
+                </ul>
+                
+        </section>
     </article>
     <footer>
         Cinnamondev 2022. Licensed under the Apache License 2.0. <a href="#" onclick="theme.invert();">Set theme</a>

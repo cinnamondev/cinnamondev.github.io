@@ -1,5 +1,22 @@
 const HAMBURGER_NAV = document.getElementById("mainNav");
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// <little class="copyToast">Copied to clipboard!</little>
+async function copyHome(service) {
+    let elem = document.getElementById("ccardinner");
+    let child = document.createElement("little");
+    child.classList.add("copyToast");
+    child.innerText = service + " has been copied to the clipboard.";
+    elem.appendChild(child);
+    await sleep(4000);
+    elem.removeChild(child);
+
+
+}
+
 function toggleHamburger() {
     console.log("HI")
     HAMBURGER_NAV.classList.toggle("burgerOpen");
@@ -15,3 +32,4 @@ document.addEventListener('click', (e) => {
         closeHamburger();
     }
 })
+
