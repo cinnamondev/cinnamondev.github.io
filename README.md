@@ -1,41 +1,29 @@
 # Website
 
-Simple personal website. Font is IBM Plex Serif.
+Personal website
 
-## Hover links
-[Code](js/hover.js)
+Partially inspired by a 'material you' look (largely nav and card.)
 
-Allows for the previewing of linked site's metadata without any extra work.
+## Fonts
+Headers/Logos - Quicksand
+Text - Roboto
 
-### Usage
+## Image crediting
 
-1. Make sure you have this line or similar in a javascript file somewhere
-(Ensure that this script runs after the DOM has rendered)
-`document.addEventListener("DOMContentLoaded", (e) => { hover.init(); })`
+### Fusion 360 Logo
+[Image](https://commons.wikimedia.org/wiki/File:Fusion_360_Logo.png) Pulled from WikiMedia commons under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). Author is Howe1, though Autodesk created the logo.
 
-2. In your CSS somewhere make sure that you declare variables for the coloring of the popups.
-ie:
-```css
-:root {
-    --hoverjs-bg: #eee;
-    --hoverjs-txt: #444;
-}
-```
-Adjust to your preferences.
-If you want to have a similar configuration to this site, use in conjunction with the variable areas for [themes](#Theming)
+### Lush 'Lord of Misrule'
 
-3. Wherever theres a `<a>`, and it's not a relative link (not foolproof!), there will be a metadata pop-up on hovers!
+[Image](https://unsplash.com/photos/ZLtZfjJfjj0) taken by [Gerda](https://unsplash.com/@gerdadesign) and provided by [Unsplash](https://unsplash.com) under the [Unsplash License](https://unsplash.com/license)
 
-4. To exclude a `<a>` from this functionality, add the class "nohover" to the `<a>`.
+### Lush 'Intergalactic'
 
-P.S.: If you want to change the language or placeholder image used, you need to change:
-```
-hover.titleNotFound
-hover.descriptionNotFound
-hover.placeholderImage
-```
-to whichever wording you please.
+[Image](https://unsplash.com/photos/hwmw123QZqI) taken by [Gerda](https://unsplash.com/@gerdadesign) and provided by [Unsplash](https://unsplash.com) under the [Unsplash License](https://unsplash.com/license)
 
+### 'Guru Meditation'
+
+[Image](https://commons.wikimedia.org/wiki/File:Guru_meditation.gif) pulled from WikiMedia commosn under PUBLIC DOMAIN. Uploaded by MooseBlaster. From Commodore Amiga.
 ## Theming
 [Code](js/theme.js)
 
@@ -43,7 +31,7 @@ Allows for the switching between two color themes (typically a light/dark theme)
 
 ### Usage
 
-1. In your CSS, make two selectors for ID's
+In your CSS, make two selectors for ID's
 ```css
 #a {
     /*...*/
@@ -54,14 +42,14 @@ Allows for the switching between two color themes (typically a light/dark theme)
 }
 ```
 
-2. Use CSS variables (`--foo: bar;`) to fill in info (ie: colors, fonts, whatever)
+Use these methods (requires page ready)
 
-3. Run `theme.default();` on page load
+`theme.current()`: Meh. It's there.
 
-4. To change the theme, you need to make something that triggers `theme.invert();`. If you ever need it, you can also get the current theme number from `theme.current();`.
+`theme.default()`: Uses window.matchMedia to determine a system preferred theme.
 
-// Simple JS Themes! (Supports 2 themes)
-// Cinnamondev, licensed under Apache 2.0
+`theme.invert()`: Swaps the currently slotted theme with the other. Only works for the current configuration currently, which has 2 themes. Potentially could be improved
 
-// Simply make your color schemes under either a class called b for dark or class called a for light.
-"use strict";
+`theme.set()`: Sets the theme according to an input. Should not usually be used, but its there
+
+`theme.removePreference()`: When theme.set() is given it will save to the localstorage. This calls to remove the item from local storage completely and calls `theme.default()`

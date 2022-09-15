@@ -1,61 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" id="a"> <!--If no JS default to light.-->
+<html lang="en" id="a">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css"/>
-    <script src="js/theme.js"></script>
-    <!--<script src="js/hover.js"></script>-->
-    <script src="js/index.js"></script>
-
-    <title>Cinnamondev - Projects</title>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="/js/index.js" defer></script>
+    <script src="/js/theme.js"></script>
+    <title>Cinnamondev</title>
 </head>
-<body>
-    <div id="flexdiv">
-        <div id="header">
-            <h1><a href="index.html" class="nohover">Cinnamondev</a></h1>
-            <!-- Header navigation bar -->
-            <a href="javascript:void(0)" class="burger nohover" onclick="openHamburger()">
-                <!--Google material icons SVG for Menu-->
-                <svg class="hamburger-darkmode"xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-                <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-            </a>
-            <ul id="links">
-                <li><a href="index.html" class="active nohover">Home</a></li>
-                <li><a href="./projects/index.html" class="nohover">Projects</a></li>
-                <li><a href="contact.html" class="nohover">Contact</a></li>
+<body onload="theme.default();">
+    <div id="headerUnder">
+        <header>
+            <h1><a href="/">Cinnamondev</a></h1>
+            <a href="javascript:;" onclick="toggleHamburger()" class="hamburger"><img src="./assets/menu_FILL1_wght400_GRAD0_opsz48.svg" style="filter:var(--pallete);"></a>
+            <ul class="nav" id="mainNav">
+                <li class="burgerItem"><a href="/" class="burgerItem">Home</a></li>
+                <li><a href="/#Projects">Projects</a></li>
+                <li><a href="/resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="https://www.github.com/cinnamondev" target="_blank">Github</a></li>
+                <li><a href="/#Contact">Contact</a></li>
+                <li id="closeBurger"><a href="javascript:;" onclick="toggleHamburger()">x</a></li>
             </ul>
-    
-        </div>
-        <div id="content">
-                
-            <div id="main_center">
-                <h1>Hi!</h1>
-                <h2>I make things :)</h2>
-                <p>
-                    <a href="https://github.com/cinnamondev" class="nohover" target="_blank">Github</a>
-                    <a href="https://gitlab.com/pr0mpted"class="nohover" target="_blank">Gitlab</a>
-                    <a href="./projects/index.html"class="nohover">Projects</a>
-                    <a href="contact.html"class="nohover" style="padding-right:0 !important;">Contact</a>
-                </p>
-                <p>
-                    <a href="#" onclick="theme.invert()">(Set theme)</a>
-                    <a href="#" onclick="theme.removePreference();">(Reset theme)</a>
-                </p>
-            </div>
-
-
-
-
-        </div>
-    
-        <div id="footer">
-            <div class="centered">Cinnamondev - Licensed under the Apache 2.0 License. <a href="https://github.com/cinnamondev/">Github</a>
-            <a href="javascript:void(0)" onclick="theme.invert()" class="force-right nohover">Set theme</a></div>
-
-        </div>
+        </header>
     </div>
+    <article>
+        <section class="cardGeneric bathBomb introCard" id="">
+            <img class="gravatar" height="256" alt="Gravatar Profile Picture" title="Cinnamondev"/>
+            <aside>
+                <h2>Hi! I like to make stuff.</h2>
+                <p>I'm cinnamondev- a student in the UK (studying EEE) with a passion for electronics and computing.</p>            
+                <p>Feel free to explore my collection of work below, or go to any of my other pages below.</p>
+            </aside>
+        </section>
+    </article>
+    <article id="Projects">
+        <h2>Projects</h2>
+        <div>
+            <a class="cardGeneric projectCard" id="leviathan" href="./projects/leviathan/" style="margin-top: 0;">
+                <img/>
+                <aside>
+                    <header>
+                        <h3>Pi handheld</h3>   
+                    </header>
+                    <p>
+                    Powered by a Compute Module 4, leviathan is a 3d printed portable device designed for games and emulation- designed in KiCAD and Fusion 360
+                    </p>               
+                    <p>
+                        Project is TBF due to supply constraints, but can be made with off the shelf parts and a 3d printer.
+                    </p>
+                    <p>
+                        Battery should last at least a few hours and uses a 21700 battery which can be bought reliably and charged internally or externally.
+                        
+                    </p>
+                </aside>
 
+
+            </a>
+        </div>
+    </article>
+    <article id="Contact">
+        <section class="cardGeneric contactCard" id="ccardinner">
+                <header>
+                    <h3>Contact us</h3>   
+                </header>
+                <ul class="nav">
+                    <li><a href="#" onclick="navigator.clipboard.writeText(window.location.href);copyHome('Website url');">Website</a></li>
+                    <li><a href="#" onclick="navigator.clipboard.writeText('tbf');copyHome('Discord');">Discord</a></li>
+                    <li><a href="#" onclick="navigator.clipboard.writeText('@-cinnamon:matrix.org');copyHome('Matrix');">Matrix</a></li>
+                    <li><a href="https://www.github.com/cinnamondev" target="_blank">Github</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/User:Prompt0259" target="_blank">Wikipedia (enwiki)</a></li>
+                </ul>
+                
+        </section>
+    </article>
+    <footer>
+        Cinnamondev 2022. Licensed under the Apache License 2.0. <a href="#" onclick="theme.invert();">Set theme</a>
+        <a href="#" onclick="theme.removePreference     ();">Reset theme</a>
+    </footer>
 </body>
 </html>

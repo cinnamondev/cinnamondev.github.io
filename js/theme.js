@@ -7,14 +7,19 @@
 let theme = {
     "current": () => {return localStorage.getItem('cinnamondev_theme')}, // if you so desire
     "default": () => {
+        document.getElementsByTagName("html")[0].classList.add("notransition");
+        document.getElementById("headerUnder").classList.add("notransition");
         let state = localStorage.getItem('cinnamondev_theme');
-        if (state === null ) {
+        if (state != "1" && state != "0" ) { // why tf is it a string????
             // attempt to discover value by system preference
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches) {
-                theme.set(0);
-            } else {theme.set(1);}
+                theme.set(1);
+            } else {theme.set(0);}
+        } else {
+            theme.set(state);
         }
-        theme.set(state);
+        document.getElementsByTagName("html")[0].classList.remove("notransition");
+        document.getElementById("headerUnder").classList.remove("notransition");
     },
     "invert": () => {
         theme.set(
@@ -23,6 +28,7 @@ let theme = {
     },
     "set": (value) => {
         localStorage.setItem('cinnamondev_theme', value);
+        value = parseInt(value);
         // dumb css
         let state = "a";
         switch(parseInt(value)) {

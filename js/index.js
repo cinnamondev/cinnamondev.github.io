@@ -1,24 +1,35 @@
-theme.default();
+const HAMBURGER_NAV = document.getElementById("mainNav");
 
-// Open the hamburger on button click
-function openHamburger() {
-    let list = document.getElementById("links");
-    if (list.style.display === "flex") {
-        list.style.display = "none";
-    } else { list.style.display = "flex";}
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// <little class="copyToast">Copied to clipboard!</little>
+async function copyHome(service) {
+    let elem = document.getElementById("ccardinner");
+    let child = document.createElement("little");
+    child.classList.add("copyToast");
+    child.innerText = service + " has been copied to the clipboard.";
+    elem.appendChild(child);
+    await sleep(4000);
+    elem.removeChild(child);
+
 
 }
 
-// Ensure the menu is always visible in all cases (this is to handle typically orientation changes that might make it go fucky)
-window.addEventListener('resize', () => {
-    // function body
-    let list = document.getElementById("links");
-    if(window.innerWidth >= 540) {
-        list.style.display = "flex";
-    } else { list.style.display = "none"; }
-});
+function toggleHamburger() {
+    console.log("HI")
+    HAMBURGER_NAV.classList.toggle("burgerOpen");
+    HAMBURGER_NAV.classList.toggle("nav");
+}
+function closeHamburger() {
+    HAMBURGER_NAV.classList.remove("burgerOpen");
+    HAMBURGER_NAV.classList.add("nav");   
+}
 
-document.addEventListener("DOMContentLoaded", (e) => {
-    //hover.init();
-    console.warn("HoverJS disabled until bug fix - see https://github.com/cinnamondev/cinnamondev.github.io/issues/1")
+document.addEventListener('click', (e) => {
+    if (e.target == HAMBURGER_NAV | HAMBURGER_NAV.contains(e.target)) {
+        closeHamburger();
+    }
 })
+

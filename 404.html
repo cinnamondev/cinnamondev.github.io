@@ -1,44 +1,77 @@
 <!DOCTYPE html>
-<html lang="en" id="a"> <!--If no JS default to light.-->
+<html lang="en" id="b">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css"/>
-    <script src="js/theme.js"></script>
-    <script src="js/hover.js"></script>
-    <script src="js/index.js"></script>
-
-    <title>Page not found</title>
+    <link rel="stylesheet" href="indexmin.css"/>
+    <title>Uhoh (cinnadev)</title>
 </head>
 <body>
-    <div id="flexdiv">
-        <div id="header">
-            <h1><a href="index.html" class="nohover">Cinnamondev</a></h1>
-            <!-- Header navigation bar -->
-            <a href="javascript:void(0)" class="burger nohover" onclick="openHamburger()">
-                <!--Google material icons SVG for Menu-->
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-            </a>
-            <ul id="links">
-                <li><a href="index.html" class="nohover">Home</a></li>
-                <li><a href="./projects/index.html" class="nohover">Projects</a></li>
-                <li><a href="contact.html" class="nohover">Contact</a></li>
-            </ul>
-    
-        </div>
-    
-        <div id="content" style="text-align: center;">
-            <h2>Page not found!</h2><br>
-            <a href="index.html" class="nohover">Go home</a>
-        </div>
-    
-        <div id="footer">
-            <div class="centered">Cinnamondev - Licensed under the Apache 2.0 License. <a href="https://github.com/cinnamondev/">Github</a>
-            <a href="javascript:void(0)" onclick="theme.invert()" class="force-right nohover">Theme</a></div>
-
-        </div>
+    <div id="headerUnder">
+        <header>
+            <h1><input value="Cinnamondev" id="eeInput" onkeydown="if(event.key=='Enter'){this.blur();}"></input></h1>
+        </header>
     </div>
+    <article onclick="window.location.href = '/'">
+        <img src="/assets/Guru_meditation.gif" class="guru"/>
+        <h2>It seems you've taken a wrong turn!</h2>
+        <p>Left click to continue <a href="/">home</a>.</p>
+        <p id="easter"><a href="./legacy/index.html">Find the old site!</a></p>
+        <video width="640" controls autoplay class="videoPlayer" id="eggman">
+            <source src="/assets/announcement.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video> 
+        <video width="640" controls autoplay class="videoPlayer" id="woke">
+            <source src="/assets/moralists.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video> 
+    </article>
+    <footer>
+        Cinnamondev 2022. Licensed under the Apache License 2.0.
+    </footer>
+     <script>
+        let audio = new Audio('');
+        let video1 = document.getElementById("eggman");
+        let video2 = document.getElementById("woke");
+        let egg = document.getElementById("easter");
+        let element = document.getElementById("eeInput");
+        element.value = "Cinnamondev"
+        element.addEventListener('blur', (e) => {
+            easterParser(element.value)
+        }, false)
 
+        function easterParser(value) {
+            audio.loop = false; audio.pause();
+            video1.style="";video1.pause();
+            video2.style="";video2.pause();
+            easter.style="";
+            document.body.style = "";
+            value = value.toLowerCase()
+            switch (value) {
+                case "hazardous drip":
+                    console.log("vine boom");
+                    audio = new Audio('/assets/drip.m4a');
+                    audio.loop = true;
+                    audio.play();
+                    document.body.style = "background-image: url('/assets/scienceteam.jpg');background-size:300px;"
+                    break;
+                case "piss":
+                    console.log("vine boom");
+                    video1.style="display:initial !important;";
+                    video1.play()
+                    document.body.style = "background-image: url('/assets/bluehair.jpg');background-size:300px;"
+                    break;
+                case "old":
+                    easter.style="display:initial;"
+                    video2.style="display:initial !important;";
+                    video2.play()
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+    
 </body>
 </html>
