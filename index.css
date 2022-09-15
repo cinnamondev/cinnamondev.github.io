@@ -400,7 +400,7 @@ body > article {
 	flex-direction: row;
 	background-image: var(--img);
 	/*color: var(--text-col);*/
-	color: whitesmoke
+	color: whitesmoke;
 }
 
 .introCard > img {
