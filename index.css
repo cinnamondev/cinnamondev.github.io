@@ -278,7 +278,17 @@ ul.burgerOpen > li#closeBurger {
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
 }
+
+@media only screen and (max-width: 550px) {
+	body > article {
+		width: 98% !important;
+	}
+}
 @media only screen and (max-width: 800px){
+	.projectCard,.introCard {
+		flex-direction: column !important;
+		align-items: center;
+	}
 	/* Enable hamburger */
 	.burgerItem {
 		visibility: visible !important;
@@ -289,7 +299,7 @@ ul.burgerOpen > li#closeBurger {
 		visibility: visible;
 		margin-right: 32px;
 	}
-	ul.nav {
+	ul.navHeader {
 		display: none;
 		visibility: hidden;
 	}
@@ -302,9 +312,6 @@ ul.burgerOpen > li#closeBurger {
 		padding-left: 8px;
 	}
 
-	.cardGeneric {
-		padding: 16px 0 16px 0 !important;
-	}
 	.cardGeneric h1 {
 		padding: 0 0 0 0;
 		margin: 0 0 0 0;  
@@ -313,10 +320,6 @@ ul.burgerOpen > li#closeBurger {
 	.greeting {
 		padding-bottom: 0;
 		margin-bottom: 0;
-	}
-	/* Give more room*/
-	body {
-		width: 95% !important;
 	}
 	/* Github button smaller*/
 	.github {
@@ -431,7 +434,7 @@ body > article {
 	background-color: var(--primary-t) !important; /* Tint color */
 }
 .bathBomb2 {
-	--img: url(/assets/gerda-hwmw123QZqI-unsplash.jpg);
+	--img: url(/assets/gerda-hwmw123QZqI-unsplash90.jpg);
 	--text-col: #d3c7d8;
 	background-color: var(--primary-t) !important; /* Tint color */
 }
