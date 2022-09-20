@@ -26,6 +26,10 @@
             <source src="/assets/moralists.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video> 
+        <video width="640" controls autoplay class="videoPlayer" id="british">
+            <source src="/assets/epic.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video> 
     </article>
     <footer>
         Cinnamondev 2022. Licensed under the Apache License 2.0.
@@ -34,6 +38,7 @@
         let audio = new Audio('');
         let video1 = document.getElementById("eggman");
         let video2 = document.getElementById("woke");
+        let video3 = document.getElementById("british");
         let egg = document.getElementById("easter");
         let element = document.getElementById("eeInput");
         element.value = "Cinnamondev"
@@ -45,6 +50,7 @@
             audio.loop = false; audio.pause();
             video1.style="";video1.pause();
             video2.style="";video2.pause();
+            video3.style="";video3.pause();
             easter.style="";
             document.body.style = "";
             value = value.toLowerCase()
@@ -66,6 +72,11 @@
                     easter.style="display:initial;"
                     video2.style="display:initial !important;";
                     video2.play()
+                    break;
+                case "bit sad innit":
+                    video3.style="display:initial !important;";
+                    video3.play()
+                    document.body.style = "background-image: url('/assets/british.jpg');background-size:300px;"
                     break;
                 default:
                     break;
