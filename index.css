@@ -481,3 +481,8 @@ h3 {
 	display: flex;
 	flex-direction: column;
 }
+
+
+.introCard,.projectCard {
+	transition: flex-direction 1000ms linear;
+}
