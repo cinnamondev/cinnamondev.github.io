@@ -416,7 +416,7 @@ body > article {
 }
 
 .gravatar {
-	content: url(/assets/grav.png) !important;
+	content: url(/assets/grav.jpg) !important;
 }
 
 .cardGeneric > img {
