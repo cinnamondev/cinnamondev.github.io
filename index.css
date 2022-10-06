@@ -429,12 +429,12 @@ body > article {
 	text-decoration: none;
 }
 .bathBomb {
-	--img: url(/assets/gerda-ZLtZfjJfjj0-unsplash.jpg);
+	--img: url(/assets/gerda2.jpg);
 	--text-col: #eee2f3;
 	background-color: var(--primary-t) !important; /* Tint color */
 }
 .bathBomb2 {
-	--img: url(/assets/gerda-hwmw123QZqI-unsplash90.jpg);
+	--img: url(/assets/gerda3.jpg);
 	--text-col: #d3c7d8;
 	background-color: var(--primary-t) !important; /* Tint color */
 }
