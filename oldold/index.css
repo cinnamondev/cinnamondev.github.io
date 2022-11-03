@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Quicksand:wght@700&display=swap');
+
+#a {
+    --primary: #9373b8;
+	--primary-a: rgba(102, 80, 164, 0.555);
+	--primary-t: rgba(102, 80, 164, 0.555);
+	--on-primary: #FFFFFF;
+	--primary-container: #EADDFF;
+	--on-primary-container: #21005D;
+	--secondary: #625B71;
+	--on-secondary: #FFFFFF;
+	--secondary-container: #E8DEF8;
+	--on-secondary-container: #1D192B;
+	--tertiary: #7D5260;
+	--on-tertiary: #FFFFFF;
+	--tertiary-container: #FFD8E4;
+	--on-tertiary-container: #31111D;
+	--error: #B3261E;
+	--on-error: #FFFFFF;
+	--error-container: #F9DEDC;
+	--on-error-container: #410E0B;
+	--outline: #79747E;
+	--background: #dccfe2;
+	--on-background: #1C1B1F;
+	--surface: #FFFBFE;
+	--on-surface: #1C1B1F;
+	--surface-variant: #E7E0EC;
+	--on-surface-variant: #49454F;
+	--inverse-surface: #313033;
+	--inverse-on-surface: #F4EFF4;
+
+	--pallete: invert(100%) sepia(0%) saturate(7485%) hue-rotate(238deg) brightness(105%) contrast(104%);
+	--gh: url("/assets/GitHub-Mark-Light-64px.png");
+	--gh-lr:  url("/assets/GitHub-Mark-Light-32px.png");
+}
+
+#b {
+	--primary: #D0BCFF;
+	--primary-a: rgba(208, 188, 255, 0.555);
+	--primary-t: rgba(102, 80, 164, 0.555);
+	--on-primary: #381E72;
+	--primary-container: #4F378B;
+	--on-primary-container: #EADDFF;
+	--secondary: #CCC2DC;
+	--on-secondary: #332D41;
+	--secondary-container: #4A4458;
+	--on-secondary-container: #E8DEF8;
+	--tertiary: #EFB8C8;
+	--on-tertiary: #492532;
+	--tertiary-container: #633B48;
+	--on-tertiary-container: #FFD8E4;
+	--error: #F2B8B5;
+	--on-error: #601410;
+	--error-container: #8C1D18;
+	--on-error-container: #F2B8B5;
+	--outline: #938F99;
+	--background: #36353b;
+	--on-background: #E6E1E5;
+	--surface: #1C1B1F;
+	--on-surface: #E6E1E5;
+	--surface-variant: #49454F;
+	--on-surface-variant: #CAC4D0;
+	--inverse-surface: #E6E1E5;
+	--inverse-on-surface: #313033;
+	
+	--pallete: invert(18%) sepia(39%) saturate(2378%) hue-rotate(235deg) brightness(87%) contrast(109%);
+	--gh: url("/assets/GitHub-Mark-Light-64px.png");
+	--gh-lr:  url("/assets/GitHub-Mark-Light-32px.png");
+}
+
+html {
+    max-width: 100%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    scroll-behavior: smooth;
+    color: var(--on-background);
+    background: var(--background);
+    background-repeat: repeat;
+    background-attachment: fixed;
+	transition: background 0.5s linear;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /*font-family:  'IBM Plex Serif', serif;*/
+    transition: background 0.5s linear;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+#headerUnder {
+	position: sticky;
+	top: 0; left:0;
+	width: 100%;
+	background-color: var(--surface-variant);
+	color: var(--on-surface-variant);
+	border-bottom: 1px solid var(--outline);
+	transition: background 0.5s linear;
+}
+
+img {
+	border: 1px solid var(--outline);
+	border-radius: 25px;
+	border: none;
+	transition: border-radius 0.2s;
+}
+img:hover {
+	border-radius: 10px;
+}
+
+.notransition {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-o-transition: none !important;
+	transition: none !important;
+  }
+#headerUnder > header {
+	width: 80%;
+	max-width: 768px;
+	margin-left: auto;
+	margin-right: auto;
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	z-index: 9999;
+	height: 84px;
+}
+
+header h1 {
+	font-family: 'Quicksand', sans-serif;
+	z-index: 99999;
+	padding-right: 0;
+	margin-right: 0;
+}
+header little {
+	position: absolute;
+}
+ul.nav {
+	display: flex;
+	margin-left: 0;
+	padding-left: 0;
+}
+ul.nav > li {
+	display: block;
+	margin-right: 16px;
+}
+ul.nav > li:last-child {
+	margin-right: 0;
+	border-right: none;
+}
+
+/* button styling nav*/
+ul.nav > li > a {
+	padding: 12px 16px 12px 16px;
+	display: block;
+	color: var(--on-primary);
+	background-color: var(--primary);
+	border-radius: 25px;
+	transition: border-radius 0.2s;
+}
+ul.nav > li > a:hover{
+	border-radius: 10px;
+}
+
+
+li>a:any-link {
+	text-decoration: none;
+}
+
+footer {
+	position: sticky;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+/* Make a 'card' */
+.cardGeneric {
+	padding: 16px 16px 16px 16px;
+	/* Background image is expected.*/
+	background-size: cover;
+	background-position: center;
+	background-color: var(--primary-a); /* Tint color */
+	background-blend-mode: multiply;
+	/*border: 1px solid var(--primary-container);*/
+	border:none;
+	border-radius: 2em;
+	transition: border-radius 0.2s;
+}
+.cardGeneric:hover {
+	border-radius: 1em;
+}
+
+.cardGeneric {
+	margin-top: 32px;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+h1>a:any-link {
+	text-decoration: none;
+	color: var(--on-surface-variant);
+}
+
+.link:any-link {
+	color: var(--on-surface-variant);
+	font-size: 20px;
+}
+
+
+.github {
+	margin-top: 8px;
+	content: var(--gh);
+	height: 64px;
+	filter:var(--pallete);
+}
+
+
+
+
+
+.hamburger {
+	display: none;
+	visibility: hidden;
+}
+
+/* Hamburger items */
+ul.burgerOpen > li {
+	display: block;
+	margin-bottom: 12px;
+}
+ul.burgerOpen > li:last-child {
+	margin-bottom: 0;
+	border-right: none;
+}
+
+ul.burgerOpen > li > a {
+	padding: 24px 32px 24px 32px;
+	display: block;
+	color: var(--on-primary);
+	background-color: var(--primary);
+	border-radius: 25px;
+	text-align: center;
+	font-size: 2em;
+}
+#closeBurger {
+	visibility: hidden;
+	display: none;
+}
+ul.burgerOpen > li#closeBurger {
+	visibility: visible !important;
+	display: block !important;
+	position: absolute;
+	bottom: 32px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.burgerItem {
+	display: none !important;
+	visibility: hidden;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+
+@media only screen and (max-width: 550px) {
+	body > article {
+		width: 98% !important;
+	}
+}
+@media only screen and (max-width: 800px){
+	.projectCard,.introCard {
+		flex-direction: column !important;
+		align-items: center;
+	}
+	/* Enable hamburger */
+	.burgerItem {
+		visibility: visible !important;
+		display: block !important;
+	}
+	.hamburger {
+		display: initial;
+		visibility: visible;
+		margin-right: 32px;
+	}
+	ul.navHeader {
+		display: none;
+		visibility: hidden;
+	}
+
+	/* Header should take over */
+	header {
+		width: 100%;
+	}
+	header h1 {
+		padding-left: 8px;
+	}
+
+	.cardGeneric h1 {
+		padding: 0 0 0 0;
+		margin: 0 0 0 0;  
+	}
+
+	.greeting {
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	/* Github button smaller*/
+	.github {
+		height: 32px !important;
+		content: var(--gh-lr) !important;
+	}
+	.scrollToolTip {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+}
+
+ul.burgerOpen {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: stretch;
+	left: 0;
+	top: 0; 	
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	position: absolute;
+	background-color: var(--background);
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-duration: 0.2s;
+
+}
+
+
+
+
+.skillLogo {
+	height: 48px;
+	margin-right: 8px;
+}
+
+.rustLang {
+	content: url("/assets/rust-logo-blk.svg");
+	filter: var(--pallete);
+}
+
+.electronics {
+	content: url("/assets/elec.svg");
+	filter: var(--pallete);
+}
+
+/*
+Attribution
+Howe1, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
+*/
+.fusionWare {
+	content: url("/assets/Fusion_360_Logo.png");
+	width: 48px;
+	object-fit: contain;
+}
+
+h2 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 3em;
+	padding: 0 0 0 0;
+	margin:  16px 16px 8px 0px;
+}
+
+body > article {
+	width: 80%;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.introCard {
+	margin-top: 32px;
+	display: flex;
+	flex-direction: row;
+	background-image: var(--img);
+	/*color: var(--text-col);*/
+	color: whitesmoke;
+}
+
+.introCard > img {
+	margin-right: 16px;
+	content: var(--image);
+}
+
+.introCard > aside > p {
+	font-size: 18px;
+}
+
+.gravatar {
+	content: url(/assets/bluehairandpronouns.png) !important;
+}
+
+.cardGeneric > img {
+	margin-right: 16px;
+	border: 1px solid whitesmoke;
+}
+
+.cardGeneric {
+	color: whitesmoke;
+	text-decoration: none;
+}
+.bathBomb {
+	--img: url(/assets/gerda2.jpg);
+	--text-col: #eee2f3;
+	background-color: var(--primary-t) !important; /* Tint color */
+}
+.bathBomb2 {
+	--img: url(/assets/gerda3.jpg);
+	--text-col: #d3c7d8;
+	background-color: var(--primary-t) !important; /* Tint color */
+}
+
+#Projects > div{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+
+h3 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 2em;
+	padding: 0 0 0 0;
+	margin:  0px 0px 0px 0px;
+}
+
+.projectCard {
+	display: flex;
+	width: 100%;
+
+}
+.projectCard > img {
+	content: var(--image);
+	height: 256px;
+	margin-right: 16px;
+}
+
+#leviathan {
+	--image: url(/assets/leviathanrender.png);
+}
+
+.sadmac {
+	--image: url(/assets/sadmac.png);
+}
+
+.guru {
+	width: 100%;
+	margin-top: 32px;
+}
+
+.contactCard {
+	display: flex;
+	flex-direction: column;
+}
+
