@@ -1,10 +1,8 @@
-// Theme Manager Cinnamondev REV3 - Typescript boogaloo
+// Theme Manager Cinnamondev REV3
 /**
 
-aft doc load:
 let theme = new ThemeService("myConstant");
-
-/
+...
 **/
 class ThemeService {
     /**
@@ -16,6 +14,7 @@ class ThemeService {
      */
     constructor(localStorageItem, parent = document.body) {
         this.parent = document.body;
+        this.localStorageItem = localStorageItem;
         this.default();
         console.log("Theme Manager REV3. Defaulted to theme number", this.theme);
     }
@@ -60,7 +59,8 @@ class ThemeService {
      * @returns The theme that was set.
      */
     default() {
-        let theme = window.matchMedia("(prefers-color-scheme: light)").matches ? 0 : 1;
+        let theme = parseInt(localStorage.getItem(this.localStorageItem));
+        if (theme != 1 && theme != 0) theme = window.matchMedia("(prefers-color-scheme: light)").matches ? 0 : 1;
         return this.setState(theme);
     }
     /**
@@ -72,4 +72,3 @@ class ThemeService {
         return this.setState(theme);
     }
 }
-//# sourceMappingURL=theme.js.map

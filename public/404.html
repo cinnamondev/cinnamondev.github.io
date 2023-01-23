@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">   
+    <script src="/js/index.js" async defer></script>
+    <!--<script src="/js/theme.js"></script>-->
+    <!--Theme feature disable-->
+    <title>spice</title>
+</head>
+<body class="errpg">
+    <header>
+        <h1><input value="Cinnamon" id="eeInput" onkeydown="if(event.key=='Enter'){this.blur();}"></input></h1>
+    </header>
+        <article onclick="window.location.href = '/'" class="errart">
+            <img src="/assets/Guru_meditation.gif" class="guru"/>
+            <h2>It seems you've taken a wrong turn!</h2>
+            <p>Left click to continue <a href="/">home</a>.</p>
+            <p id="easter"><a href="/legacy/index.html">Find the old site!</a></p>
+            <video width="640" controls autoplay class="videoPlayer" id="eggman">
+                <source src="/assets/announcement.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> 
+            <video width="640" controls autoplay class="videoPlayer" id="woke">
+                <source src="/assets/moralists.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> 
+            <video width="640" controls autoplay class="videoPlayer" id="british">
+                <source src="/assets/epic.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> 
+        </article>
+    
+    <footer>
+        <span>Cinnamondev 2022. <a href="https://github.com/cinnamondev">Github.</a> Licensed under the Apache 2.0 License.</span>
+        <!--<button onclick="theme.invert()">Theme manager</button>-->
+    </footer>
+    <script>
+        let audio = new Audio('');
+        let video1 = document.getElementById("eggman");
+        let video2 = document.getElementById("woke");
+        let video3 = document.getElementById("british");
+        let egg = document.getElementById("easter");
+        let element = document.getElementById("eeInput");
+        element.value = "Cinnamondev"
+        element.addEventListener('blur', (e) => {
+            easterParser(element.value)
+        }, false)
+    
+        function easterParser(value) {
+            audio.loop = false; audio.pause();
+            video1.style="";video1.pause();
+            video2.style="";video2.pause();
+            video3.style="";video3.pause();
+            easter.style="";
+            document.body.style = "";
+            value = value.toLowerCase()
+            switch (value) {
+                case "hazardous drip":
+                    console.log("vine boom");
+                    audio = new Audio('/assets/drip.m4a');
+                    audio.loop = true;
+                    audio.play();
+                    document.body.style = "background-image: url('/assets/scienceteam.jpg');background-size:300px;"
+                    break;
+                case "what is obamas last name":
+                    console.log("vine boom");
+                    video1.style="display:initial !important;";
+                    video1.play()
+                    document.body.style = "background-image: url('/assets/bluehair.jpg');background-size:300px;"
+                    break;
+                case "old":
+                    easter.style="display:initial;"
+                    video2.style="display:initial !important;";
+                    video2.play()
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
