@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" id="a">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="/index.css"/>
     <script src="/js/index.js" defer></script>
     <script src="/js/theme.js"></script>
     <title>Cinnamondev</title>
@@ -14,74 +14,23 @@
     <meta property="og:url" content="https://cinnamondev.github.io/" />
     <meta property="og:image" content="https://secure.gravatar.com/avatar/a58f9f8b29c2d82da4ba5e4b757d3792?s=512" />
 </head>
-<body onload="theme.default();">
-    <div id="headerUnder">
+<body class="theme-dark">
+    <noscript class="dd">
+        <h1 class="noscript">No javascript? skill issue ig</h1>
+    </noscript>
+    <main class="introCard">
+        <img src="/assets/manmade-horrors.jpg" height="256">
         <header>
-            <h1><a href="/">Cinnamondev</a></h1>
-            <a href="javascript:;" onclick="toggleHamburger()" class="hamburger"><img src="./assets/menu_FILL1_wght400_GRAD0_opsz48.svg" style="filter:var(--pallete);"></a>
-            <ul class="nav navHeader" id="mainNav">
-                <li class="burgerItem"><a href="/" class="burgerItem">Home</a></li>
-                <li><a href="/#Projects">Projects</a></li>
-                <!--<li><a href="/resume.pdf" target="_blank">bloody cv innit</a></li>-->
-                <li><a href="https://www.github.com/cinnamondev" target="_blank">Github</a></li>
-                <li><a href="/#Contact">Contact</a></li>
-                <li id="closeBurger"><a href="javascript:;" onclick="toggleHamburger()">x</a></li>
-            </ul>
+            <h1><a href="/" class="noLink">Cinnamondev</a></h1>
+            <p> I make stuff!</p>
+            <p><a href="" class="noLink nav">About</a> • 
+                <a href="https://www.github.com/cinnamondev" class="noLink nav" target="_blank">Github</a> • 
+                <a href="" class="noLink nav">Contact</a></header></p>
         </header>
-    </div>
-    <article>
-        <section class="cardGeneric bathBomb introCard" id="">
-            <img class="gravatar" height="256" alt="Gravatar Profile Picture" title="Cinnamondev"/>
-            <aside>
-                <h2>Hi! I like to make stuff.</h2>
-                <p>I'm cinnamondev- a student in the UK (studying EEE) with a passion for electronics and technology.</p>            
-                <p>Feel free to explore my collection of work below, or go to any of my other pages below.</p>
-            </aside>
-        </section>
-    </article>
-    <article id="Projects">
-        <h2>Projects</h2>
-        <div>
-            <a class="cardGeneric projectCard" id="leviathan" href="./projects/leviathan/" style="margin-top: 0;">
-                <img/>
-                <aside>
-                    <header>
-                        <h3>Pi handheld</h3>   
-                    </header>
-                    <p>
-                    Powered by a Compute Module 4, leviathan is a 3d printed portable device designed for games and emulation- designed in KiCAD and Fusion 360
-                    </p>               
-                    <p>
-                        Project is TBF due to supply constraints, but can be made with off the shelf parts and a 3d printer.
-                    </p>
-                    <p>
-                        Battery should last at least a few hours and uses a 21700 battery which can be bought reliably and charged internally or externally.
-                        
-                    </p>
-                </aside>
+    </main>
 
-
-            </a>
-        </div>
-    </article>
-    <article id="Contact">
-        <section class="cardGeneric contactCard" id="ccardinner">
-                <header>
-                    <h3>Contact us</h3>   
-                </header>
-                <ul class="nav">
-                    <li><a href="javascript:void(0)" onclick="navigator.clipboard.writeText(window.location.href);copyHome('Website url');">Website</a></li>
-                    <li><a href="javascript:void(0)" onclick="navigator.clipboard.writeText('tbf');copyHome('Discord');">Discord</a></li>
-                    <li><a href="javascript:void(0)" onclick="navigator.clipboard.writeText('@-cinnamon:matrix.org');copyHome('Matrix');">Matrix</a></li>
-                    <li><a href="https://www.github.com/cinnamondev" target="_blank">Github</a></li>
-                    <li><a href="https://en.wikipedia.org/wiki/User:Prompt0259" target="_blank">Wikipedia (enwiki)</a></li>
-                </ul>
-                
-        </section>
-    </article>
     <footer>
-        Cinnamondev 2022. Licensed under the Apache License 2.0. <a href="#" onclick="theme.invert();">Set theme</a>
-        <a href="#" onclick="theme.removePreference     ();">Reset theme</a>
+        <p><a href="https://github.com/cinnamondev" target="_blank" class="noLink nav">Cinnamondev</a> 2023. Website is licensed under Apache 2.0.</p>
     </footer>
 </body>
 </html>
