@@ -47,6 +47,7 @@ html,body {
 }
 html {
 	font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -55,7 +56,7 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	align-items: center;
 }
 
@@ -75,6 +76,64 @@ main.introCard {
 main.introCard>* {
 	height: 256px;
 }
+
+h1 {
+	font-weight: 700;
+	font-size: 2.5em;
+}
+header > h1{
+	padding-bottom: 0;margin-bottom: 0;
+}
+header > p{
+	font-size: 1.5em;
+	margin-top: 8px;
+}
+header {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+header.top {
+	padding-top: 8px;
+	text-align: left;
+	vertical-align: middle;
+	flex-direction: row;
+	align-content: center;
+	width: 100%;
+	max-width: 1024px;
+	height: 64px;
+}
+
+header.top > * {
+	height: 100%;
+	line-height: 64px;
+}
+
+header.top > h1,header.top>div>h1{
+	margin: initial;
+	padding: initial;
+}
+
+header.top>div>h1{padding-left: 16px;	font-weight: 400;}
+header.top>div>img{height: 100%;;}
+header.top>div {
+	display: flex;
+}
+header.top > p{
+	margin: initial;
+	padding: initial;
+	padding-left: 128px;
+}
+a.noLink:any-link {
+	color: inherit;
+	text-decoration: inherit;
+}
+a.nav {
+	text-decoration: underline !important;
+}
+
+
 @media only screen and (max-width: 511px) {
 	main.introCard {
 		width: 90%;
@@ -86,42 +145,47 @@ main.introCard>* {
 		height: auto;
 		width: 256px;
 	}
-
 }
-h1 {
-	font-weight: 700;
-	font-size: 2.5em;
+@media only screen and (max-width: 700px) {
+	header.top>div>img{display: none;}
+	header.top {
+		height: 128px;
+		flex-direction: column;
+	}
+	header.top {
+		align-content: center;
+		align-items: center;
+	}
+	header.top>div>h1 {
+		width:100%;
+		padding: initial;
+		text-align: center;
+	}
+	header.top>p {
+		width:100%;
+		padding: initial;
+		text-align: center;
+	}
 }
-header > h1 {
-	padding-bottom: 0;margin-bottom: 0;
-}
-header > p {
-	font-size: 1.5em;
-	margin-top: 8px;
-}
-header {
-	text-align: center;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-}
-
-a.noLink:any-link {
-	color: inherit;
-	text-decoration: inherit;
-}
-a.nav {
-	text-decoration: underline !important;
-}
-
 
 footer {
 	display: block;
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
 	word-wrap: break-word;
+}
+
+a.navActive {
+	font-weight: bold;
+}
+
+main.content {
+	width:80%;
+	max-width: 768px;
+}
+
+h1 > sub {
+	font-size: 0.7em;
 }
