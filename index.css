@@ -189,3 +189,56 @@ main.content {
 h1 > sub {
 	font-size: 0.7em;
 }
+
+h2 {
+	font-weight: 500;
+	font-size: 2em;
+}
+
+#contact > p {
+	font-size: 1.7em;
+	text-align: center;
+}
+
+section > aside > img {
+	border: 3px solid var(--outline);
+	width: 256px;
+}
+section > aside {
+	float: inline-end;
+	clear:both;
+}
+section {
+	clear:both;
+	display: block;
+	height: auto;
+}
+section:after {
+	clear: both; 
+	content: "";
+	display: table; 
+  }
+section > aside > p {
+	margin-top: 0;
+}
+@media only screen and (max-width: 800px) {
+	header.projectPage>div>img{display: none;}
+	header.projectPage {
+		height: 128px;
+		flex-direction: column;
+	}
+	header.projectPage {
+		align-content: center;
+		align-items: center;
+	}
+	header.projectPage>div>h1 {
+		width:100%;
+		padding: initial;
+		text-align: center;
+	}
+	header.projectPage>p {
+		width:100%;
+		padding: initial;
+		text-align: center;
+	}
+}
