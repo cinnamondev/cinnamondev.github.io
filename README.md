@@ -10,9 +10,6 @@ Text - Roboto
 
 ## Image crediting
 
-### Fusion 360 Logo
-[Image](https://commons.wikimedia.org/wiki/File:Fusion_360_Logo.png) Pulled from WikiMedia commons under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). Author is Howe1, though Autodesk created the logo.
-
 ### Lush 'Lord of Misrule'
 
 [Image](https://unsplash.com/photos/ZLtZfjJfjj0) taken by [Gerda](https://unsplash.com/@gerdadesign) and provided by [Unsplash](https://unsplash.com) under the [Unsplash License](https://unsplash.com/license)
@@ -24,10 +21,11 @@ Text - Roboto
 ### 'Guru Meditation'
 
 [Image](https://commons.wikimedia.org/wiki/File:Guru_meditation.gif) pulled from WikiMedia commosn under PUBLIC DOMAIN. Uploaded by MooseBlaster. From Commodore Amiga.
-## Theming
-[Code](js/theme.js)
 
-Allows for the switching between two color themes (typically a light/dark theme) with system preference detection.
+
+### RP2040
+[Image](https://commons.wikimedia.org/wiki/File:RP2040.jpg) pulled from WikiMedia commons under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). Author/Uploader is Phiarc.
+Logo belongs to the Pi Foundation ("Raspberry Pi Logo").
 
 ### Usage
 
