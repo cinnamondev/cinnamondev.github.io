@@ -28,16 +28,17 @@
         <main class="content">
             <article id="about">
                 <section>
-                <aside>
+                <!--<aside>
                     <img src="/assets/bluehair.jpg">
                     <p>test side image</p>
-                </aside>
+                </aside>-->
                 <p> Hi! I'm a EE student from the UK with a passion for electronics and technology. </p>
 
                 </section>
             </article>
             <article id="projects">
                 <h2>Projects</h2>
+                <!--
                 <section>
                     <h3>Gamepithing</h3>
                     <aside>
@@ -51,22 +52,34 @@
                         Project links: <a href="https://github.com/cinnamondev/gamepithing" target="_blank" class="noLink nav">Repository</a> • 
                         <a href="/projects/leviathan/index.html" class="noLink nav">Project page</a>
                     </p>
-                </section>
+                </section>-->
                 <section>
-                    <h3>itscinnamon</h3>
+                    <h3>cmsis-rp2040</h3>
                     <aside>
-                        <img src="/assets/website2.png" alt="Screenshot of the website homepage.">
+                        <img src="/assets/RP2040.jpg" alt="fld2csv script help prompt">
                         <p></p>
                     </aside>
                     <p>
-                        Personal website. Has gone through many iterations now.
+                        Template/Environment for using CMSIS tools in combination with the pico-sdk.
+                        Requires no dependencies other than powershell - all build dependencies are bootstrapped via
+                        vcpkg.
                     </p>
+                    <p>More info can be found in the project's README.</p>
                     <p>
-                        Project links: <a href="https://github.com/cinnamondev/cinnamondev.github.io" target="_blank" class="noLink nav">Repository</a> • 
-                        <a href="/" class="noLink nav navActive">Website</a>
+                        2 templates are provided:
+                    </p>
+                    <ul>
+                        <li><a href="https://github.com/cinnamondev/cmsis-rp2040" target="_blank" class="noLink nav">Base (master)</a> 
+                            <p>Template with a blinking LED demo.</p>
+                        </li>
+                        <li><a href="https://github.com/cinnamondev/cmsis-rp2040/tree/demo-lvgl" target="_blank" class="noLink nav">LVGL (demo-lvgl)</a>
+                            <p>Template with a simple demo of LVGL, using a custom ILI9341 driver.</p>
+                        </li>
+                    </ul>
+                    <p>
+                        Project links: <a href="https://github.com/cinnamondev/cmsis-rp2040" target="_blank" class="noLink nav">Repository</a>
                     </p>
                 </section>
-
                 <section>
                     <h3>fld2csv.py</h3>
                     <aside>
@@ -83,6 +96,22 @@
                         Project links: <a href="https://github.com/cinnamondev/fld2csv.py" target="_blank" class="noLink nav">Repository</a>
                     </p>
                 </section>
+
+                <section>
+                    <h3>itscinnamon</h3>
+                    <aside>
+                        <img src="/assets/website2.png" alt="Screenshot of the website homepage.">
+                        <p></p>
+                    </aside>
+                    <p>
+                        Personal website. Has gone through many iterations now.
+                    </p>
+                    <p>
+                        Project links: <a href="https://github.com/cinnamondev/cinnamondev.github.io" target="_blank" class="noLink nav">Repository</a> • 
+                        <a href="/" class="noLink nav navActive">Website</a>
+                    </p>
+                </section>
+
             </article>
             <article id="contact">
                 <h2>Contact us</h2>
