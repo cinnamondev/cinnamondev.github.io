@@ -160,10 +160,13 @@
                 playVideo("/assets/soda.mp4");
                 break;
             case "you're the moron they made to make me an idiot":
-                let eeMoron = new Audio('/assets/moron.wav');   
+                let eeMoron = new Audio('/assets/moron.wav');
+                eeMoron.play();   
                 displayImage("/assets/moron.jpg");
+                break;
+            case "sniping":
+                let eeMoronY = new Audio('/assets/glados_moron.wav')
                 eeMoron.play();
-            case "nerd":
                 displayImage("/assets/nerd_sniping.png");
                 break;
             default:
