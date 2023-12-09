@@ -1,53 +1,56 @@
-# Website
+# Personal Website
 
-Personal website
-
-Partially inspired by a 'material you' look (largely nav and card.)
+TODO: resize and optimize images.
 
 ## Fonts
+
 Headers/Logos - Quicksand
 Text - Roboto
 
-## Image crediting
+## Crediting
 
-### Lush 'Lord of Misrule'
+Credit is given where possible.
 
-[Image](https://unsplash.com/photos/ZLtZfjJfjj0) taken by [Gerda](https://unsplash.com/@gerdadesign) and provided by [Unsplash](https://unsplash.com) under the [Unsplash License](https://unsplash.com/license)
+### ESP Project Trackday
 
-### Lush 'Intergalactic'
+Thumbnail of [Video](https://youtu.be/0njrJgK_GcI?feature=shared), uploaded by University of Manchester.
 
-[Image](https://unsplash.com/photos/hwmw123QZqI) taken by [Gerda](https://unsplash.com/@gerdadesign) and provided by [Unsplash](https://unsplash.com) under the [Unsplash License](https://unsplash.com/license)
+### 'Sad Mac'
 
-### 'Guru Meditation'
-
-[Image](https://commons.wikimedia.org/wiki/File:Guru_meditation.gif) pulled from WikiMedia commosn under PUBLIC DOMAIN. Uploaded by MooseBlaster. From Commodore Amiga.
-
+[Image](https://commons.wikimedia.org/wiki/File:Sad_mac.png) uploaded by "Mysid" under public domain.
+'Sad Mac' itself comes from Apple / Apple Macintosh. Image was edited to contain '404' in the error code.
 
 ### RP2040
+
 [Image](https://commons.wikimedia.org/wiki/File:RP2040.jpg) pulled from WikiMedia commons under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). Author/Uploader is Phiarc.
 Logo belongs to the Pi Foundation ("Raspberry Pi Logo").
 
-### Usage
+### 'Man-made Horrors' / Profile Picture
 
-In your CSS, make two selectors for ID's
-```css
-#a {
-    /*...*/
-}
+[Image](https://www.instagram.com/p/Ci05l7hDfkj/?img_index=1) by 'iamthatwitch'.
 
-#b {
-    /*...*/
-}
-```
+### DTMF Graph
 
-Use these methods (requires page ready)
+[Image](https://commons.wikimedia.org/wiki/File:MultiTone1.png) by 'Tomhubbard', licensed under Creative Commons Attribution-Share Alike 4.0 International.
 
-`theme.current()`: Meh. It's there.
+<details>
+<summary>Easter Eggs</summary>
 
-`theme.default()`: Uses window.matchMedia to determine a system preferred theme.
+### 'Announcement'
 
-`theme.invert()`: Swaps the currently slotted theme with the other. Only works for the current configuration currently, which has 2 themes. Potentially could be improved
+[Video](https://youtu.be/IMC0uZY2iH0?feature=shared&t=778) Excert from Snapcube's Parody Dub.
 
-`theme.set()`: Sets the theme according to an input. Should not usually be used, but its there
+### 'Soda'
 
-`theme.removePreference()`: When theme.set() is given it will save to the localstorage. This calls to remove the item from local storage completely and calls `theme.default()`
+[Video](https://www.youtube.com/watch?v=gCzzZ3nILRM) Unknown if original source.
+
+### 'Nerd Sniping'
+
+[Image](https://xkcd.com/356/) by Randall Munroe, licensed under Creative Commons Attribution-NonCommercial 2.5 License.
+
+### 'Moron'
+
+Audio clip from Portal 2.
+Image based off Portal 2.
+
+</details>

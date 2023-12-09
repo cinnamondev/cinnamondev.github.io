@@ -1,79 +1,174 @@
 <!DOCTYPE html>
-<html lang="en" id="b">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/indexmin.css"/>
-    <title>Uhoh (cinnadev)</title>
+    <link rel="stylesheet" href="/index.css"/>
+    <script src="/js/index.js" defer></script>
+    <script src="/js/theme.js"></script>
+    <title>Cinnamondev - Page not found</title>
+    <meta property="og:title" content="Cinnamondev - 404" />
+    <meta property="og:description" content="Page not found" />
+    <meta property="profile:username" content="cinnamon">
+    <meta property="og:url" content="https://cinnamondev.github.io/404.html" />
+    <meta property="og:image" content="https://cinnamondev.github.io/assets/Sad_mac_404.png" />
 </head>
-<body>
-    <div id="headerUnder">
-        <header>
-            <h1><input value="Cinnamondev" id="eeInput" onkeydown="if(event.key=='Enter'){this.blur();}"></input></h1>
+<body class="theme-dark" style="justify-content: space-between;">
+    <header class="top">
+        <div>
+            <img src="/assets/manmade-horrors.jpg">
+            <h1 class="noJS">
+                Cinnamondev
+            </h1>
+            <h1 class="hideNoJS">
+                <input value="Cinnamondev" type="text" autocomplete="off" id="ei" onkeydown="if(event.key=='Enter'){this.blur();}"></input>
+            </h1>
+        </div>
+        <p>
+            <a href="/" class="noLink nav">Home</a>
+            • <a href="/about.html#" class="noLink nav">About</a>
+            • <a href="/about.html#projects" class="noLink nav">Projects</a>
+            • <a href="/about.html#contact" class="noLink nav">Contact</a>
+        </p>
         </header>
-    </div>
-    <article onclick="window.location.href = '/'">
-        <img src="/assets/Guru_meditation.gif" class="guru"/>
-        <h2>It seems you've taken a wrong turn!</h2>
-        <p>Left click to continue <a href="/">home</a>.</p>
-        <noscript>(Use link if JS is disabled.)</noscript>
-        <p id="easter"><a href="/legacy/index.html">Find the old site!</a></p>
-        <video height="256" controls autoplay class="videoPlayer" id="eggman">
-            <source src="/assets/announcement.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video> 
-        <video height="256" controls autoplay class="videoPlayer" id="woke">
-            <source src="/assets/soda.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video> 
-    </article>
-    <footer>
-        Cinnamondev 2022. Licensed under the Apache License 2.0.
-    </footer>
-     <script>
-        let audio = new Audio('');
-        let video1 = document.getElementById("eggman");
-        let video2 = document.getElementById("woke");
-        let video3 = document.getElementById("british");
-        let egg = document.getElementById("easter");
-        let element = document.getElementById("eeInput");
-        element.value = "Cinnamondev"
-        element.addEventListener('blur', (e) => {
-            easterParser(element.value)
-        }, false)
+        <main class="introCard" style="width:628px;min-width: 564px;">
+            <div id="ec">
+                <img src="/assets/Sad_mac_404.png" id="eci">
+                <video controls autoplay class="hide" id="ecv"></video> 
+            </div>
+            <header style="width:100%;">
+                <h1><a href="/" class="noLink">404 Not found</a></h1>
+                <p>
+                    It seems you have taken a wrong turn! 
+                </p>
+                <p>     
+                    <a href="/" class="noLink nav">Home</a>
+                        • <a href="/about.html" class="noLink nav">About</a>
+                     • <a href="/about.html#projects" class="noLink nav">Projects</a>
+                     • <a href="/about.html#contact" class="noLink nav">Contact</a>
 
-        function easterParser(value) {
-            audio.loop = false; audio.pause();
-            video1.style="";video1.pause();
-            video2.style="";video2.pause();
-            easter.style="";
-            document.body.style = "";
-            value = value.toLowerCase()
-            switch (value) {
-                case "hazardous drip":
-                    console.log("vine boom");
-                    audio = new Audio('/assets/drip.m4a');
-                    audio.loop = true;
-                    audio.play();
-                    document.body.style = "background-image: url('/assets/scienceteam.jpg');background-size:300px;"
-                    break;
-                case "obamna":
-                    console.log("vine boom");
-                    video1.style="display:initial !important;";
-                    video1.play()
-                    document.body.style = "background-image: url('/assets/bluehair.jpg');background-size:400px;"
-                    break;
-                case "soda":
-                    console.log("SODA!");
-                    video2.style="display:initial !important;";
-                    video2.play()
-                    document.body.style = "background-image: url('/assets/bluehair.jpg');background-size:400px;"                   
-                default:
-                    break;
-            }
-        }
-    </script>
-    
+                </p>
+            </header>
+        </main>
+    <footer>
+        <p><a href="https://github.com/cinnamondev" target="_blank" class="noLink nav">Cinnamondev</a> 2023. Website is licensed under Apache License 2.0.</p>
+        <p>
+            <a href="https://webring.queercoded.dev/prev?source=cinnamondev.github.io" class="noLink">&#60;&#60;</a>
+            <a href="https://webring.queercoded.dev/" class="noLink nav" target="_blank">This website is part of the QC Webring!</a>
+            <a href="https://webring.queercoded.dev/next?source=cinnamondev.github.io" class="noLink">&#62;&#62;</a>
+        </p>
+    </footer>
 </body>
+<style>
+    .noJS { /** overridden in noscript section if no js*/
+        display: none;
+        visibility: hidden;
+    }
+    input {
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        height: 100%;
+        width: 100% ;
+	    padding: 0 0 0 0;
+	    margin: 0 0 0 0;
+        background-color: transparent;
+	    border: none;
+        outline: none;
+	    color: inherit;
+    }
+    header.top h1 {
+        padding: 0 0 0 0;
+        width: 232.833px !important;
+        max-width: 232.833px !important ; /** This is gross looking, but it fixes header size*/
+    }
+    #ec > * {
+        height: 100%;
+    }
+    #ec      > video {
+        visibility: hidden;
+        display: none;
+        overflow: hidden;
+        aspect-ratio: 1/1;
+    }
+    #ec.v > video {
+        visibility: initial;
+        display: initial;
+    }
+    #ec.v > img {
+        visibility: hidden;
+        display: none;
+    }
+</style>
+<noscript>
+    <style>
+        .noJS {
+           display: initial !important;
+           visibility: initial !important; 
+        }
+        .hideNoJS {
+            display: none;
+            visibility: hidden;
+        }
+    </style>
+</noscript>
+<!-- Spoilers ! ;)-->
+<script>
+    let input = document.getElementById("ei");
+    let mediaBox = document.getElementById("ec");
+    let videoPlayer = document.getElementById("ecv");
+    let imager = document.getElementById("eci");
+    const imageOriginal = imager.src;
+
+    input.addEventListener('blur', (e) => { // Respond to input change event
+            eeParser(input.value)
+        }, false);
+    function setVideo(source) {
+        if(videoPlayer.firstChild) videoPlayer.firstChild.remove();
+        sourceElem = document.createElement("source");
+        sourceElem.type = "video/mp4";
+        sourceElem.src = source;
+        videoPlayer.appendChild(sourceElem);
+    }
+    function revealVideo() {
+        mediaBox.classList.add("v");
+        videoPlayer.play();
+    }
+    function hideVideo() {
+        videoPlayer.pause();
+        mediaBox.classList.remove("v");
+    }
+    function playVideo(source) {
+        setVideo(source);
+        revealVideo();
+    }
+    function resetImage() {
+        displayImage(imageOriginal);
+    }
+    function displayImage(source) {
+        imager.src = source;
+    }
+    function eeParser(input) {
+        hideVideo();
+        resetImage();
+        switch (input) {
+            case "i am the eggman":
+                playVideo("/assets/announcement.mp4");
+                break;
+            case "soda":
+                playVideo("/assets/soda.mp4");
+                break;
+            case "you're the moron they made to make me an idiot":
+                let eeMoron = new Audio('/assets/moron.wav');   
+                displayImage("/assets/moron.jpg");
+                eeMoron.play();
+            case "nerd":
+                displayImage("/assets/nerd_sniping.png");
+                break;
+            default:
+                break;  
+        }
+    }
+</script>
 </html>
