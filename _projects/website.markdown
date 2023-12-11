@@ -7,10 +7,6 @@ imageAlt: "RP2040 Chip"
 repositoryURL: "https://github.com/cinnamondev/cinnamondev.github.io"
 websiteURL: "https://cinnamondev.github.io/"
 ---
+Personal website- has been frequently updated over time as my projects or focus has changed.
 
-<p>
-    Personal website- has been frequently updated over time as my projects or focus has changed.
-</p>
-<p>
-    Static website + blog generated using custom jekyll.
-</p>
+Static website + blog generated using custom jekyll.
