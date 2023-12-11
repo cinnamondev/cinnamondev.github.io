@@ -37,7 +37,7 @@ pagination:
                     {% continue %}
                     {% endif %}
                     <li>
-                        <a href="#{{ project.title | strip }}" class="noLink nav    ">
+                        <a href="#{{ project.title | replace: " ", "" }}" class="noLink nav    ">
                             {{ project.title }}
                         </a>
                     </li>
@@ -52,7 +52,7 @@ pagination:
                     {% continue %}
                     {% endif %}
                     <li>
-                        <a href="#{{ project.title | strip }}" class="noLink nav">
+                        <a href="#{{ project.title | replace: " ", "" }}" class="noLink nav">
                             {{ project.title }}
                         </a>
                     </li>
@@ -66,7 +66,7 @@ pagination:
                     {% continue %}
                     {% endif %}
                     <li>
-                        <a href="#{{ project.title | strip }}" class="noLink nav">
+                        <a href="#{{ project.title | replace: " ", "" }}" class="noLink nav">
                             {{ project.title }}
                         </a>
                     </li>
@@ -80,12 +80,14 @@ pagination:
     {% if project.type != "Personal" %}
     {% continue %}
     {% endif %}
-    <section id="{{ project.title | strip }}">
+    <section id="{{ project.title | replace: " ", "" }}">
         <h4>{{ project.title }}</h4>
         <aside>
-            <img src="{% if project.image %}{{ project.image }}{% endif %}" 
+            {% if project.image %}
+            <img src="{{ project.image }}" 
                 alt="{% if project.imageAlt %}{{ project.imageAlt }}{% endif %}">
-            <p>{% if project.imageCaption %}{{ project.imageCaption }}{% endif %}</p>
+            {% endif %}
+            {% if project.imageCaption %}<p>{{ project.imageCaption }}</p>{% endif %}
             {% if project.youtubeEmbed %}
             <iframe width="256" height="315" src="{{ project.youtubeEmbed }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 3px solid var(--outline);"></iframe>
             {% endif %}
@@ -110,12 +112,14 @@ pagination:
     {% if project.type != "University" %}
     {% continue %}
     {% endif %}
-    <section id="{{ project.title | strip }}">
+    <section id="{{ project.title | replace: " ", "" }}">
         <h4>{{ project.title }}</h4>
         <aside>
-            <img src="{% if project.image %}{{ project.image }}{% endif %}" 
+            {% if project.image %}
+            <img src="{{ project.image }}" 
                 alt="{% if project.imageAlt %}{{ project.imageAlt }}{% endif %}">
-            <p>{% if project.imageCaption %}{{ project.imageCaption }}{% endif %}</p>
+            {% endif %}
+            {% if project.imageCaption %}<p>{{ project.imageCaption }}</p>{% endif %}
             {% if project.youtubeEmbed %}
             <iframe width="256" height="315" src="{{ project.youtubeEmbed }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 3px solid var(--outline);"></iframe>
             {% endif %}
@@ -140,12 +144,14 @@ pagination:
     {% if project.type != "School" %}
     {% continue %}
     {% endif %}
-    <section id="{{ project.title | strip }}">
+    <section id="{{ project.title | replace: " ", ""  }}">
         <h4>{{ project.title }}</h4>
         <aside>
-            <img src="{% if project.image %}{{ project.image }}{% endif %}" 
+            {% if project.image %}
+            <img src="{{ project.image }}" 
                 alt="{% if project.imageAlt %}{{ project.imageAlt }}{% endif %}">
-            <p>{% if project.imageCaption %}{{ project.imageCaption }}{% endif %}</p>
+            {% endif %}
+            {% if project.imageCaption %}<p>{{ project.imageCaption }}</p>{% endif %}
             {% if project.youtubeEmbed %}
             <iframe width="256" height="315" src="{{ project.youtubeEmbed }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 3px solid var(--outline);"></iframe>
             {% endif %}
