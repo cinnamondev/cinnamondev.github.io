@@ -3,6 +3,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/assets/css/pre.css">
 <link rel="stylesheet" href="/assets/css/main.css">
+{% if page.redirect_to %}
+<link rel="canonical" href="{{ page.redirect_to }}"/>
+<meta http-equiv="refresh" content="0;url={{ page.redirect_to }}" />
+{% endif %}
 <meta property="og:title" content="Cinnamondev - {{ page.title }}" />
 <meta property="og:description" content="
 {% if page.id %}
