@@ -1,10 +1,19 @@
 ---
+layout: redirect
 title:  "Embedded Systems Project"
 priority: 1
 type: "University"
 image: /assets/images/esp-project.jpg
 imageAlt: "ESP Racetrack"
 imageCaption: "ESP Racetrack"
+redirect_from: 
+    - /projects/esp
+    - /project/embeddedsystems
+    - /project/embeddedsystemsproject
+    - /esp
+    - /embeddedsystems
+    - /embeddedsystemsproject
+non_gem_redirect_url: /about#EmbeddedSystemsProject
 ---
 As part of the Embedded Systems Project course, as a group, we must undertake
 designing an autonomous vehicle (line follower robot). This requires strong

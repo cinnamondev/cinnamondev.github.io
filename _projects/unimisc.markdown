@@ -1,10 +1,15 @@
 ---
+layout: redirect
 title:  "Misc. Scripting"
 priority: 2
 type: "University"
 image: /assets/images/fld2csv.png
 imageAlt: "fld2csv script"
 imageCaption: "fld2csv script"
+redirect_from: 
+    - /projects/uniscripts
+    - /uniscripts
+non_gem_redirect_url: /about#Misc.Scripting
 ---
 - [FLD2CSV](https://github.com/cinnamondev/fld2csv.py)\
 Converts Ansys/ELVISmx output to a .csv file for data processing.

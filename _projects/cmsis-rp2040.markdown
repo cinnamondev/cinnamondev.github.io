@@ -1,10 +1,15 @@
 ---
+layout: redirect
 title:  "cmsis-rp2040"
 priority: 1
 type: "Personal"
 image: /assets/images/RP2040.jpg
 imageAlt: "RP2040 Chip"
 repositoryURL: "https://github.com/cinnamondev/cmsis-rp2040"
+redirect_from: 
+    - /projects/cmsis-rp2040
+    - /cmsis-rp2040
+non_gem_redirect_url: /about#cmsis-rp2040
 ---
 Custom scripts and template project structure for a project using the Pico SDK
 in tandem with CMSIS csolutions - allowing us to use CMSIS/KEIL Packs, for

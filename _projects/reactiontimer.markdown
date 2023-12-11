@@ -1,8 +1,17 @@
 ---
+layout: redirect
 title:  "Reaction Timer Coursework"
 priority: 2
 type: "School"
 repositoryURL: "https://github.com/cinnamondev/ReactionTimer"
+redirect_from: 
+    - /projects/reactiontimer
+    - /projects/electronicgame
+    - /projects/picassembly
+    - /electronicgame
+    - /reactiontimer
+    - /picassembly
+non_gem_redirect_url: /about#ReactionTimerCoursework
 ---
 For my Electronics A-Level, we were tasked to design 2 electronic systems of our own choice and design.
 

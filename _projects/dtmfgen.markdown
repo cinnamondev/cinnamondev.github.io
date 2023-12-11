@@ -1,10 +1,16 @@
 ---
+layout: redirect
 title:  "DTMF Tone Generator"
 priority: 1
 type: "School"
 image: /assets/images/DTMF1.png
 imageAlt: "DTMF Tone '1'"
 imageCaption: "DTMF Tone for 1."
+sitemap: false
+redirect_from: 
+    - /projects/DTMFToneGenerator
+    - /DTMFToneGenerator
+non_gem_redirect_url: /about#DTMFToneGenerator
 ---
 For my Electronics A-Level, we were tasked to design 2 electronic systems of our own choice and design.
 

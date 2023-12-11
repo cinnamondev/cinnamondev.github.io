@@ -1,4 +1,5 @@
 ---
+layout: redirect
 title:  "Handheld Console"
 priority: 2
 type: "Personal"
@@ -8,6 +9,14 @@ imageCaption: "3D render of case iteration"
 youtubeEmbed: "https://www.youtube-nocookie.com/embed/Q7foxCv2dbI?si=M_87cLazMFbLLm8G&amp;controls=0"
 embedCaption: "Spring-loaded baseplate prototype"
 repositoryURL: "https://github.com/cinnamondev/gamepithing"
+redirect_from: 
+    - /projects/gamepithing
+    - /projects/leviathan
+    - /projects/handheld
+    - /gamepithing
+    - /leviathan
+    - /handheld
+non_gem_redirect_url: /about#HandheldConsole
 ---
 This project aspires to create a handheld games console, powered by a
 Compute Module 4 (equivalent to a Raspberry Pi 4, with board-board connectors that
