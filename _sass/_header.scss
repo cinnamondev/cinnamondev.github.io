@@ -1,0 +1,56 @@
+$headerHeight: 64px;
+
+header.top {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	vertical-align:middle;
+	padding-top: 8px;
+	height: $headerHeight;
+	margin: 0 16px 0 16px;
+}
+header.top div {
+	height: $headerHeight;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-content: inherit;
+	align-items: inherit;
+}
+header.top h1 {
+	display: flex;							// the fact that flex is consistently the most
+	flex-flow: row nowrap;					// reliable center mechanism is so annoying.
+	margin: initial;
+	padding:initial;
+	margin-left: 16px;	
+	font-weight: 400;
+}
+header.top img{
+	height: 100%;
+	padding:0 0 0 0; 
+	margin: 0 0 0 0;
+}
+header.top p {	
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: center;
+}
+
+@media only screen and (max-width: 732px) {
+	header.top {
+		flex-flow: column  nowrap;
+		height: auto;	
+		margin: 0 0 0 0;
+	}
+	header.top div {
+		margin-bottom: 4px;
+	}
+}
+@media only screen and (max-width: 300px) {
+	header.top img {
+		display: none;
+		visibility: hidden;
+	}
+}

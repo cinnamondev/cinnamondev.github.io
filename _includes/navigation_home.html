@@ -1,0 +1,10 @@
+<p class="navBar">
+    {% for item in site.data.navigation %}
+        {% unless forloop.first %}
+        <a href="{{ item.link }}" class="noLink nav {% if page.url == item.link %} navActive {% endif %}">
+            {{ item.name }}
+        </a>
+        {% endunless %}
+        {% unless forloop.last or forloop.first %} • {% endunless %}
+    {% endfor %}
+</p>

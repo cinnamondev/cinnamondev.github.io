@@ -1,0 +1,18 @@
+$spacingNavOptions: 4px;
+p.navBar > a {
+    padding-left: $spacingNavOptions;
+    padding-right: $spacingNavOptions;
+}
+p.navBar > a:last-child {
+    padding-right: 0;
+}
+p.navBar > a:first-child {
+    padding-left: 0;
+}
+p.navBar {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: initial;
+    padding: initial;
+    font-size: 1.5em;
+}

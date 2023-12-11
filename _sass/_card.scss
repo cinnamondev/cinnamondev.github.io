@@ -1,0 +1,50 @@
+$card-height: 256px;
+$card-width: 608px;
+$card-image-width: $card-height;
+
+main.card {
+    display: flex;
+	flex-flow: row wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: $card-width;
+	height: $card-height;	
+	min-height: $card-height;	
+	border: 3px solid var(--outline);
+	background-color: var(--surface-variant);
+	padding:0 0 0 0;
+	margin: 0 0 0 0;
+}
+main.card>img {
+	width: $card-image-width;
+}
+
+main.card>header {
+    flex:1;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+main.card>header>h1 {
+    font-size: 2.5em;
+    margin: 0 0 0 0;
+    font-weight: 700;
+}
+main.card>header>p {
+    font-size: 1.5em;
+    margin-bottom: 32px;
+}
+
+
+@media only screen and (max-width: ($card-width + 3px)) {
+	main.card {
+        width: auto;
+		height: auto;
+        max-height: auto;
+	}
+    main.card>img {
+        max-width: 100%;    
+    }
+}

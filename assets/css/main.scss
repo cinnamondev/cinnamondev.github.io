@@ -1,0 +1,156 @@
+---
+---
+@use "card" as card;
+@use "header" as header;
+@use "navbar" as nav;
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+html,body {
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	height:100%;
+}
+html {
+	width:100%;
+	font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	scroll-behavior: smooth;
+}
+
+body {
+	width: 1024px;
+	max-width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+/* Landing page specific*/
+
+/* General / All */
+h1 {
+	font-weight: 700;
+	font-size: 2.5em;
+}
+
+a {
+	transition: color 100ms;
+	color: var(--primary);	
+}
+a:active,a:hover {
+	color: var(--primary-t);
+} 	
+a.noLink {
+	color: inherit !important;
+	text-decoration: none;
+}
+a.nav {
+	text-decoration: underline;
+}
+a.navActive {
+	font-weight: bold;
+}
+
+ol.contentTable li {
+	margin-bottom: 2px;
+}
+footer {
+	display: block;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+main.content {
+	width: 100%;
+	flex: 1;
+}
+
+/* typ. project pages for this selector*/
+h1 > sub {
+	font-size: 0.7em;
+}
+/* About / Projects / Contact page */
+h2 {
+	font-weight: 500;
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+h4 {
+	display: list-item;
+	list-style: disc;
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+#contact > p {
+	font-size: 1.7em;
+	text-align: center;
+}
+
+section > aside > img {
+	border: 3px solid var(--outline);
+	width: 256px;
+}
+section > aside {
+	float: right;
+	clear:both;
+	padding-left: 12px;
+}
+section {
+	clear:both;
+	display: block;
+	height: auto;
+}
+section:after {
+	clear: both; 
+	content: "";
+	display: table; 
+  }
+section > aside > p {
+	margin-top: 0;
+}
+
+/* Project page sub override*/
+@media only screen and (max-width: 800px) {
+	header.projectPage>div>img{display: none;}
+	header.projectPage {
+		height: 128px;
+		flex-direction: column;
+	}
+	header.projectPage {
+		align-content: center;
+		align-items: center;
+	}
+	header.projectPage>div>h1 {
+		width:100%;
+		padding: initial;
+		text-align: center;
+	}
+	header.projectPage>p {
+		width:100%;
+		padding: initial;
+		text-align: center;
+	}
+	
+}
+
+@media only screen and (max-width: 576px) {
+	section > aside {
+		width: 100%;
+		float:initial;
+		padding-left: initial;
+	}
+	section > aside > img {
+		width: 100%;
+	}
+
+	main.content { width: 100%;padding-left: 12px;padding-right: 12px;}
+}

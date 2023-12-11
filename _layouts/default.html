@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+    <meta property="og:title" content="Cinnamondev- {{ page.title }}" />
+    <meta property="og:description" content="Hi!" />
+    <meta property="profile:username" content="cinnamon">
+    <meta property="og:url" content="{{ page.url }}" />
+    <meta property="og:image" content="https://secure.gravatar.com/avatar/a58f9f8b29c2d82da4ba5e4b757d3792?s=512" />
+</head>
+<body class="theme-dark">
+        {% include header.html %}
+        <main class="content">
+            {{ content }}
+        </main>
+
+    {% include footer.html %}
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css"/>
+    <script src="/js/index.js" defer></script>
+    <script src="/js/theme.js"></script>
+    <title>Cinnamondev - Page not found</title>
+    <meta property="og:title" content="Cinnamondev - 404" />
+    <meta property="og:description" content="Page not found" />
+    <meta property="profile:username" content="cinnamon">
+    <meta property="og:url" content="https://cinnamondev.github.io/404.html" />
+    <meta property="og:image" content="https://cinnamondev.github.io/assets/Sad_mac_404.png" />
+</head>
+<body class="theme-dark" style="justify-content: space-between;">
+    <header class="top">
+        <div>
+            <img src="/assets/manmade-horrors.jpg">
+            <h1 class="noJS">
+                Cinnamondev
+            </h1>
+            <h1 class="hideNoJS">
+                <input value="Cinnamondev" type="text" autocomplete="off" id="ei" onkeydown="if(event.key=='Enter'){this.blur();}"></input>
+            </h1>
+        </div>
+        <p>
+            <a href="/" class="noLink nav">Home</a>
+            • <a href="/about.html#" class="noLink nav">About</a>
+            • <a href="/about.html#projects" class="noLink nav">Projects</a>
+            • <a href="/about.html#contact" class="noLink nav">Contact</a>
+        </p>
+        </header>
+        <main class="introCard" style="width:628px;min-width: 564px;">
+            <div id="ec">
+                <img src="/assets/Sad_mac_404.png" id="eci">
+                <video controls autoplay class="hide" id="ecv"></video> 
+            </div>
+            <header style="width:100%;">
+                <h1><a href="/" class="noLink">404 Not found</a></h1>
+                <p>
+                    It seems you have taken a wrong turn! 
+                </p>
+                <p>     
+                    <a href="/" class="noLink nav">Home</a>
+                        • <a href="/about.html" class="noLink nav">About</a>
+                     • <a href="/about.html#projects" class="noLink nav">Projects</a>
+                     • <a href="/about.html#contact" class="noLink nav">Contact</a>
+
+                </p>
+            </header>
+        </main>
+    <footer>
+        <p><a href="https://github.com/cinnamondev" target="_blank" class="noLink nav">Cinnamondev</a> 2023. Website is licensed under Apache License 2.0.</p>
+        <p>
+            <a href="https://webring.queercoded.dev/prev?source=cinnamondev.github.io" class="noLink">&#60;&#60;</a>
+            <a href="https://webring.queercoded.dev/" class="noLink nav" target="_blank">This website is part of the QC Webring!</a>
+            <a href="https://webring.queercoded.dev/next?source=cinnamondev.github.io" class="noLink">&#62;&#62;</a>
+        </p>
+    </footer>
+</body>
+<style>
+    .noJS { /** overridden in noscript section if no js*/
+        display: none;
+        visibility: hidden;
+    }
+    input {
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        height: 100%;
+        width: 100% ;
+	    padding: 0 0 0 0;
+	    margin: 0 0 0 0;
+        background-color: transparent;
+	    border: none;
+        outline: none;
+	    color: inherit;
+    }
+    header.top h1 {
+        padding: 0 0 0 0;
+        width: 232.833px !important;
+        max-width: 232.833px !important ; /** This is gross looking, but it fixes header size*/
+    }
+    #ec > * {
+        height: 100%;
+    }
+    #ec      > video {
+        visibility: hidden;
+        display: none;
+        overflow: hidden;
+        aspect-ratio: 1/1;
+    }
+    #ec.v > video {
+        visibility: initial;
+        display: initial;
+    }
+    #ec.v > img {
+        visibility: hidden;
+        display: none;
+    }
+</style>
+<noscript>
+    <style>
+        .noJS {
+           display: initial !important;
+           visibility: initial !important; 
+        }
+        .hideNoJS {
+            display: none;
+            visibility: hidden;
+        }
+    </style>
+</noscript>
+<!-- Spoilers ! ;)-->
+<script>
+    let input = document.getElementById("ei");
+    let mediaBox = document.getElementById("ec");
+    let videoPlayer = document.getElementById("ecv");
+    let imager = document.getElementById("eci");
+    const imageOriginal = imager.src;
+
+    input.addEventListener('blur', (e) => { // Respond to input change event
+            eeParser(input.value)
+        }, false);
+    function setVideo(source) {
+        if(videoPlayer.firstChild) videoPlayer.firstChild.remove();
+        sourceElem = document.createElement("source");
+        sourceElem.type = "video/mp4";
+        sourceElem.src = source;
+        videoPlayer.appendChild(sourceElem);
+    }
+    function revealVideo() {
+        mediaBox.classList.add("v");
+        videoPlayer.play();
+    }
+    function hideVideo() {
+        videoPlayer.pause();
+        mediaBox.classList.remove("v");
+    }
+    function playVideo(source) {
+        setVideo(source);
+        videoPlayer.load();
+        revealVideo();
+    }
+    function resetImage() {
+        displayImage(imageOriginal);
+    }
+    function displayImage(source) {
+        imager.src = source;
+    }
+    function eeParser(input) {
+        hideVideo();
+        resetImage();
+        switch (input) {
+            case "i am the eggman":
+                playVideo("/assets/announcement.mp4");
+                break;
+            case "soda":
+                playVideo("/assets/soda.mp4");
+                break;
+            case "you're the moron they made to make me an idiot":
+                let eeMoron = new Audio('/assets/moron.wav');
+                eeMoron.play();   
+                displayImage("/assets/moron.jpg");
+                break;
+            case "sniping":
+                let eeMoronY = new Audio('/assets/glados_moron.wav')
+                eeMoronY.play();
+                displayImage("/assets/nerd_sniping.png");
+                break;
+            default:
+                break;  
+        }
+    }
+</script>
+</html>

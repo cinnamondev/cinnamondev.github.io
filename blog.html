@@ -1,0 +1,22 @@
+---
+layout: default
+title: Blog
+---
+<h1>Latest Posts</h1>
+<ul>
+  {% for post in site.posts %}
+  <section>
+    <h2><a href="{{ post.url }}" class="noLink nav">{{ post.title }}</a></h2>
+    <small>Posted {{ post.date | date_to_string }}</small>
+    {% if post.image %}
+    <aside>
+        <img src="{{ post.image }}" alt="{{ post.image_alt }}">
+        <p>
+            {{ post.image_text }}
+        </p>
+    </aside>
+    {% endif %}
+    {{ post.excerpt }}
+</section>
+  {% endfor %}
+</ul>
