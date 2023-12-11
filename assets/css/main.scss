@@ -1,9 +1,12 @@
 ---
 ---
-@use "card" as card;
-@use "header" as header;
-@use "navbar" as nav;
+@use "card" as card; // landing page/404 'card'
+@use "navbar" as nav; // nav bar used in various places
+@use "header" as header; // header bar
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+
+$wallPad: 16px;
+
 html,body {
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
@@ -26,8 +29,6 @@ body {
 	justify-content: flex-start;
 	align-items: stretch;
 }
-
-/* Landing page specific*/
 
 /* General / All */
 h1 {
@@ -57,15 +58,13 @@ ol.contentTable li {
 	margin-bottom: 2px;
 }
 footer {
-	display: block;
-	position: relative;
-	bottom: 0;
 	width: 100%;
 	text-align: center;
 }
 
 main.content {
-	width: 100%;
+	margin-left: $wallPad;
+	margin-right: $wallPad;
 	flex: 1;
 }
 
@@ -88,6 +87,7 @@ h4 {
 	list-style: disc;
 	font-size: 1.5em;
 	font-weight: 400;
+	margin-left: 32px;
 }
 
 #contact > p {
@@ -95,8 +95,10 @@ h4 {
 	text-align: center;
 }
 
-section > aside > img {
+img {
 	border: 3px solid var(--outline);
+}
+section > aside > img {
 	width: 256px;
 }
 section > aside {
@@ -139,9 +141,35 @@ section > aside > p {
 		padding: initial;
 		text-align: center;
 	}
-	
 }
 
+// Blog Post
+#blogPost {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-content: stretch;
+}
+/*#blogPost p {
+	text-indent: 32px;
+}*/
+#blogPost p + p {
+	margin-top: 0;
+}
+#blogPost h2 {
+	margin-bottom: 0;
+}
+#blogPost img {
+	display: block;
+	max-height: 256px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#blogPost img+em {
+	display: block;
+	padding-top: 4px;
+	text-align: center;
+}
 @media only screen and (max-width: 576px) {
 	section > aside {
 		width: 100%;
