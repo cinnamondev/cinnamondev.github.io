@@ -20,8 +20,8 @@ pagination:
         Feel free to browse my projects below. These are projects from different points in my studies & personal work thus far. Some work's source
         may not be available or may not be currently available- this may be because the work is part of an ongoing course or the original source may
         be lost (i.e: some older pieces of coursework from GCSE/A-Level). Feel free to browse my 
-        <a href="https://github.com/cinnamondev/" class="" target="_blank">Github</a> and
-        <a href="https://gist.github.com/cinnamondev" class="" target="_blank">Gists</a> for other works that may have not been significant 
+        <a href="https://github.com/cinnamondev/" target="_blank">Github</a> and
+        <a href="https://gist.github.com/cinnamondev" target="_blank">Gists</a> for other works that may have not been significant 
         enough to list here.
     </p>
     </section>
@@ -93,12 +93,14 @@ pagination:
         </aside>
         {{ project.content }}
         <p>
+            {% if project.repositoryURL or project.websiteURL %}
             Project links: 
+            {% endif %}
             {% if project.repositoryURL %}
-            <a href="{{ project.repositoryURL }}" target="_blank" class="noLink nav">Repository</a>
+            <a href="{{ project.repositoryURL }}" target="_blank" >Repository</a>
             {% endif %}
             {% if project.websiteURL %}
-            <a href="{{ project.websiteURL }}" class="noLink nav">Project log</a>
+            <a href="{{ project.websiteURL }}" >Website</a>
             {% endif %}
         </p>
     </section>
@@ -121,12 +123,14 @@ pagination:
         </aside>
         {{ project.content }}
         <p>
+            {% if project.repositoryURL or project.websiteURL %}
             Project links: 
+            {% endif %} 
             {% if project.repositoryURL %}
-            <a href="{{ project.repositoryURL }}" target="_blank" class="noLink nav">Repository</a>
+            <a href="{{ project.repositoryURL }}" target="_blank">Repository</a>
             {% endif %}
             {% if project.websiteURL %}
-            <a href="{{ project.websiteURL }}" class="noLink nav">Website</a>
+            <a href="{{ project.websiteURL }}">Website</a>
             {% endif %}
         </p>
     </section>
@@ -149,12 +153,14 @@ pagination:
         </aside>
         {{ project.content }}
         <p>
+            {% if project.repositoryURL or project.websiteURL %}
             Project links: 
+            {% endif %}
             {% if project.repositoryURL %}
-            <a href="{{ project.repositoryURL }}" target="_blank" class="noLink nav">Repository</a>
+            <a href="{{ project.repositoryURL }}" target="_blank">Repository</a>
             {% endif %}
             {% if project.websiteURL %}
-            <a href="{{ project.websiteURL }}" class="noLink nav">Website</a>
+            <a href="{{ project.websiteURL }}">Website</a>
             {% endif %}
         </p>
     </section>
@@ -163,8 +169,8 @@ pagination:
 <article id="contact">
     <h2>Contact us</h2>
     <p>
-        <a href="https://github.com/cinnamondev" target="_blank" class="noLink nav">Github</a> • 
-        <a href="https://tech.lgbt/@itscinnamon" target="_blank" class="noLink nav">Mastodon</a> • 
-        <a href="mailto:justpromptiguess@gmail.com" class="noLink nav" target="_blank">Email</a> 
+        <a href="https://github.com/cinnamondev" target="_blank"">Github</a> • 
+        <a href="https://tech.lgbt/@itscinnamon" target="_blank">Mastodon</a> • 
+        <a href="mailto:justpromptiguess@gmail.com" target="_blank">Email</a> 
     </p>
 </article>
