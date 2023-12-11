@@ -8,13 +8,9 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "~> 4.3.2"
-# github-pages gem will not be used, force actions.
-#gem "github-pages", "~> 228", group: :jekyll_plugins
-# If you have any plugins, put them here!
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-paginate-v2", "~> 3.0"
-end
+gem "jekyll-feed", "~> 0.12"
+gem "jekyll-paginate-v2", "~> 3.0"
+gem "jekyll-redirect-from", "~> 0.16.0"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.

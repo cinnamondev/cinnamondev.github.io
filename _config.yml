@@ -28,6 +28,7 @@ github_username:  cinnamondev
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2
+  - jekyll-redirect-from
 
 autopages:
   enabled: false
