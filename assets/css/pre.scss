@@ -1,7 +1,7 @@
 ---
 ---
 @charset "utf-8";
-@use "theme";
+@use "theme" as t;
 :root, [data-theme='d'] {
 	--primary: #{t.$d-primary};
 	--primary-a: #{t.$d-primary-a};
