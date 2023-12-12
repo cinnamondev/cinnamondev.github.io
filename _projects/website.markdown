@@ -13,7 +13,6 @@ redirect_from:
     - /projects/blog
     - /personalwebsite
     - /website
-    - /blog
 
 non_gem_redirect_url: /about#PersonalWebsite
 ---
