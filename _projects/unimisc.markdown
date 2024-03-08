@@ -3,9 +3,11 @@ layout: redirect
 title:  "Misc. Scripting"
 priority: 2
 type: "University"
-image: /assets/images/fld2csv.png
-imageAlt: "fld2csv script"
-imageCaption: "fld2csv script"
+images:
+    fld2csv:
+        url: /assets/images/fld2csv.png
+        alt: "fld2csv script"
+        caption: "fld2csv script"
 redirect_from: 
     - /projects/uniscripts
     - /uniscripts

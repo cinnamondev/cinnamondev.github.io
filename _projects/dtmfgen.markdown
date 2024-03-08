@@ -3,9 +3,11 @@ layout: redirect
 title:  "DTMF Tone Generator"
 priority: 1
 type: "School"
-image: /assets/images/DTMF1.png
-imageAlt: "DTMF Tone '1'"
-imageCaption: "DTMF Tone for 1."
+images:
+    dtmf:
+        url: /assets/images/DTMF1.png
+        alt: "DTMF Tone '1'"
+        caption: "DTMF Tone for 1."
 sitemap: false
 redirect_from: 
     - /projects/DTMFToneGenerator

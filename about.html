@@ -83,11 +83,14 @@ pagination:
     <section id="{{ project.title | replace: " ", "" }}">
         <h4>{{ project.title }}</h4>
         <aside>
-            {% if project.image %}
-            <img src="{{ project.image }}" 
-                alt="{% if project.imageAlt %}{{ project.imageAlt }}{% endif %}">
+
+            {% for img in project.images %}
+            {% if img[1].url %}
+            <img src="{{ img[1].url }}" 
+                alt="{% if img[1].alt %}{{ img[1].alt }}{% endif %}">
             {% endif %}
-            {% if project.imageCaption %}<p>{{ project.imageCaption }}</p>{% endif %}
+            {% if img[1].caption %}<p>{{ img[1].caption }}</p>{% endif %}
+            {% endfor %}
             {% if project.youtubeEmbed %}
             <iframe width="256" height="315" src="{{ project.youtubeEmbed }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 3px solid var(--outline);"></iframe>
             {% endif %}
@@ -115,11 +118,14 @@ pagination:
     <section id="{{ project.title | replace: " ", "" }}">
         <h4>{{ project.title }}</h4>
         <aside>
-            {% if project.image %}
-            <img src="{{ project.image }}" 
-                alt="{% if project.imageAlt %}{{ project.imageAlt }}{% endif %}">
+
+            {% for img in project.images %}
+            {% if img[1].url %}
+            <img src="{{ img[1].url }}" 
+                alt="{% if img[1].alt %}{{ img[1].alt }}{% endif %}">
             {% endif %}
-            {% if project.imageCaption %}<p>{{ project.imageCaption }}</p>{% endif %}
+            {% if img[1].caption %}<p>{{ img[1].caption }}</p>{% endif %}
+            {% endfor %}
             {% if project.youtubeEmbed %}
             <iframe width="256" height="315" src="{{ project.youtubeEmbed }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 3px solid var(--outline);"></iframe>
             {% endif %}
@@ -147,11 +153,14 @@ pagination:
     <section id="{{ project.title | replace: " ", ""  }}">
         <h4>{{ project.title }}</h4>
         <aside>
-            {% if project.image %}
-            <img src="{{ project.image }}" 
-                alt="{% if project.imageAlt %}{{ project.imageAlt }}{% endif %}">
+
+            {% for img in project.images %}
+            {% if img[1].url %}
+            <img src="{{ img[1].url }}" 
+                alt="{% if img[1].alt %}{{ img[1].alt }}{% endif %}">
             {% endif %}
-            {% if project.imageCaption %}<p>{{ project.imageCaption }}</p>{% endif %}
+            {% if img[1].caption %}<p>{{ img[1].caption }}</p>{% endif %}
+            {% endfor %}
             {% if project.youtubeEmbed %}
             <iframe width="256" height="315" src="{{ project.youtubeEmbed }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 3px solid var(--outline);"></iframe>
             {% endif %}

@@ -3,9 +3,15 @@ layout: redirect
 title:  "Embedded Systems Project"
 priority: 1
 type: "University"
-image: /assets/images/esp-project.jpg
-imageAlt: "ESP Racetrack"
-imageCaption: "ESP Racetrack"
+images:
+    linesensor:
+        url: /assets/images/linesensor2.1.png
+        alt: "ESP Line Sensor"
+        caption: "ESP Line Sensor"
+    buggyCAD:
+        url: /assets/images/esp-buggy.png
+        alt: "ESP Buggy CAD Mockup"
+        caption: "ESP Buggy CAD Model"
 redirect_from: 
     - /projects/esp
     - /project/embeddedsystems

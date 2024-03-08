@@ -3,9 +3,11 @@ layout: redirect
 title:  "Handheld Console"
 priority: 2
 type: "Personal"
-image: /assets/images/leviathanrender.png
-imageAlt: "3D render of case iteration"
-imageCaption: "3D render of case iteration"
+images:
+    render:
+        url: /assets/images/leviathanrender.png
+        alt: "3D render of case iteration"
+        caption: "3D render of case iteration"
 youtubeEmbed: "https://www.youtube-nocookie.com/embed/Q7foxCv2dbI?si=M_87cLazMFbLLm8G&amp;controls=0"
 embedCaption: "Spring-loaded baseplate prototype"
 repositoryURL: "https://github.com/cinnamondev/gamepithing"
