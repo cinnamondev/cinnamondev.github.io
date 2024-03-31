@@ -11,9 +11,11 @@ title: Blog
     {% if post.image %}
     <aside>
         <img src="{{ post.image }}" alt="{{ post.image_alt }}">
+        {% if post.image_caption %}
         <p>
-            {{ post.image_text }}
+            {{ post.image_caption }}
         </p>
+        {% endif %}
     </aside>
     {% endif %}
     {{ post.excerpt }}

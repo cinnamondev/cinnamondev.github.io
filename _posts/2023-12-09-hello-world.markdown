@@ -5,7 +5,6 @@ date:   2023-12-09 08:27:20 +0000
 categories: offtopic
 image: /assets/images/website2.png
 image_alt: "Screenshot of the website home page, showing the navigation bar."
-image_capton: "ooo"
 ---
 
 I have succesfully converted to jekyll, with a new blog page to tag along!
