@@ -15,6 +15,7 @@ html,body {
 html {
 	width:100%;
 	font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+	font-size: 1.08rem;
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -22,7 +23,7 @@ html {
 }
 
 body {
-	width: 1024px;
+	width: 920px;
 	max-width: 100%;
 	display: flex;
 	flex-flow: column nowrap;
@@ -32,7 +33,7 @@ body {
 
 /* General / All */
 h1 {
-	font-weight: 700;
+	font-weight: bolder;
 	font-size: 2.5em;
 }
 
@@ -156,8 +157,15 @@ section > aside > p {
 #blogPost p + p {
 	margin-top: 0;
 }
-#blogPost h2 {
-	margin-bottom: 0;
+#blogPost h2, #blogpost h3, #blogpost h4 {
+	margin-top: 2px;
+	margin-bottom: 4px;
+}
+#blogPost h2.title {
+	margin-top: 12px;
+	margin-bottom: 0px;
+	font-weight: 600;
+	color: var(--on-background);
 }
 #blogPost img {
 	display: block;

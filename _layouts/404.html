@@ -24,7 +24,7 @@
                 <video controls autoplay class="hide" id="ecv"></video> 
             </div>
             <header>
-                <h1>404 Not found</h1>
+                <h1>404: Not found</h1>
                 <p>
                     It seems you have taken a wrong turn! 
                 </p>
@@ -35,7 +35,7 @@
 <!-- Spoilers ! ;) -->
 <style>
     :root {
-        --card-width: 656px;
+        --card-width: 668px;
     }
     input {
         font-family: inherit;
@@ -54,7 +54,7 @@
     }
     main.card video {
         height: 100%;
-        width: var(--card-image-width);
+        width: var(--card-width);
         visibility: hidden;
         display: none;
         overflow: hidden;
@@ -119,9 +119,6 @@
         switch (input) {
             case "i am the eggman":
                 playVideo("/assets/video/announcement.mp4");
-                break;
-            case "soda":
-                playVideo("/assets/video/soda.mp4");
                 break;
             case "you're the moron they made to make me an idiot":
                 let eeMoron = new Audio('/assets/audio/moron.wav');
