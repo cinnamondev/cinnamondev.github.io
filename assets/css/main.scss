@@ -64,8 +64,10 @@ footer {
 }
 
 main.content {
-	margin-left: $wallPad;
-	margin-right: $wallPad;
+	width: 100%;
+	max-width: 100%;
+	padding-left: $wallPad;
+	padding-right: $wallPad;
 	flex: 1;
 }
 
@@ -180,13 +182,13 @@ section > aside > p {
 }
 @media only screen and (max-width: 576px) {
 	section > aside {
-		width: 100%;
+		width: 80%;
 		float:initial;
 		padding-left: initial;
 	}
 	section > aside > img {
-		width: 100%;
+		width: 80%;
 	}
 
-	main.content { width: 100%;padding-left: 12px;padding-right: 12px;}
+	main.content { width: 100%;padding-left: 6px;padding-right: 6px;}
 }

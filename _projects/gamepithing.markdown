@@ -4,6 +4,10 @@ title:  "Handheld Console"
 priority: 2
 type: "Personal"
 images:
+    render-new:
+        url: /assets/images/handheld2024.png
+        alt: "3D render of case iteration (2024 revision)"
+        caption: "3D render of case (2024 revision, work in progress)"
     render:
         url: /assets/images/leviathanrender.png
         alt: "3D render of case iteration"
