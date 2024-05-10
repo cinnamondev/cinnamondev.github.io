@@ -12,6 +12,10 @@ images:
         url: /assets/images/esp-buggy.png
         alt: "ESP Buggy CAD Mockup"
         caption: "ESP Buggy CAD Model"
+    buggyFinal:
+        url: /assets/images/buggyfinal.jpg
+        alt: "Final buggy"
+        caption: "Buggy"
 redirect_from: 
     - /projects/esp
     - /project/embeddedsystems
