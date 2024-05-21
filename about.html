@@ -37,7 +37,7 @@ pagination:
                     {% continue %}
                     {% endif %}
                     <li>
-                        <a href="#{{ project.title | replace: " ", "" }}" class="noLink nav    ">
+                        <a href="#{{ project.title | replace: " ", "" }}" class="nav">
                             {{ project.title }}
                         </a>
                     </li>
@@ -52,7 +52,7 @@ pagination:
                     {% continue %}
                     {% endif %}
                     <li>
-                        <a href="#{{ project.title | replace: " ", "" }}" class="noLink nav">
+                        <a href="#{{ project.title | replace: " ", "" }}" class="nav">
                             {{ project.title }}
                         </a>
                     </li>
@@ -66,7 +66,7 @@ pagination:
                     {% continue %}
                     {% endif %}
                     <li>
-                        <a href="#{{ project.title | replace: " ", "" }}" class="noLink nav">
+                        <a href="#{{ project.title | replace: " ", "" }}" class="nav">
                             {{ project.title }}
                         </a>
                     </li>
@@ -80,105 +80,95 @@ pagination:
     {% if project.type != "Personal" %}
     {% continue %}
     {% endif %}
-    <section id="{{ project.title | replace: " ", "" }}">
-        <h4>{{ project.title }}</h4>
-        <aside>
 
-            {% for img in project.images %}
-            {% if img[1].url %}
-            <img src="{{ img[1].url }}" 
-                alt="{% if img[1].alt %}{{ img[1].alt }}{% endif %}">
-            {% endif %}
-            {% if img[1].caption %}<p>{{ img[1].caption }}</p>{% endif %}
-            {% endfor %}
-            {% if project.youtubeEmbed %}
-            <iframe width="256" height="315" src="{{ project.youtubeEmbed }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 3px solid var(--outline);"></iframe>
-            {% endif %}
-            <p>{% if project.embedCaption %}{{ project.embedCaption }}{% endif %}</p>
-        </aside>
-        {{ project.content }}
-        <p>
-            {% if project.repositoryURL or project.websiteURL %}
-            Project links: 
-            {% endif %}
-            {% if project.repositoryURL %}
-            <a href="{{ project.repositoryURL }}" target="_blank" >Repository</a>
-            {% endif %}
-            {% if project.websiteURL %}
-            <a href="{{ project.websiteURL }}" >Website</a>
-            {% endif %}
-        </p>
-    </section>
+    {% capture projectFooter %}
+        {% if project.repositoryURL or project.websiteURL %}
+        Project links: 
+        {% endif %}
+        {% if project.repositoryURL %}
+        <a href="{{ project.repositoryURL }}" target="_blank" >Repository</a>
+        {% endif %}
+        {% if project.websiteURL %}
+        <a href="{{ project.websiteURL }}" >Website</a>
+        {% endif %}
+    {% endcapture%}
+
+    {% capture projectID %}
+    {{ project.title | replace: " ", ""}}
+    {% endcapture %}
+
+    {% include card.html
+        media=project.images
+        widthOverride="100%"
+        title=project.title 
+        contents=project.content
+        footer=projectFooter
+        cardID=projectID
+    %}
+
     {% endfor %}
     <h3 id="uniProjects">University Projects</h3>
     {% for project in paginator.posts %}
     {% if project.type != "University" %}
     {% continue %}
     {% endif %}
-    <section id="{{ project.title | replace: " ", "" }}">
-        <h4>{{ project.title }}</h4>
-        <aside>
 
-            {% for img in project.images %}
-            {% if img[1].url %}
-            <img src="{{ img[1].url }}" 
-                alt="{% if img[1].alt %}{{ img[1].alt }}{% endif %}">
-            {% endif %}
-            {% if img[1].caption %}<p>{{ img[1].caption }}</p>{% endif %}
-            {% endfor %}
-            {% if project.youtubeEmbed %}
-            <iframe width="256" height="315" src="{{ project.youtubeEmbed }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 3px solid var(--outline);"></iframe>
-            {% endif %}
-            <p>{% if project.embedCaption %}{{ project.embedCaption }}{% endif %}</p>
-        </aside>
-        {{ project.content }}
-        <p>
-            {% if project.repositoryURL or project.websiteURL %}
-            Project links: 
-            {% endif %} 
-            {% if project.repositoryURL %}
-            <a href="{{ project.repositoryURL }}" target="_blank">Repository</a>
-            {% endif %}
-            {% if project.websiteURL %}
-            <a href="{{ project.websiteURL }}">Website</a>
-            {% endif %}
-        </p>
-    </section>
+    {% capture projectFooter %}
+        {% if project.repositoryURL or project.websiteURL %}
+        Project links: 
+        {% endif %}
+        {% if project.repositoryURL %}
+        <a href="{{ project.repositoryURL }}" target="_blank" >Repository</a>
+        {% endif %}
+        {% if project.websiteURL %}
+        <a href="{{ project.websiteURL }}" >Website</a>
+        {% endif %}
+    {% endcapture%}
+
+    {% capture projectID %}
+    {{ project.title | replace: " ", ""}}
+    {% endcapture %}
+
+    {% include card.html
+        media=project.images
+        widthOverride="100%"
+        title=project.title 
+        contents=project.content
+        footer=projectFooter
+        cardID=projectID
+    %}
+
     {% endfor %}
     <h3 id="schProjects">A Level Projects</h3>
     {% for project in paginator.posts %}
     {% if project.type != "School" %}
     {% continue %}
     {% endif %}
-    <section id="{{ project.title | replace: " ", ""  }}">
-        <h4>{{ project.title }}</h4>
-        <aside>
 
-            {% for img in project.images %}
-            {% if img[1].url %}
-            <img src="{{ img[1].url }}" 
-                alt="{% if img[1].alt %}{{ img[1].alt }}{% endif %}">
-            {% endif %}
-            {% if img[1].caption %}<p>{{ img[1].caption }}</p>{% endif %}
-            {% endfor %}
-            {% if project.youtubeEmbed %}
-            <iframe width="256" height="315" src="{{ project.youtubeEmbed }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 3px solid var(--outline);"></iframe>
-            {% endif %}
-            <p>{% if project.embedCaption %}{{ project.embedCaption }}{% endif %}</p>
-        </aside>
-        {{ project.content }}
-        <p>
-            {% if project.repositoryURL or project.websiteURL %}
-            Project links: 
-            {% endif %}
-            {% if project.repositoryURL %}
-            <a href="{{ project.repositoryURL }}" target="_blank">Repository</a>
-            {% endif %}
-            {% if project.websiteURL %}
-            <a href="{{ project.websiteURL }}">Website</a>
-            {% endif %}
-        </p>
-    </section>
+    {% capture projectFooter %}
+        {% if project.repositoryURL or project.websiteURL %}
+        Project links: 
+        {% endif %}
+        {% if project.repositoryURL %}
+        <a href="{{ project.repositoryURL }}" target="_blank" >Repository</a>
+        {% endif %}
+        {% if project.websiteURL %}
+        <a href="{{ project.websiteURL }}" >Website</a>
+        {% endif %}
+    {% endcapture%}
+
+    {% capture projectID %}
+    {{ project.title | replace: " ", ""}}
+    {% endcapture %}
+
+    {% include card.html
+        media=project.images
+        widthOverride="100%"
+        title=project.title 
+        contents=project.content
+        footer=projectFooter
+        cardID=projectID
+    %}
     {% endfor %}
 </article>  
 <article id="contact">
