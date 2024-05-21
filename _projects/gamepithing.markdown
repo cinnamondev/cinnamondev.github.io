@@ -12,8 +12,10 @@ images:
         url: /assets/images/leviathanrender.png
         alt: "3D render of case iteration"
         caption: "3D render of case iteration"
-youtubeEmbed: "https://www.youtube-nocookie.com/embed/Q7foxCv2dbI?si=M_87cLazMFbLLm8G&amp;controls=0"
-embedCaption: "Spring-loaded baseplate prototype"
+    video:
+        type: "yt"
+        url: "https://www.youtube-nocookie.com/embed/Q7foxCv2dbI?si=M_87cLazMFbLLm8G&amp;controls=0"
+        caption: "Spring-loaded baseplate prototype"
 repositoryURL: "https://github.com/cinnamondev/gamepithing"
 redirect_from: 
     - /projects/gamepithing

@@ -5,7 +5,7 @@ priority: 3
 type: "Personal"
 images:
     website:
-        image: /assets/images/website2.png
+        url: /assets/images/website2.png
         alt: "Website screenshot"
 repositoryURL: "https://github.com/cinnamondev/cinnamondev.github.io"
 websiteURL: "https://cinnamondev.github.io/"
