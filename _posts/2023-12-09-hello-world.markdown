@@ -18,5 +18,3 @@ The website has also been updated to use the single consistent style  (404), as 
 
 Check out the code [here](https://github.com/cinnamondev/cinnamondev.github.io)!
 
-![test render](/assets/images/website2.png)
-*Partial website screenshot*

@@ -4,7 +4,7 @@
     {% include head.html %}
 </head>
 <body style="justify-content: space-between;align-items: center;">
-    <header class="top" style="width: 100%;">
+    <header class="top">
         <div>
             <img src="/assets/images/manmade-horrors.jpg">
             <noscript>
@@ -18,25 +18,23 @@
         </div>
         {% include navigation.html %}
     </header>
-    <main class="card">
+    <article class="card">
+        <aside>
             <div id="ec">
-                <img src="/assets/images/Sad_mac_404.png" id="eci">
-                <video controls autoplay class="hide" id="ecv"></video> 
+                <video controls="" autoplay="" class="hide" id="ecv"></video>
+                <img src="/assets/images/Sad_mac_404.png" alt="sad mac 404!" id="eci">
             </div>
-            <header>
-                <h1>404: Not found</h1>
-                <p>
-                    It seems you have taken a wrong turn! 
-                </p>
-                {% include navigation.html %}
-            </header>
-    </main>
+        </aside>
+        <div>
+            <h2>404</h2>
+            <main>
+            <p>Go <a href="/">home</a> instead?</p>
+            </main>
+        </div>
+    </article>
     {% include footer.html %}
 <!-- Spoilers ! ;) -->
 <style>
-    :root {
-        --card-width: 668px;
-    }
     input {
         font-family: inherit;
         font-weight: inherit;
@@ -51,14 +49,14 @@
         text-wrap: nowrap;
         overflow: hidden;
         color: inherit;
+        width: 250px;
     }
-    main.card video {
+    video {
         height: 100%;
-        width: var(--card-width);
+        width: 100%;
         visibility: hidden;
         display: none;
         overflow: hidden;
-        aspect-ratio: 1/1;
     }
     #ec.v > video {
         visibility: initial;
@@ -68,6 +66,7 @@
         visibility: hidden;
         display: none;
     }
+
 </style>
 <noscript>
         <style>
