@@ -28,7 +28,13 @@ body {
 	/* make the website look older*/
 body.themeStupid {
 	background-image: url(/assets/images/cloud.jpg);
-	background-size: 300px;
+	background-size: 256px;
+}
+
+body.themeStupid > main, header {
+	background-color: inherit;
+	opacity: 0.92;
+	background-image: none;
 }
 
 @media only screen and (max-width: 800px) {
@@ -40,6 +46,7 @@ body.themeStupid {
 
 main {
 	flex-grow: 1;
+	width: 100%;
 }
 
 a.noLink {
