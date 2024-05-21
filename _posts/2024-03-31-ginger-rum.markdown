@@ -1,19 +1,18 @@
 ---
 layout: post
-title:  "Cooking! Lets make Spiced Ginger Rum Cake!"
+title:  "Cooking! Ginger Rum Cake!"
 date:   2024-03-31 00:00:00 +0000
 categories: offtopic cooking
-image: /assets/images/gingercake.jpg
-image_alt: "Picture of Ginger Rum Cake"
-image_caption: "mm yummy ginger rum cake"
+images:
+    cake:
+        url: /assets/images/gingercake.jpg
+        alt: "Picture of Ginger Rum Cake"
+        caption: "yummers"
 ---
 
 If you like ginger, and you like rum, you will love this loaf cake! I wasn't totally happy with some other recipes, so this has been changed as appropriate. Very tasty, millions must try!
 
 Read the instructions in advance, as there is *some* prep work involved, though not much :)
-
-![rum cake](/assets/images/gingercake.jpg)
-*Yummy yummy*
 
 ## Ingredients
 

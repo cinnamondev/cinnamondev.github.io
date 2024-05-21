@@ -3,8 +3,10 @@ layout: post
 title:  "Hello, World!"
 date:   2023-12-09 08:27:20 +0000
 categories: offtopic
-image: /assets/images/website2.png
-image_alt: "Screenshot of the website home page, showing the navigation bar."
+images:
+    website:
+        url: /assets/images/website2.png
+        alt: "Screenshot of the website home page, showing the navigation bar."
 ---
 
 I have succesfully converted to jekyll, with a new blog page to tag along!

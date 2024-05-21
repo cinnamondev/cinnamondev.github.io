@@ -3,7 +3,7 @@ layout: default
 title: Blog
 ---
 <h1>Latest Posts</h1>
-<ul id="postList">
+<ul id="postList" style="padding-left: 0;">
   {% for post in site.posts %}
 
   {% capture summary %}
@@ -14,7 +14,7 @@ title: Blog
   <a href="{{ post.url }}" class="noLink">
     {% include card.html
         sidebarImages=post.images 
-        widthOverride="95%"
+        widthOverride="100%"
         title=post.title 
         contents=summary
     %}
