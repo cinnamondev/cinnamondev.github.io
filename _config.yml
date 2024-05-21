@@ -47,3 +47,13 @@ sass:
 collections:
   projects:
     output: true 
+
+exclude:
+  - README.md
+  - LICENSE
+
+### Site globals
+logo:
+  url: /assets/images/manmade-horrors.jpg
+  alt: "logo"
+
