@@ -6,19 +6,23 @@
 {% if include.widthOverride %}style="max-width:{{include.widthOverride}};"{% endif %}>
     {% if include.homeCard != "true" %}
     <div>
-        {% if include.title %}<h2>{{ include.title }}</h2>{% endif %}
+        {% if include.title %}<h2 id="{{include.cardID}}">{{ include.title }}</h2>{% endif %}
         <main>
         {{ include.contents }}
         </main>
         <footer>{{ include.footer }}</footer>
     </div>
-    {% if include.sidebarImages %}
+    {% if include.media %}
     <aside {% if include.sidebarWidth %}style="max-width:{{ include.sidebarWidth }};"{% endif %}>
-        {% for img in include.sidebarImages %}
+        {% for media in include.media %}
         <div>
-            <img src="{{ img[1].url }}" alt="{{ img[1].alt}}">
-            {% if img[1].caption %}
-            <span>{{ img[1].caption }}</span>
+            {% if media[1].type != "yt" %}
+            <img src="{{ media[1].url }}" alt="{{ media[1].alt}}">
+            {% else %}
+            <iframe width="256" height="315" src="{{ media[1].url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 3px solid var(--outline);"></iframe>
+            {% endif %}
+            {% if media[1].caption %}
+            <span>{{ media[1].caption }}</span>
             {% endif %}
         </div>
         {% endfor%}
