@@ -5,16 +5,23 @@
     <title>You are being redirected...</title>
 </head>
 <body style="justify-content: center;align-items: center;">
-    <main class="card">
-        <img src="/assets/images/Sad_mac_301.png">
-        <header>
-            <h1> Redirecting you now.</h1>
+<section class="card">
+    <aside>
+        <div>
+            <img src="/assets/images/Sad_mac_301.png" alt="sadmac301">
+        </div>
+    </aside>
+    <div>
+        <h2>Redirecting you now.</h2>
+        <main>
             <p>
-                You are being redirected to {{ title }}. Click <a href="{{ page.redirect.to }}{{ page.non_gem_redirect_url}}">
+                You are being redirected. Click <a href="{{ page.redirect.to }}{{ page.non_gem_redirect_url}}">
                 here</a> if you are not redirected automagically.
             </p>
-        </header>
-    </main>
+        </main>
+    </div>
+
+</section>
     {% include footer.html %}
     <script>location='{{ page.redirect.to }}{{ page.non_gem_redirect_url}}'</script>
 </body>
