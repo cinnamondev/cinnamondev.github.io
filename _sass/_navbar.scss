@@ -1,4 +1,4 @@
-$spacingNavOptions: 4px;
+$spacingNavOptions: 6px;
 p.navBar > a {
     padding-left: $spacingNavOptions;
     padding-right: $spacingNavOptions;
@@ -16,3 +16,10 @@ p.navBar {
     padding: initial;
     font-size: 1.5em;
 }
+
+@media only screen and (max-width: 500px) {
+    p.navBar {
+        font-size: 1.2em;
+    }
+}
+

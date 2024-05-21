@@ -1,4 +1,30 @@
 ---
-layout: home
+layout: default
 title: Home
+
+customImages:
+    esp:
+        url: /assets/images/buggyfinal.jpg
+        caption: "hello world"
 ---
+
+{% include card.html
+    homeCard="true"
+%}
+{% capture webring %}{% include webring.html %}{% endcapture %}
+
+{% if include.homeCard=="true"%}
+{% assign overrideImgLeft = "true" %}
+{% endif %}
+
+<article class="card" style="text-align: center;">
+    <div>
+        <main>
+            <span>
+                <a href="https://webring.queercoded.dev/prev?source=cinnamondev.github.io" class="noLink">&#60;&#60;</a>
+                <a href="https://webring.queercoded.dev/" class="noLink nav" target="_blank">This website is part of the QC Webring!</a>
+                <a href="https://webring.queercoded.dev/next?source=cinnamondev.github.io" class="noLink">&#62;&#62;</a>
+            </span> 
+        </main>
+    </div>
+</article>

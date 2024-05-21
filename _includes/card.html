@@ -1,0 +1,39 @@
+{% if include.homeCard=="true"%}
+{% assign overrideImgLeft = "true" %}
+{% endif %}
+
+<article class="card {% if include.widthOverride %}cardWOverride{{ include.widthOverride | replace: "%", "pc" }}{% endif %}"
+{% if include.widthOverride %}style="max-width:{{include.widthOverride}};"{% endif %}>
+    {% if include.homeCard != "true" %}
+    <div>
+        {% if include.title %}<h2>{{ include.title }}</h2>{% endif %}
+        <main>
+        {{ include.contents }}
+        </main>
+        <footer>{{ include.footer }}</footer>
+    </div>
+    {% if include.sidebarImages %}
+    <aside {% if include.sidebarWidth %}style="max-width:{{ include.sidebarWidth }};"{% endif %}>
+        {% for img in include.sidebarImages %}
+        <div>
+            <img src="{{ img[1].url }}" alt="{{ img[1].alt}}">
+            {% if img[1].caption %}
+            <span>{{ img[1].caption }}</span>
+            {% endif %}
+        </div>
+        {% endfor%}
+    </aside>
+    {% endif %}
+    {% else %}
+    <aside>
+        <div>
+            <img src="{{ site.logo.url }}">
+        </div>
+    </aside>
+    <div>
+        <h1 class="header">cinnamon</h1>
+        <p> some random text here idfk</p>
+        {% include navigation_home.html %}
+    </div>
+    {% endif %}
+</article>

@@ -1,57 +1,61 @@
-// defaults
-$card-height: 256px;
-$card-width: 608px;
-$card-image-width: $card-height;
-:root {
-    --card-height: #{$card-height};
-    --card-image-width: #{$card-image-width};
-    --card-width: #{$card-width};
+@use "theme" as theme;
+
+.card {
+    max-width: 680px;
+    margin: 30px 0 30px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    border: 2px solid #{theme.$text-d};
+    background-color: #{theme.$background-d-2};
+    box-shadow: 4px 4px #{theme.$background-shadow};
 }
 
-main.card {
+.card > div {
+    padding: 0px 3px 0px 18px;
     display: flex;
-	flex-flow: row wrap;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	width: var(--card-width);
-	height: var(--card-height);	
-	min-height: var(--card-height);	
-	border: 3px solid var(--outline);
-	background-color: var(--surface-variant);
-	padding:0 0 0 0;
-	margin: 0 0 0 0;
-}
-main.card img {
-	width: var(--card-image-width);
-    border: none !important;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-main.card header {
-    flex:1;
+.card > div > main {
+    flex-grow: 1;
+}
+
+.card > div > main:first-child {
+    padding-top: 25px;
+}
+
+.card > div > main:last-child {
+    padding-bottom: 25px;
+}
+.card > div > footer {
+    padding-bottom: 18px;
+}
+
+.card aside {
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
     justify-content: center;
-}
-main.card header>h1 {
-    font-size: 2.5em;
-    margin: 0 0 0 0;
-    font-weight: 700;
-}
-main.card header>p {
-    font-size: 1.5em;
-    margin-bottom: 32px;
+    align-items: center;
+    flex-direction: row;
+    padding: 3px 3px 0px 3px;
+    max-width: 40%;
 }
 
-
-@media only screen and (max-width: (var(--card-width) + 3px)) {
-	main.card {
-        width: auto;
-		height: auto;
-        max-height: auto;
-	}
-    main.card img {
-        max-width: 100%;    
-    }
+.card > aside div {
+    width: 100%;
+    height: auto;
+    padding-top: 6px;
+    text-align: center;
+    color: #{theme.$text-d-alt};
 }
+
+.card > aside div:first-child {
+    padding-top: 0px;
+}
+.card > aside img {
+    flex-grow: 1;
+    max-width: 100%;
+}
+
