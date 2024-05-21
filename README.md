@@ -2,6 +2,23 @@
 
 TODO: resize and optimize images.
 
+## Components
+
+### Card
+
+files `_includes/card.html` and `_card.scss` used.
+
+```
+{% include card.html 
+    title="esp" 
+    contents=content
+    footer="A whole bunch of links go here"         (optional)
+    sidebarImages=page.customImages                 (optional) 
+    sidebarWidth="20%"                              (optional)
+%}
+```
+^^ intended usage
+
 ## Fonts
 
 Headers/Logos - Quicksand
