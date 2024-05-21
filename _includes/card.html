@@ -2,7 +2,7 @@
 {% assign overrideImgLeft = "true" %}
 {% endif %}
 
-<article class="card {% if include.widthOverride %}cardWOverride{{ include.widthOverride | replace: "%", "pc" }}{% endif %}"
+<section class="card {% if include.widthOverride %}cardWOverride{{ include.widthOverride | replace: "%", "pc" }}{% endif %}"
 {% if include.widthOverride %}style="max-width:{{include.widthOverride}};"{% endif %}>
     {% if include.homeCard != "true" %}
     <div>
@@ -36,4 +36,4 @@
         {% include navigation_home.html %}
     </div>
     {% endif %}
-</article>
+</section>
