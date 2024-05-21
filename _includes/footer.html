@@ -1,9 +1,6 @@
 <footer>
-    <p><a href="https://github.com/cinnamondev" target="_blank" class="noLink nav">Cinnamondev</a> 2023. Website is licensed under Apache 2.0.</p>
-    <p>
-        <a href="https://webring.queercoded.dev/prev?source=cinnamondev.github.io" class="noLink">&#60;&#60;</a>
-        <a href="https://webring.queercoded.dev/" class="noLink nav" target="_blank">This website is part of the QC Webring!</a>
-        <a href="https://webring.queercoded.dev/next?source=cinnamondev.github.io" class="noLink">&#62;&#62;</a>
+    <p><a href="https://github.com/cinnamondev" target="_blank" class="noLink nav">Cinnamondev</a> 2023. Website is licensed under Apache 2.0.
+    <span id="eef" role="textbox" contenteditable></span><!-- for those who look for things -->
     </p>
     <noscript>
         <p>
@@ -12,3 +9,22 @@
         </p>
     </noscript>
 </footer>
+<script>
+    let footerinput = document.getElementById("eef");
+    let footerbody = document.getElementsByTagName("body")[0];
+
+    footerinput.addEventListener('blur', (e) => { // Respond to input change event
+        switch (footerinput.innerText) {
+            case "i love neocities":
+                footerbody.classList.add("themeStupid");
+                break;
+            default:
+                footerbody.classList.remove("themeStupid");
+                break;
+        }
+        }, false);
+
+    function eefParser(input) {
+
+    }
+</script>
